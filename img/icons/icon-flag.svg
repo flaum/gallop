@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="15" height="21" viewBox="0 0 15 21">
   <defs>
     <style>
-      .cls-1 {
+      .cls-2 {
         fill: #fff;
         stroke: #fff;
         stroke-width: 2px;
@@ -10,5 +10,5 @@
       }
     </style>
   </defs>
-  <path d="M1.000,1.000 L14.000,1.000 L14.000,20.000 L7.500,14.458 L1.000,20.000 L1.000,1.000 Z" class="cls-1"/>
+  <path d="M1.000,1.000 L14.000,1.000 L14.000,20.000 L7.500,14.458 L1.000,20.000 L1.000,1.000 Z" class="cls-2"/>
 </svg>

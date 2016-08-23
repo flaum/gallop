@@ -2,10 +2,15 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
 
 	padding-top: 12px;
+	padding-right: 41px;
 	padding-bottom: 10px;
-	padding-left: 216px;
+	padding-left: 16px;
+	margin-left: 200px;
+
+	box-shadow: inset 9px 0 7px -6px rgba(122, 122, 122, 0.5);
 }
 
 .page-header__search-block {
@@ -20,14 +25,137 @@
 		width: 100%;
 
 		padding-top: 4.5px;
+		padding-right: 36px;
 		padding-bottom: 4.5px;
-		padding-left: 27px;
-		padding-right: 24px;
+		padding-left: 24px;
 
 		text-transform: uppercase;
 		color: @page-header-input-text-color;
 
 		border: 1px solid @page-header-input-border-color;
 		border-radius: 15px;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	svg {
+		position: absolute;
+		top: 10px;
+		right: 18px;
+		z-index: 100;
+
+		width: 15px;
+		height: 14px;
+		fill: @page-header-input-icon-color;
+	}
+}
+
+.page-header__right-side-wrapper {
+	display: flex;
+	flex-direction: row;
+}
+
+.page-header__list {
+	display: flex;
+	flex-direction: row;
+
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+
+	border-right: 1px solid @page-header-list-border-color;
+}
+
+.page-header__list-item {
+	display: flex;
+	align-items: center;
+
+	padding-right: 43px;
+	// line-height: 0;
+
+	a {
+		display: flex;
+
+		padding-top: 3.5px;
+		padding-bottom: 3.5px;
+
+		.font-fira-medium();
+		text-transform: uppercase;
+		text-decoration: none;
+		// line-height: 24px;
+		color: @page-header-list-item-color;
+	}
+}
+
+.page-header__settings {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	padding-left: 27px;
+
+	a {
+		text-decoration: none;
+	}
+}
+
+.page-header__currency {
+	position: relative;
+
+	margin-right: 32px;
+
+	color: @page-header-list-item-color;
+
+	&::after {
+		content: "";
+
+		position: absolute;
+		right: -11px;
+		top: 7px;
+
+		display: flex;
+
+		width: 6px;
+		height: 6px;
+
+		border-bottom: 1px solid #b7b7b7;
+		border-right: 1px solid #b7b7b7;
+
+		transform: rotate(45deg);
+	}
+}
+
+.page-header__lang {
+	position: relative;
+
+	font-size: 0;
+	line-height: 0;
+	margin-top: -2px;
+
+	svg {
+		width: 20px;
+		height: 12px;
+		background: red; // временно
+	}
+
+	&::after {
+		content: "";
+
+		position: absolute;
+		right: -13px;
+		top: 0px;
+
+		display: flex;
+
+		width: 6px;
+		height: 6px;
+
+		border-bottom: 1px solid #b7b7b7;
+		border-right: 1px solid #b7b7b7;
+
+		transform: rotate(45deg);
 	}
 }

@@ -1,0 +1,142 @@
+.right-sidebar {
+	// position: absolute;
+	// top: 127px;
+	// right: 0;
+
+	display: flex;
+	flex-direction: column;
+
+	width: 298px;
+	padding-top: 33px;
+	padding-right: 39px;
+}
+
+.right-sidebar__filters {
+	padding-bottom: 39px;
+}
+
+.right-sidebar__filters-title {
+	margin: 0;
+	padding-bottom: 6px;
+
+	font-size: 13px;
+	line-height: 20px;
+	color: @right-sidebar-title-color;
+
+	border-bottom: 1px solid @right-sidebar-boder-color;
+}
+
+.right-sidebar__filters-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	padding-top: 22px;
+	padding-left: 2px;
+}
+
+.right-sidebar__filter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 76px;
+	height: 76px;
+
+	.font-fira-italic();
+	text-decoration: none;
+	color: @right-sidebar-filter-text-color;
+
+	background: @right-sidebar-filter-bg-color;
+	border-radius: 50%;
+
+	transition: all 0.3s ease;
+
+	&:not(:last-child) {
+		margin-right: 16px;
+	}
+
+	&:hover {
+		color: @right-sidebar-filter-text-color-hover;
+		background: @right-sidebar-filter-bg-color-hover
+	}
+}
+
+.right-sidebar__tags-title {
+	margin: 0;
+	padding-bottom: 6px;
+
+	font-size: 13px;
+	line-height: 20px;
+	color: @right-sidebar-title-color;
+
+	border-bottom: 1px solid @right-sidebar-boder-color;
+}
+
+.right-sidebar__tags-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	padding-top: 19px;
+	padding-bottom: 42px;
+	padding-left: 1px;
+}
+
+.right-sidebar__tag {
+	display: flex;
+
+	padding: 0 16px;
+	margin-right: 6px;
+	margin-bottom: 5px;
+
+	.font-ptserif-italic();
+	line-height: 24px;
+	text-decoration: none;
+	color: @right-sidebar-tags-text-color;
+
+	background: @right-sidebar-tags-bg-color;
+	border-radius: 15px;
+
+	transition: all 0.3s ease;
+
+	&:hover {
+		color: @right-sidebar-tags-text-color-hover;
+		background: @right-sidebar-tags-bg-color-hover
+	}
+
+	&:active {
+		color: @right-sidebar-tags-text-color;
+		background: @right-sidebar-tags-bg-active;
+	}
+}
+
+.right-sidebar__submit-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 11px;
+
+	.font-fira-medium();
+	font-size: 13px;
+	line-height: 16px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: @right-sidebar-btn-text-color;
+
+	border: 1px solid @right-sidebar-btn-border-color;
+
+	transition: all 0.3s ease;
+
+	&:hover {
+		color: @right-sidebar-btn-text-color-hover;
+		background: @right-sidebar-btn-bg-color-hover;
+	}
+
+	&:active {
+		opacity: 0.8;
+	}
+}
