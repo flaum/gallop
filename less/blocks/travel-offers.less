@@ -1,0 +1,197 @@
+.travel-offers {
+	display: flex;
+	flex-direction: column;
+	// justify-content: space-between;
+	// flex-wrap: wrap;
+	align-items: center;
+
+	padding-right: 25px;
+	padding-bottom: 33px;
+	padding-left: 24px;
+
+	// background: red;
+}
+
+.travel-offers__title {
+	margin: 0;
+	padding-bottom: 58px;
+
+	.font-fira-medium();
+	font-size: 20px;
+	line-height: 36px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: @travel-offers-title-color;
+}
+
+.travel-offers__item-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	width: 100%;
+}
+
+.travel-offers__item {
+	width: 32%;
+	min-width: 204px;
+	background: @travel-offers-item-bg-color;
+	margin-bottom: 15px;
+}
+
+.travel-offers__item-title {
+	margin: 0;
+	padding-top: 19px;
+	padding-bottom: 15px;
+	padding-left: 15px;
+
+	font-size: 12px;
+	text-transform: uppercase;
+	color: @travel-offers-item-title-color;
+}
+
+.travel-offers__item-image-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 164px;
+
+	background-color: #a6512e;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+
+	&--living {
+		background-image: url("../img/living.jpg");
+	}
+
+	&--flying {
+		background-image: url("../img/air.jpg");
+	}
+
+	&--joing {
+		background-image: url("../img/joys.jpg");
+	}
+}
+
+.travel-offers__item-share-block {
+	display: flex;
+	flex-direction: column;
+
+	padding-left: 14px;
+	padding-bottom: 14px;
+}
+
+.travel-offers__item-share-name {
+	.font-fira-bold();
+	font-size: 20px;
+	line-height: 24px;
+	text-transform: uppercase;
+	color: @travel-offers-item-share-text-color;
+
+	i {
+		display: flex;
+		width: 100%;
+
+		.font-fira-italic();
+		font-size: 13px;
+		line-height: 20px;
+		text-transform: none;
+	}
+}
+
+.travel-offers__item-share-duration {
+	.font-ptserif-italic();
+	font-size: 12px;
+	line-height: 20px;
+	color: @travel-offers-item-share-text-color;
+	opacity: 0.6;
+}
+
+.travel-offers__item-details-block {
+	padding-top: 10px;
+	padding-bottom: 13px;
+	padding-left: 15px;
+
+	line-height: 0;
+}
+
+.travel-offers__item-details-name {
+	display: flex;
+
+	width: 100%;
+
+	.font-fira-medium();
+	font-size: 16px;
+	line-height: 20px;
+	color: @travel-offers-item-details-name-color;
+}
+
+.travel-offers__item-details-text {
+
+	.font-ptserif-italic();
+	font-size: 13px;
+	line-height: 15px;
+	color: @travel-offers-item-details-text-color;
+}
+
+.travel-offers__item-ratio-block {
+	padding-top: 4px;
+
+	font-size: 0;
+	line-height: 0;
+
+	svg {
+		width: 11px;
+		height: 11px;
+		margin-right: 3px;
+
+		background: #000000;
+	}
+}
+
+.travel-offers__item-footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	padding-right: 12px;
+	padding-bottom: 15px;
+	padding-left: 15px;
+}
+
+.travel-offers__item-price {
+	font-size: 15px;
+	color: @travel-offers-item-price-color;
+}
+
+.travel-offers__item-btn {
+	display: flex;
+
+	padding-top: 9px;
+	padding-bottom: 8px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	.font-fira-regular();
+	font-size: 10px;
+	line-height: 10px;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: @travel-offers-item-btn-color;
+
+	border: 1px solid @travel-offers-item-btn-border-color;
+	border-radius: 25px;
+
+	transition: all 0.3s ease;
+
+	&:hover {
+		color: @travel-offers-item-btn-color-hover;
+		background: @travel-offers-item-btn-bg-color-hover;
+		border-color: @travel-offers-item-btn-bg-color-hover;
+	}
+}

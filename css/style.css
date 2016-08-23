@@ -237,6 +237,12 @@ th {
   font-weight: normal;
   font-style: italic;
 }
+@font-face {
+  font-family: "Georgia Italic";
+  src: url("../fonts/georgiaitalic.woff") format("woff"), url("../fonts/georgiaitalic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
 * {
   box-sizing: border-box;
 }
@@ -265,6 +271,106 @@ main {
   flex-shrink: 0;
   width: 60%;
   padding-left: 200px;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 25px;
+  margin-right: 24px;
+  padding-top: 47px;
+  padding-bottom: 34px;
+  background: #49717e url("../img/beach.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+.app__title {
+  margin: 0;
+  padding-bottom: 11px;
+  font-family: "FiraSans Bold", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 35px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #f7f7f7;
+}
+.app__text {
+  margin: 0;
+  padding-bottom: 23px;
+  font-family: "FiraSans Italic", Arial, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 20px;
+  color: #f7f7f7;
+}
+.app__downloads-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 24px;
+}
+.app__download {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3px;
+  padding-right: 34px;
+  padding-bottom: 4px;
+  padding-left: 48px;
+  text-decoration: none;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+}
+.app__download:not(:last-child) {
+  margin-right: 17px;
+}
+.app__download-text {
+  font-size: 10px;
+  line-height: 20px;
+}
+.app__download-platform {
+  font-family: "FiraSans Medium", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 13px;
+}
+.app__sms-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.app__sms-form input {
+  width: 149px;
+  margin-right: 19px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 17px;
+  line-height: 20px;
+  color: #ffffff;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  background: transparent;
+}
+.app__sms-form input:focus {
+  outline: none;
+}
+.app__sms-form-btn {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 9px;
+  padding-left: 27px;
+  padding-right: 27px;
+  font-family: "FiraSans Regular", Arial, sans-serif;
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  background: #39b8ab;
+  border: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
 }
 .error-block {
   display: flex;
@@ -400,6 +506,83 @@ main {
   text-transform: uppercase;
   color: #808285;
 }
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  margin-top: 30px;
+  margin-right: 324px;
+  margin-left: 225px;
+  padding-bottom: 29px;
+  border-top: 1px solid #dedede;
+}
+.page-footer__list {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: 18px;
+  padding-bottom: 24px;
+  line-height: 0;
+  list-style: none;
+}
+.page-footer__list-item {
+  padding-right: 36px;
+}
+.page-footer__list-item a {
+  display: flex;
+  color: #071a1e;
+  font-size: 11px;
+  line-height: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.page-footer__content-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.page-footer__text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 20px;
+  color: #999c9d;
+}
+.page-footer__social-block {
+  display: flex;
+  flex-direction: row;
+  padding-left: 51px;
+}
+.page-footer__social-btn {
+  font-size: 0;
+  line-height: 0;
+}
+.page-footer__social-btn:hover svg {
+  fill-opacity: 0.8;
+}
+.page-footer__social-btn--vimeo svg {
+  width: 19px;
+  height: 16px;
+}
+.page-footer__social-btn--twitter svg {
+  width: 19px;
+  height: 15px;
+}
+.page-footer__social-btn--pinterest svg {
+  width: 16px;
+  height: 18px;
+}
+.page-footer__social-btn--google svg {
+  width: 17px;
+  height: 16px;
+}
+.page-footer__social-btn svg {
+  margin-left: 13px;
+  fill: #60686b;
+  fill-opacity: 0.4;
+  transition: all 0.3s ease;
+}
 .page-header {
   display: flex;
   flex-direction: row;
@@ -521,6 +704,8 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   width: 48.78%;
+  margin-bottom: 42px;
+  background: #ffffff;
   cursor: pointer;
 }
 .post--margined {
@@ -530,6 +715,9 @@ main {
   width: 100%;
 }
 .post--full-length .post__image-container {
+  height: 316px;
+}
+.post--full-length .post__image-container::after {
   height: 316px;
 }
 .post:hover .post__image-container::after {
@@ -621,6 +809,148 @@ main {
   line-height: 24px;
   color: #ffffff;
 }
+.post--full-length .post__title {
+  font-size: 34px;
+  line-height: 40px;
+}
+.post__flag {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  background: rgba(35, 189, 170, 0.75);
+  border-radius: 50%;
+  font-size: 0;
+  line-height: 0;
+}
+.post__flag svg {
+  width: 13px;
+  height: 19px;
+  fill: #fff;
+  fill-opacity: 0.3;
+  stroke: #fff;
+  stroke-width: 2px;
+}
+.post__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px 15px;
+  font-family: "FiraSans Italic", Arial, sans-serif;
+  font-style: italic;
+  color: #979797;
+}
+.post__info--apple {
+  padding-top: 15px;
+}
+.post__author-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 45px;
+}
+.post__author-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 33px;
+  height: 33px;
+  background: #000000;
+  border-radius: 50%;
+}
+.post__author-block::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  display: flex;
+  width: 13px;
+  height: 17px;
+  border: 2px solid #ffea00;
+}
+.post__author {
+  line-height: 18px;
+}
+.post__place {
+  display: flex;
+  align-items: center;
+  line-height: 18px;
+}
+.post__place svg {
+  width: 8px;
+  height: 11px;
+  margin-right: 7px;
+  background: #979797;
+}
+.post__text {
+  max-height: 65px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-family: "Georgia Italic", Arial, sans-serif;
+  font-style: italic;
+  font-size: 13px;
+  line-height: 22px;
+  color: #737373;
+  overflow: hidden;
+}
+.post__text--smaller {
+  max-height: 45px;
+}
+.post__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 15px;
+  margin-left: 15px;
+  padding-top: 8px;
+  padding-bottom: 12px;
+  border-top: 1px solid #dddddd;
+}
+.post__activity {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "FiraSans Italic", Arial, sans-serif;
+  font-style: italic;
+  color: #979797;
+}
+.post__likes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 15px;
+}
+.post__likes:hover svg {
+  fill: #22bcaa;
+}
+.post__likes svg {
+  width: 17px;
+  height: 16px;
+  margin-right: 7px;
+  margin-bottom: 2px;
+  fill: #979797;
+  transition: all 0.3s ease;
+}
+.post__comments {
+  text-transform: capitalize;
+}
+.post__more {
+  font-size: 15px;
+  text-decoration: none;
+  color: #39b8ab;
+}
 .posts-container {
   display: flex;
   flex-direction: row;
@@ -631,6 +961,7 @@ main {
   min-width: 422px;
   padding-top: 24px;
   padding-right: 35px;
+  padding-bottom: 67px;
   padding-left: 25px;
 }
 .posts-container__header {
@@ -700,6 +1031,39 @@ main {
   background: #f7f7f7;
   border-bottom: 1px solid #dadada;
   transform: rotate(45deg);
+}
+.posts-container__show-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.posts-container__show-more svg {
+  width: 46px;
+  height: 46px;
+  margin-bottom: 31px;
+  background: #d7d9dd;
+}
+.posts-container__show-btn {
+  display: flex;
+  padding-top: 13px;
+  padding-bottom: 11px;
+  padding-left: 43px;
+  padding-right: 43px;
+  font-family: "FiraSans Regular", Arial, sans-serif;
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #8d8d8d;
+  border: 1px solid #8c8c8c;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+.posts-container__show-btn:hover {
+  background: #e2e2e2;
+  border-color: #e2e2e2;
 }
 .right-sidebar {
   display: flex;
@@ -807,4 +1171,162 @@ main {
 }
 .right-sidebar__submit-btn:active {
   opacity: 0.8;
+}
+.travel-offers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 25px;
+  padding-bottom: 33px;
+  padding-left: 24px;
+}
+.travel-offers__title {
+  margin: 0;
+  padding-bottom: 58px;
+  font-family: "FiraSans Medium", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #071a1e;
+}
+.travel-offers__item-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.travel-offers__item {
+  width: 32%;
+  min-width: 204px;
+  background: #ffffff;
+  margin-bottom: 15px;
+}
+.travel-offers__item-title {
+  margin: 0;
+  padding-top: 19px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #7e888a;
+}
+.travel-offers__item-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 164px;
+  background-color: #a6512e;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.travel-offers__item-image-container--living {
+  background-image: url("../img/living.jpg");
+}
+.travel-offers__item-image-container--flying {
+  background-image: url("../img/air.jpg");
+}
+.travel-offers__item-image-container--joing {
+  background-image: url("../img/joys.jpg");
+}
+.travel-offers__item-share-block {
+  display: flex;
+  flex-direction: column;
+  padding-left: 14px;
+  padding-bottom: 14px;
+}
+.travel-offers__item-share-name {
+  font-family: "FiraSans Bold", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.travel-offers__item-share-name i {
+  display: flex;
+  width: 100%;
+  font-family: "FiraSans Italic", Arial, sans-serif;
+  font-style: italic;
+  font-size: 13px;
+  line-height: 20px;
+  text-transform: none;
+}
+.travel-offers__item-share-duration {
+  font-family: "PT Serif Italic", Arial, sans-serif;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 20px;
+  color: #ffffff;
+  opacity: 0.6;
+}
+.travel-offers__item-details-block {
+  padding-top: 10px;
+  padding-bottom: 13px;
+  padding-left: 15px;
+  line-height: 0;
+}
+.travel-offers__item-details-name {
+  display: flex;
+  width: 100%;
+  font-family: "FiraSans Medium", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #071a1e;
+}
+.travel-offers__item-details-text {
+  font-family: "PT Serif Italic", Arial, sans-serif;
+  font-style: italic;
+  font-size: 13px;
+  line-height: 15px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.travel-offers__item-ratio-block {
+  padding-top: 4px;
+  font-size: 0;
+  line-height: 0;
+}
+.travel-offers__item-ratio-block svg {
+  width: 11px;
+  height: 11px;
+  margin-right: 3px;
+  background: #000000;
+}
+.travel-offers__item-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 12px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+.travel-offers__item-price {
+  font-size: 15px;
+  color: #071a1e;
+}
+.travel-offers__item-btn {
+  display: flex;
+  padding-top: 9px;
+  padding-bottom: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "FiraSans Regular", Arial, sans-serif;
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #071a1e;
+  border: 1px solid #000000;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+.travel-offers__item-btn:hover {
+  color: #ffffff;
+  background: #ffb957;
+  border-color: #ffb957;
 }

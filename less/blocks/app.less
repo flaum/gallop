@@ -1,0 +1,126 @@
+.app {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	// width: 100%;
+	margin-left: 25px;
+	margin-right: 24px;
+	padding-top: 47px;
+	padding-bottom: 34px;
+
+	background: #49717e url("../img/beach.jpg") no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.app__title {
+	margin: 0;
+	padding-bottom: 11px;
+
+	.font-fira-bold();
+	font-size: 32px;
+	line-height: 35px;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	color: @app-title-color;
+}
+
+.app__text {
+	margin: 0;
+	padding-bottom: 23px;
+
+	.font-fira-italic();
+	font-size: 14px;
+	line-height: 20px;
+	color: @app-title-color;
+}
+
+.app__downloads-block {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	padding-bottom: 24px;
+}
+
+.app__download {
+	display: flex;
+	flex-direction: column;
+
+	padding-top: 3px;
+	padding-right: 34px;
+	padding-bottom: 4px;
+	padding-left: 48px;
+	// line-height: 0;
+
+	text-decoration: none;
+	color: @app-download-text-color;
+
+	border: 1px solid @app-download-border-color;
+	border-radius: 30px;
+
+	&:not(:last-child) {
+		margin-right: 17px;
+	}
+}
+
+.app__download-text {
+	font-size: 10px;
+	line-height: 20px;
+}
+
+.app__download-platform {
+	.font-fira-medium();
+	font-size: 13px;
+	line-height: 13px;
+}
+
+.app__sms-form {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+
+	input {
+		width: 149px;
+		margin-right: 19px;
+		padding-left: 10px;
+		padding-right: 10px;
+
+		font-size: 17px;
+		line-height: 20px;
+		color: @app-sms-form-input-text-color;
+
+		border: none;
+		border-bottom: 1px solid @app-sms-form-input-border-color;
+		background: transparent;
+
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+.app__sms-form-btn {
+	display: flex;
+
+	padding-top: 10px;
+	padding-bottom: 9px;
+	padding-left: 27px;
+	padding-right: 27px;
+
+	.font-fira-regular();
+	font-size: 10px;
+	line-height: 10px;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: @app-sms-form-btn-text-color;
+
+	background: @app-sms-form-btn-bg-color;
+	border: none;
+	border-radius: 25px;
+
+	transition: all 0.3s ease;
+}
