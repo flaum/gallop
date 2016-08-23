@@ -1,0 +1,33 @@
+.page-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	padding-top: 12px;
+	padding-bottom: 10px;
+	padding-left: 216px;
+}
+
+.page-header__search-block {
+	position: relative;
+
+	padding-top: 2px;
+	padding-bottom: 1px;
+
+	width: 140px;
+
+	input {
+		width: 100%;
+
+		padding-top: 4.5px;
+		padding-bottom: 4.5px;
+		padding-left: 27px;
+		padding-right: 24px;
+
+		text-transform: uppercase;
+		color: @page-header-input-text-color;
+
+		border: 1px solid @page-header-input-border-color;
+		border-radius: 15px;
+	}
+}
