@@ -97,6 +97,25 @@
 	font-style: italic;
 }
 
+@keyframes clockwise {
+  to {
+    -webkit-transform: rotate(1turn) translatez(0);
+            transform: rotate(1turn) translatez(0);
+  }
+}
+
+@keyframes fadeInDown {
+	from {
+		transform: translateY(-10px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -131,9 +150,10 @@ main {
 	flex-direction: column;
 	// flex-wrap: wrap;
 	flex-grow: 1;
-	flex-shrink: 0;
-	width: 60%;
-
-	padding-left: 200px;
+  flex-shrink: 0;
+  width: 60%;
+  max-width: 90rem;
+  padding-left: 200px;
+  margin: 0 auto;
 	// padding-right: 300px;
 }

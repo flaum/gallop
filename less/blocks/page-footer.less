@@ -4,6 +4,7 @@
 	flex-grow: 1;
 	flex-shrink: 0;
 
+	min-width: 225px;
 	margin-top: 30px;
 	margin-right: 324px;
 	margin-left: 225px;
@@ -27,16 +28,20 @@
 }
 
 .page-footer__list-item {
-	padding-right: 36px;
+
+	&:not(:last-of-type) {
+		padding-right: 36px;
+	}
 
 	a {
 		display: flex;
 
-		color: @page-footer-list-item-text-color;
 		font-size: 11px;
 		line-height: 12px;
 		text-transform: uppercase;
 		text-decoration: none;
+		letter-spacing: 1px;
+		color: @page-footer-list-item-text-color;
 	}
 }
 
@@ -105,5 +110,16 @@
 		fill-opacity: 0.4;
 
 		transition: all 0.3s ease;
+	}
+}
+
+@media @big-screens-width {
+
+	.page-footer__list {
+		justify-content: center;
+	}
+
+	.page-footer__content-wrapper {
+		justify-content: center;
 	}
 }
