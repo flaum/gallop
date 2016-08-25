@@ -1,16 +1,32 @@
 .page-footer {
+	position: relative;
+
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
 	flex-shrink: 0;
 
 	min-width: 225px;
-	margin-top: 30px;
+	// margin-top: 30px;
 	margin-right: 324px;
 	margin-left: 225px;
 	padding-bottom: 29px;
 
 	border-top: 1px solid @page-footer-border-color;
+
+	&::before {
+		content: "";
+
+		position: absolute;
+		top: -1px;
+		left: -225px;
+		bottom: 0;
+
+		display: flex;
+		width: 200px;
+
+		background: @left-sidebar-bg-color;
+	}
 }
 
 .page-footer__list {
@@ -36,6 +52,7 @@
 	a {
 		display: flex;
 
+		.font-fira-medium();
 		font-size: 11px;
 		line-height: 12px;
 		text-transform: uppercase;
@@ -48,11 +65,19 @@
 .page-footer__content-wrapper {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .page-footer__text {
-	margin: 0;
+	display: flex;
+	flex-shrink: 1;
 
+	max-width: 700px;
+	margin: 0;
+	padding-right: 30px;
+
+	.font-fira-medium();
 	font-size: 13px;
 	line-height: 20px;
 	color: @page-footer-text-color;
@@ -61,13 +86,25 @@
 .page-footer__social-block {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	flex-shrink: 0;
 
-	padding-left: 51px;
+	width: 113px;
+	padding-top: 20px;
 }
 
 .page-footer__social-btn {
+	position: relative;
+
+	display: block;
+	width: 20px;
+	height: 20px;
+
 	font-size: 0;
 	line-height: 0;
+
+	box-sizing: content-box;
 
 	&:hover {
 		svg {
@@ -79,6 +116,7 @@
 		svg {
 			width: 19px;
 			height: 16px;
+			// margin-left: -9.5px;
 		}
 	}
 
@@ -86,6 +124,7 @@
 		svg {
 			width: 19px;
 			height: 15px;
+			// margin-left: -9.5px;
 		}
 	}
 
@@ -93,6 +132,7 @@
 		svg {
 			width: 16px;
 			height: 18px;
+			// margin-left: -8px;
 		}
 	}
 
@@ -100,16 +140,31 @@
 		svg {
 			width: 17px;
 			height: 16px;
+			// margin-left: -8.5px;
 		}
 	}
 
 	svg {
-		margin-left: 13px;
+		// position: absolute;
+		// top: 0;
+		// left: 50%;
+
+		display: flex;
 
 		fill: @page-footer-social-icons-color;
 		fill-opacity: 0.4;
 
 		transition: all 0.3s ease;
+	}
+}
+
+@media @desktop-width {
+	.page-footer__content-wrapper {
+		flex-wrap: nowrap;
+	}
+
+	.page-footer__social-block {
+		padding-top: 0;
 	}
 }
 

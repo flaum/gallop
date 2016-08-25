@@ -9,6 +9,12 @@
 	background: @post-bg-color;
 
 	cursor: pointer;
+
+	transition: all 0.3s ease;
+
+	&:hover {
+		box-shadow: 0px 0px 27px -2px rgba(0, 0, 0, 0.6);
+	}
 }
 
 
@@ -20,10 +26,10 @@
 	}
 }
 
-.post:hover  .post__image-container::after {
-	// opacity: 1;
-	transform: scale(1.1);
-}
+// .post:hover  .post__image-container::after {
+// 	// opacity: 1;
+// 	transform: scale(1.1);
+// }
 
 .post__image-container {
 	position: relative;
@@ -35,8 +41,7 @@
 	width: 100%;
 	height: 318px;
 	padding-top: 13px;
-	padding-bottom: 21px;
-	padding-left: 16px;
+	padding-bottom: 13px;
 
 	background-color: #747b69;
 	background-repeat: no-repeat;
@@ -52,24 +57,24 @@
 	// 	transition: all 0.3s ease;
 	// }
 
-	&::after {
-		content: ' ';
-    position: absolute;
-    left: 0;
-    top: 0;
-
-		width: 100%;
-		height: 318px;
-
-		background-color: #747b69;
-		background-repeat: no-repeat;
-		background-position: 50% 50%;
-		background-size: cover;
-		// background-blend-mode: luminosity;
-
-		opacity: 0.2;
-    transition: opacity 0.5s;
-	}
+	// &::after {
+	// 	content: ' ';
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+	//
+	// 	width: 100%;
+	// 	height: 318px;
+	//
+	// 	background-color: #747b69;
+	// 	background-repeat: no-repeat;
+	// 	background-position: 50% 50%;
+	// 	background-size: cover;
+	// 	// background-blend-mode: luminosity;
+	//
+	// 	opacity: 0.2;
+  //   transition: opacity 0.5s;
+	// }
 
 	&--paris {
 		background-image: url("../img/paris.jpg");
@@ -118,6 +123,7 @@
 
 	align-self: flex-start;
 
+	margin-left: 16px;
 	padding-top: 2.5px;
 	padding-right: 13px;
 	padding-bottom: 1.5px;
@@ -140,11 +146,22 @@
 	position: relative;
 	z-index: 100;
 
+	display: flex;
+
+	padding-top: 8px;
+	padding-right: 10px;
+	padding-bottom: 6px;
+	padding-left: 16px;
+	// margin-left: -7px;
+	// margin-bottom: -7px;
+
 	.font-fira-medium();
 	font-size: 20px;
 	line-height: 24px;
 	letter-spacing: 1px;
 	color: @post-title-color;
+
+	background: rgba(0, 0, 0, 0.5);
 }
 
 .post--full-length  .post__title {
@@ -171,11 +188,16 @@
 	line-height: 0;
 
 	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
 		display: flex;
 
 		width: 13px;
 		height: 19px;
-		margin: 0 auto;
+		margin-top: -9.5px;
+		margin-left: -6.5px;
 
 		fill: #fff;
 		fill-opacity: 0.3;
