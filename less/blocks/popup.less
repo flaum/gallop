@@ -46,6 +46,21 @@
 	}
 }
 
+.popup--warning  .popup__warning-block {
+	display: flex;
+}
+
+.popup--warning  .popup__form-login {
+
+	input {
+		color: @popup-input-text-color-warning;
+	}
+
+	svg {
+		fill: @popup-input-icon-color-warning;
+	}
+}
+
 .popup__welcome-title {
 	margin: 0;
 	padding-bottom: 56px;
@@ -176,7 +191,7 @@
 
 .popup__form-input-icon {
 	position: absolute;
-	top: 0;
+	top: 4px;
 	right: 0;
 
 	display: flex;
@@ -190,9 +205,10 @@
 	// border-radius: 50%;
 
 	svg {
-		width: 31px;
-		height: 31px;
-		// fill: @popup-input-icon-color;
+		width: 46px;
+		height: 40px;
+
+		fill: @popup-input-icon-color;
 	}
 }
 
@@ -200,10 +216,11 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	align-items: center;
+	// align-items: baseline;
 
 	width: 100%;
 	padding-top: 11px;
+	padding-bottom: 34px;
 }
 
 .popup__form-checkbox-label {
@@ -211,15 +228,18 @@
 
 	display: flex;
 
+	padding-top: 2px;
 	padding-left: 22px;
 
 	color: @popup-checkbox-label-color;
+
+	cursor: pointer;
 
 	&::before {
 		content: "";
 
 		position: absolute;
-		top: 1px;
+		top: 2.5px;
 		left: 1px;
 
 		display: flex;
@@ -232,8 +252,35 @@
 }
 
 .popup__form-forgot-btn {
+
 	.font-fira-italic();
 	color: @popup-form-forgot-btn-color;
+}
+
+.popup__form-submit-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin-right: 12px;
+	margin-bottom: 39px;
+	margin-left: 12px;
+	padding-top: 13px;
+	padding-bottom: 11px;
+
+	.font-fira-medium();
+	font-size: 14px;
+	line-height: 20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: @popup-form-submit-btn-text-color;
+
+	background: @popup-form-submit-btn-bg-color;
+	border: none;
+
+	&:active {
+		outline: none;
+	}
 }
 
 .popup__social-block {
@@ -247,6 +294,10 @@
 	padding: 0;
 	padding-bottom: 30px;
 	list-style: none;
+
+	&--fix-width {
+		width: 238px;
+	}
 }
 
 .popup__social-icon {
@@ -298,13 +349,16 @@
 	text-transform: uppercase;
 	color: @popup-text-color;
 
+	&--fix-width {
+		width: 238px;
+	}
+
 	&::before {
 		content: "";
 
 		display: flex;
 		flex-grow: 1;
 
-		width: 5%;
 		height: 1px;
 		margin-right: 10px;
 		background: #e4e4e4;
@@ -318,7 +372,6 @@
 
 		height: 1px;
 		margin-left: 10px;
-		margin-right: 5%;
 		background: #e4e4e4;
 	}
 }
@@ -349,6 +402,13 @@
 		text-transform: uppercase;
 		color: @popup-mail-btn-color;
 	}
+
+	svg {
+		width: 23px;
+		height: 22px;
+
+		fill: @popup-mail-icon-color;
+	}
 }
 
 .popup__footer {
@@ -373,4 +433,51 @@
 		color: @popup-conditions-link-color;
 		text-decoration: none;
 	}
+}
+
+.popup__warning-block {
+	position: absolute;
+	left: 0;
+	top: -86px;
+
+	display: none;
+	flex-direction: column;
+
+	width: 421px;
+	height: 86px;
+	padding-top: 11px;
+	padding-right: 15px;
+	padding-left: 74px;
+
+	background: @popup-warning-block-bg-color;
+}
+
+.popup__warning-icon {
+	position: absolute;
+	top: 27px;
+	left: 20px;
+
+	svg {
+		width: 36px;
+		height: 32px;
+
+		fill: #ffffff;
+	}
+}
+
+.popup__warning-title {
+	padding-bottom: 5px;
+
+	.font-fira-bold();
+	font-size: 16px;
+	line-height: 20px;
+	color: @popup-warning-text-color;
+}
+
+.popup__warning-text {
+	.font-fira-italic();
+	font-size: 13px;
+	line-height: 18px;
+	margin: 0;
+	color: @popup-warning-text-color;
 }

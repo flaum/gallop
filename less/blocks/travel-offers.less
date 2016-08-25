@@ -35,10 +35,16 @@
 }
 
 .travel-offers__item {
+	display: flex;
+	flex-direction: column;
 	width: 100%;
 	min-width: 225px;
 	background: @travel-offers-item-bg-color;
 	margin-bottom: 15px;
+
+	&:nth-child(4) {
+		display: none;
+	}
 }
 
 .travel-offers__item-title {
@@ -217,6 +223,13 @@
 	}
 }
 
-@media @big-screens-width {
+@media @xl-screens-width {
 
+	.travel-offers__item {
+		width: 24%;
+
+		&:nth-child(4) {
+			display: flex;
+		}
+	}
 }
