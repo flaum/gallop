@@ -6,6 +6,8 @@
 	bottom: 0;
 	z-index: 1000;
 
+	display: none;
+
 	background: @popup-outer-bg-color;
 }
 
@@ -14,15 +16,43 @@
 	top: 213px;
 	left: 50%;
 
-	display: flex;
+	display: none;
 	flex-direction: column;
 	align-items: center;
 
-	width: 421px;
-	padding-top: 57px;
-	margin-left: -210.5px;
-
 	background: @popup-bg-color;
+
+	&--welcome {
+		width: 421px;
+		height: 559px;
+		margin-left: -210.5px;
+		padding-top: 216px;
+
+		background: #453b10 url("../img/ocean.jpg") no-repeat 50% 50%;
+		background-size: cover;
+	}
+
+	&--sign-in {
+		width: 421px;
+		margin-left: -210.5px;
+		padding-top: 57px;
+	}
+
+	&--current {
+		display: flex;
+	}
+}
+
+.popup__welcome-title {
+	margin: 0;
+	padding-bottom: 56px;
+
+	.font-fira-medium();
+	font-size: 30px;
+	line-height: 40px;
+	text-transform: uppercase;
+	letter-spacing: 6px;
+	color: @popup-welcome-title-color;
 }
 
 .popup__close-icon {
