@@ -33,10 +33,18 @@
 		letter-spacing: 1px;
 		color: @page-header-input-text-color;
 
+		background: @page-header-input-bg-color;
 		border: 1px solid @page-header-input-border-color;
 		border-radius: 15px;
 
+		transition: all 0.3s ease;
+
+		&:hover {
+			background: @page-header-input-bg-color-hover;
+		}
+
 		&:focus {
+			background: @page-header-input-bg-color-hover;
 			outline: none;
 		}
 	}

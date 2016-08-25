@@ -400,7 +400,7 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
   padding-left: 200px;
   background: #39b8ab;
@@ -411,6 +411,7 @@ main {
   flex-direction: column;
   align-items: center;
   padding-top: 22px;
+  padding-right: 167px;
   padding-bottom: 24px;
   padding-left: 11.75%;
   font-family: "ProximaNova Regular", Arial, sans-serif;
@@ -683,10 +684,16 @@ main {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #191c21;
+  background: #f7f7f7;
   border: 1px solid #b7b6ba;
   border-radius: 15px;
+  transition: all 0.3s ease;
+}
+.page-header__search-block input:hover {
+  background: #ffffff;
 }
 .page-header__search-block input:focus {
+  background: #ffffff;
   outline: none;
 }
 .page-header__search-block svg {
@@ -908,19 +915,44 @@ main {
   right: 0;
   bottom: 0;
   z-index: 1000;
+  display: none;
   background: rgba(30, 28, 28, 0.8);
 }
 .popup {
   position: absolute;
   top: 213px;
   left: 50%;
-  display: flex;
+  display: none;
   flex-direction: column;
-  align-items: center;
-  width: 421px;
-  padding-top: 57px;
-  margin-left: -210.5px;
+  -ms-grid-row-align: center;
+      align-items: center;
   background: #ffffff;
+}
+.popup--welcome {
+  width: 421px;
+  height: 559px;
+  margin-left: -210.5px;
+  padding-top: 216px;
+  background: #453b10 url("../img/ocean.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+.popup--sign-in {
+  width: 421px;
+  margin-left: -210.5px;
+  padding-top: 57px;
+}
+.popup--current {
+  display: flex;
+}
+.popup__welcome-title {
+  margin: 0;
+  padding-bottom: 56px;
+  font-family: "FiraSans Medium", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 40px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: #ffffff;
 }
 .popup__close-icon {
   position: absolute;
@@ -1190,7 +1222,6 @@ main {
   right: 5px;
   z-index: 100;
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 38px;
   height: 38px;
@@ -1200,8 +1231,10 @@ main {
   line-height: 0;
 }
 .post__flag svg {
+  display: flex;
   width: 13px;
   height: 19px;
+  margin: 0 auto;
   fill: #fff;
   fill-opacity: 0.3;
   stroke: #fff;
