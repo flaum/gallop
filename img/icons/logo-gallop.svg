@@ -1,0 +1,112 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 120 34">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-rule: evenodd;
+      }
+
+      .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-4 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-5 {
+        isolation: isolate;
+      }
+
+      .cls-6 {
+        clip-path: url(#clip-path-2);
+      }
+
+      .cls-7 {
+        clip-path: url(#clip-path-3);
+      }
+
+      .cls-8 {
+        fill: #fff;
+      }
+
+      .cls-9 {
+        clip-path: url(#clip-path-5);
+      }
+
+      .cls-10 {
+        clip-path: url(#clip-path-6);
+      }
+
+      .cls-11 {
+        clip-path: url(#clip-path-7);
+      }
+
+      .cls-12 {
+        opacity: 0;
+      }
+
+      .cls-13 {
+        clip-path: url(#clip-path-11);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect class="cls-1" x="30.34" y="1.59" width="89.1" height="31.57"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect class="cls-1" x="30" y="1" width="90" height="33"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <path class="cls-2" d="M42.5,24.09V17.49H46v9.13H37.25a6.92,6.92,0,0,1-6.92-6.89V18.51a6.92,6.92,0,0,1,6.92-6.89H39l0.45,0H46v2.52H38.24a4.49,4.49,0,0,0-4.48,4.47v1a4.49,4.49,0,0,0,4.48,4.47H42.5Zm57.82-3.34a6.93,6.93,0,0,1-6.84,5.88H90.55a6.93,6.93,0,0,1-6.84-5.88h3.48a4.5,4.5,0,0,0,4.34,3.34h1a4.5,4.5,0,0,0,4.34-3.34h3.48Zm-9.76-9.13h2.93a6.93,6.93,0,0,1,6.84,5.88H96.83a4.5,4.5,0,0,0-4.34-3.34h-1a4.5,4.5,0,0,0-4.34,3.34H83.71A6.93,6.93,0,0,1,90.55,11.62Zm16.73,12.47h4.26A4.49,4.49,0,0,0,116,19.62v-1a4.49,4.49,0,0,0-4.48-4.47h-7.73V11.63h6.46l0.46,0h1.8a6.92,6.92,0,0,1,6.92,6.89v1.23a6.92,6.92,0,0,1-6.92,6.89h-5.24v6.53h-3.47V17.49h3.47v6.59ZM76.95,26.62h3.26V20.74H76.95v5.88Zm0-9.13h3.26V1.59H76.95V17.49Zm-6.69,9.13h3.26V20.74H70.26v5.88Zm0-9.13h3.26V1.59H70.26V17.49Zm-3.42,3.25v5.88H63.42V24.54a8.63,8.63,0,0,1-6,2.08H56.3a6.93,6.93,0,0,1-6.84-5.88H53a4.29,4.29,0,0,0,4.28,3.34c0.31,0,.65,0,1,0a5.05,5.05,0,0,0,4.93-3.34h3.66Zm-3.42-7V11.62h3.42v5.88H63.18a5.05,5.05,0,0,0-4.93-3.34c-0.31,0-.65,0-1,0A4.29,4.29,0,0,0,53,17.49H49.46a6.93,6.93,0,0,1,6.84-5.88h1.13A8.63,8.63,0,0,1,63.42,13.7Z"/>
+    </clipPath>
+    <clipPath id="clip-path-5">
+      <path class="cls-2" d="M6.39,12.2a4.21,4.21,0,0,1-.67-0.54A10.61,10.61,0,0,0,3.3,18.1L5,18.18a14,14,0,0,1,1.37-6M8.1,13.08A9.46,9.46,0,0,1,7,12.55,13.38,13.38,0,0,0,5.67,18.2L7.4,18.28a19.62,19.62,0,0,1,.7-5.2m-0.9-1a7.22,7.22,0,0,0,1,.69,13.79,13.79,0,0,1,.77-2A9.12,9.12,0,0,1,10.4,8.62a8.66,8.66,0,0,0-3,3l-0.24.42M8.46,9.28a10.75,10.75,0,0,0-2.29,1.86l0.52,0.49,0.2-.34a10.21,10.21,0,0,1,1.58-2M6.69,25.12l-0.56.53a10.76,10.76,0,0,0,2.58,2,10.07,10.07,0,0,1-1.82-2.24l-0.2-.34M8.2,24a7.27,7.27,0,0,0-1,.69L7.44,25.1a8.67,8.67,0,0,0,3,3A9.16,9.16,0,0,1,9,25.95a13.81,13.81,0,0,1-.77-2M7,24.19a9.45,9.45,0,0,1,1.15-.53,19.63,19.63,0,0,1-.7-5.2l-1.73.08A13.38,13.38,0,0,0,7,24.19m-1.28.92a4.15,4.15,0,0,1,.71-0.58,14,14,0,0,1-1.37-6l-1.71.08a10.61,10.61,0,0,0,2.37,6.48m8.35,4H24.15l-1.24,3.27-10.4,0A14.18,14.18,0,0,1,0,18.41,14,14,0,0,1,12,4.59c0.59-.08,1.15-0.12,1.74-0.14l4.51-3.55v5l11.43,8.51L25.54,25.41l-5.32-4a7.69,7.69,0,0,1-1.69.14,7.36,7.36,0,0,1-7.31-7.74h3.3a4.22,4.22,0,0,0,4.1,4.45,4.32,4.32,0,0,0,1-.09l1.28-.39L22,18.61l2,1.52,1.74-4.61L18.27,9.95l-3-2.17A15.07,15.07,0,0,0,13,7.8c-1.63.26-2.81,1.88-3.5,3.29a13,13,0,0,0-.76,2,11.92,11.92,0,0,0,1.14.44,4.44,4.44,0,0,1-1.21-.21,19,19,0,0,0-.67,5l1.35,0.06-1.35.06a19,19,0,0,0,.67,5,4.43,4.43,0,0,1,1.21-.21,11.49,11.49,0,0,0-1.14.44,13.08,13.08,0,0,0,.76,2c0.69,1.41,1.87,3.15,3.5,3.41a6.53,6.53,0,0,0,1,0"/>
+    </clipPath>
+    <clipPath id="clip-path-6">
+      <polygon class="cls-2" points="18.72 29.09 24.88 27.13 22.91 32.35 18.72 29.09"/>
+    </clipPath>
+    <clipPath id="clip-path-7">
+      <rect class="cls-1" x="18.72" y="27.13" width="6.16" height="5.22"/>
+    </clipPath>
+    <clipPath id="clip-path-11">
+      <polygon class="cls-2" points="16.11 27.13 24.88 27.13 23.09 32.35 16.11 32.35 16.11 27.13"/>
+    </clipPath>
+  </defs>
+  <title>logo-gallop</title>
+  <g class="cls-4">
+    <g class="cls-5">
+      <g class="cls-6">
+        <g class="cls-7">
+          <g class="cls-6">
+            <rect class="cls-8" x="25.34" y="-3.41" width="99.1" height="41.57"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g class="cls-9">
+    <rect class="cls-8" x="-5" y="-4.11" width="39.71" height="41.48"/>
+  </g>
+  <g class="cls-10">
+    <g class="cls-11">
+      <g class="cls-12">
+        <g class="cls-12">
+          <g class="cls-11">
+            <image width="26" height="22" transform="translate(18.72 27.13) scale(0.24)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAZCAIAAACpVwlNAAAACXBIWXMAAC4jAAAuIwF4pT92AAAALklEQVRIS2P4TzPAAGc5rTpARTRq9KjRo0aThEaNHjV61GiS0KjR+IymOqCh0QAjZNCGMyrxNAAAAABJRU5ErkJggg=="/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g class="cls-10">
+    <g class="cls-11">
+      <image width="26" height="22" transform="translate(18.72 27.13) scale(0.24)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAZCAIAAACpVwlNAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAaklEQVRIS2P4TzPAAGc5rTqAjBxW7rdbsdd6+W7L5bvMl+0wXbrNaMlWg8Vb9BZt0lm0QXPhOvUFa1Xnr1Get0ph7gq5uctl5iyVmr1YYtYiCBo1etToUaNHjR41etToUaMHxmiqAxoaDQA/KHVuadaLLAAAAABJRU5ErkJggg=="/>
+    </g>
+  </g>
+  <g class="cls-13">
+    <rect class="cls-8" x="11.11" y="22.13" width="18.77" height="15.22"/>
+  </g>
+</svg>

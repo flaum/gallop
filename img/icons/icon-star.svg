@@ -1,0 +1,41 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18 18">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-rule: evenodd;
+      }
+
+      .cls-3 {
+        isolation: isolate;
+      }
+
+      .cls-4 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-5 {
+        clip-path: url(#clip-path-2);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect class="cls-1" width="18" height="18"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <polygon class="cls-2" points="9 0.3 11.39 7.02 17.8 7.02 12.57 10.97 14.44 17.9 9 13.74 3.56 17.9 5.43 10.97 0.2 7.02 6.61 7.02 9 0.3"/>
+    </clipPath>
+  </defs>
+  <title>icon-star</title>
+  <g class="cls-3">
+    <g class="cls-4">
+      <g class="cls-5">
+        <g class="cls-4">
+          <rect x="-4.8" y="-4.7" width="27.6" height="27.6"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
