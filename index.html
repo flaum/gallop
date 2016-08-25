@@ -617,20 +617,59 @@
 			<section class="popup  popup--login  popup--current">
 				<a class="popup__close-icon" href="#"></a>
 				<h2 class="popup__title">Log in</h2>
-				<div class="popup__main-content-wrapper">
+				<div class="popup__main-content-wrapper  popup__main-content-wrapper--login">
 					<form class="popup__form" action="#" method="post">
 						<input type="e-mail" name="e-mail" value="kolyanikolay@gmail.com">
 						<input type="password" name="password" value="1234567">
 						<div class="popup__form-row-wrapper">
-							<label class="popup__checkbox-label" for="remember">Запомнить меня</label>
-							<input id="remember" type="checkbox" name="remember">
+							<div class="popup__form-checkbox-wrapper">
+								<label class="popup__checkbox-label" for="remember">Запомнить меня</label>
+								<input id="remember" type="checkbox" name="remember">
+							</div>
+							<a class="popup__form-forgot-btn" href="#">Забыли пароль?</a>
 						</div>
+						<button type="submit">Войти</button>
 					</form>
+					<span class="popup__text-sideborders">Войти с помощью</span>
+					<ul class="popup__social-block">
+						<li class="popup__social-item">
+							<a class="popup__social-icon  popup__social-icon--facebook" href="#">
+								Facebook
+								<svg width="28" height="35">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook@round" viewBox="0 0 2048 2048"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="popup__social-item">
+							<a class="popup__social-icon  popup__social-icon--google" href="#">
+								Goggle+
+								<svg width="30" height="28">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-google@round"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="popup__social-item">
+							<a class="popup__social-icon  popup__social-icon--vk" href="#">
+								Vkontakte
+								<svg width="33" height="24">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-vk@round"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="popup__social-item">
+							<a class="popup__social-icon  popup__social-icon--twitter" href="#">
+								Twitter
+								<svg width="28" height="24">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter@round"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
 				</div>
 			</section>
 			<section class="popup  popup--sign-in">
 				<a class="popup__close-icon" href="#"></a>
-				<div class="popup__main-content-wrapper">
+				<div class="popup__main-content-wrapper  popup__main-content-wrapper--sign-in">
 					<h2 class="popup__title">Sign up</h2>
 					<ul class="popup__social-block">
 						<li class="popup__social-item">
@@ -666,7 +705,7 @@
 							</a>
 						</li>
 					</ul>
-					<span class="popup__or">или</span>
+					<span class="popup__text-sideborders">или</span>
 					<a class="popup__e-mail-btn" href="#">
 						<span>Sing up using e-mail</span>
 						<img src="img/icon-mail.png" width="23" height="15" alt="mail">
