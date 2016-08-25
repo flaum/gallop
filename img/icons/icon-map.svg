@@ -1,11 +1,5 @@
 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.17 17.17">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #fff;
-      }
-    </style>
-  </defs>
+
   <title>icon-map</title>
   <g>
     <path class="cls-1" d="M-57.69,60.08a3.84,3.84,0,0,0-.47,0v1.1a2.65,2.65,0,0,1,.47-0.05,3.18,3.18,0,0,1,.54.05v-1.1A4.32,4.32,0,0,0-57.69,60.08Z" transform="translate(63.57 -55.14)"/>

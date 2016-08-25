@@ -13,24 +13,24 @@
         fill-rule: evenodd;
       }
 
-      .cls-4 {
+      <!-- .cls-4 {
         clip-path: url(#clip-path);
-      }
-
+      } -->
+<!--
       .cls-5 {
         isolation: isolate;
-      }
+      } -->
 
-      .cls-6 {
+      <!-- .cls-6 {
         clip-path: url(#clip-path-2);
-      }
+      } -->
 
       .cls-7 {
         clip-path: url(#clip-path-3);
       }
 
       .cls-8 {
-        fill: #fff;
+        fill: white;
       }
 
       .cls-9 {
