@@ -67,6 +67,12 @@ $(document).ready(function() {
 		leftSidebar.parent().removeClass("left-sidebar--popup");
 		popupOuter.removeClass("popup-outer--visible").addClass("popup-outer--exit");
 
+		for(var i = 0; i < popupOuter.children().length; i++) {
+			if($(popupOuter.children()[i]).hasClass("popup--current") == true) {
+				$(popupOuter.children()[i]).removeClass("popup--current").addClass("popup--exit");
+			}
+		};
+
 		for(var i = 0; i < loginBtns.length; i++) {
 			var btnClass;
 
