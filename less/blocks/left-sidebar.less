@@ -11,6 +11,11 @@
 	// min-height: 680px;
 
 	background: @left-sidebar-bg-color;
+	transition: all 0.9s ease;
+
+	&--popup {
+		background: @left-sidebar-bg-color-popup;
+	}
 }
 
 .left-sidebar__content-wrapper {
@@ -35,6 +40,12 @@
 	line-height: 0;
 
 	opacity: 0.6;
+
+	transition: all 0.3s ease;
+
+	&--popup {
+		opacity: 0;
+	}
 }
 
 .left-sidebar__list {
@@ -48,6 +59,12 @@
 	padding-left: 24px;
 
 	list-style: none;
+
+	transition: all 0.3s ease;
+
+	&--popup {
+		opacity: 0;
+	}
 }
 
 .left-sidebar__item:last-child {
@@ -123,6 +140,10 @@
 }
 
 .left-sidebar__user-block {
+	position: relative;
+	top: 0;
+	z-index: 1001;
+
 	display: flex;
 	flex-direction: column;
 	flex-shrink: 0;
@@ -131,6 +152,113 @@
 	padding: 34px 0;
 
 	background: @left-sidebar-user-block-bg-color;
+
+	transition: all 0.9s ease;
+
+	&--popup {
+		background: @left-sidebar-bg-color-popup;
+
+		animation: slideUp 1s ease-in-out forwards;
+	}
+
+	&--exit {
+		animation: slideDown 1s ease-in-out forwards;
+	}
+}
+
+.left-sidebar__enter-btns {
+	display: none;
+	flex-direction: column;
+
+	&--visible {
+		display: flex;
+	}
+}
+
+.left-sidebar__login-btn {
+	display: flex;
+	justify-content: center;
+
+	width: 134px;
+	padding-top: 7px;
+	padding-bottom: 5px;
+	margin-bottom: 29px;
+
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 2px;
+	color: @left-sidebar-login-text-color;
+
+	border-radius: 30px;
+
+	transition: all 0.3s ease;
+
+	&--active {
+		color: @left-sidebar-login-text-color-current;
+		background: @left-sidebar-login-bg-color-current;
+
+		cursor: default;
+	}
+
+	&--active:hover {
+		cursor: default;
+	}
+
+	&:hover {
+		color: @left-sidebar-login-text-color-current;
+		background: @left-sidebar-login-bg-color-current;
+	}
+}
+
+.left-sidebar__sign-btn {
+	display: flex;
+	justify-content: center;
+
+	width: 134px;
+	padding-top: 7px;
+	padding-bottom: 5px;
+
+	line-height: 20px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-decoration: none;
+	border-radius: 30px;
+	color: @left-sidebar-sign-btn-text-color-current;
+
+	background: @left-sidebar-sign-btn-bg-color-current;
+	border: 1px solid @left-sidebar-sign-btn-border-color-current;
+
+	transition: all 0.3s ease;
+
+
+	&--active {
+		color: @left-sidebar-login-text-color;
+
+		background: @left-sidebar-sign-btn-bg-color;
+		border-color: @left-sidebar-sign-btn-bg-color;
+		cursor: default;
+	}
+
+	&--active:hover {
+		cursor: default;
+	}
+
+	&:hover {
+		color: @left-sidebar-login-text-color;
+
+		background: @left-sidebar-sign-btn-bg-color;
+		border-color: @left-sidebar-sign-btn-bg-color;
+	}
+}
+
+.left-sidebar__user-info {
+	display: none;
+	flex-direction: column;
+	align-items: center;
+
+	&--visible {
+		display: flex;
+	}
 }
 
 .left-sidebar__user-photo {
@@ -163,71 +291,6 @@
 	letter-spacing: 2px;
 
 	color: @left-sidebar-user-status-color;
-}
-
-// Only popup view
-
-.left-sidebar--popup {
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	width: 200px;
-	padding-top: 374px;
-
-	background: @left-sidebar-bg-color-popup;
-}
-
-.left-sidebar__login-text {
-	display: flex;
-	justify-content: center;
-
-	width: 134px;
-	padding-top: 7px;
-	padding-bottom: 5px;
-	margin-bottom: 29px;
-
-	text-transform: uppercase;
-	text-decoration: none;
-	letter-spacing: 2px;
-	color: @left-sidebar-login-text-color;
-
-	border-radius: 30px;
-
-	&--active {
-		color: @left-sidebar-login-text-color-current;
-		background: @left-sidebar-login-bg-color-current;
-	}
-}
-
-.left-sidebar__sign-btn {
-	display: flex;
-	justify-content: center;
-
-	width: 134px;
-	padding-top: 7px;
-	padding-bottom: 5px;
-
-	line-height: 20px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	text-decoration: none;
-	color: @left-sidebar-login-text-color;
-
-	background: @left-sidebar-sign-btn-bg-color;
-	border-radius: 30px;
-
-	&--active {
-		color: @left-sidebar-sign-btn-text-color-current;
-
-		background: @left-sidebar-sign-btn-bg-color-current;
-		border: 1px solid @left-sidebar-sign-btn-border-color-current;
-	}
 }
 
 @media @small-screen-only {

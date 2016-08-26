@@ -258,8 +258,70 @@ th {
     opacity: 1;
   }
 }
+@keyframes slideUp {
+  from {
+    top: 0;
+  }
+  15% {
+    top: -200px;
+  }
+  30% {
+    top: -90px;
+  }
+  50% {
+    top: -170px;
+  }
+  70% {
+    top: -110px;
+  }
+  85% {
+    top: -150px;
+  }
+  to {
+    top: -130px;
+  }
+}
+@keyframes slideDown {
+  from {
+    top: 0;
+  }
+  15% {
+    top: 90px;
+  }
+  30% {
+    top: -60px;
+  }
+  50% {
+    top: 60px;
+  }
+  70% {
+    top: -30px;
+  }
+  85% {
+    top: 20px;
+  }
+  to {
+    top: 0;
+  }
+}
 * {
   box-sizing: border-box;
+}
+@keyframes visible {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes hidden {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 body {
   min-width: 1000px;
@@ -461,6 +523,10 @@ main {
   flex-direction: column;
   width: 200px;
   background: #34363b;
+  transition: all 0.9s ease;
+}
+.left-sidebar--popup {
+  background: #191c21;
 }
 .left-sidebar__content-wrapper {
   position: fixed;
@@ -479,6 +545,10 @@ main {
   font-size: 0;
   line-height: 0;
   opacity: 0.6;
+  transition: all 0.3s ease;
+}
+.left-sidebar__logo--popup {
+  opacity: 0;
 }
 .left-sidebar__list {
   display: flex;
@@ -489,6 +559,10 @@ main {
   padding-bottom: 2px;
   padding-left: 24px;
   list-style: none;
+  transition: all 0.3s ease;
+}
+.left-sidebar__list--popup {
+  opacity: 0;
 }
 .left-sidebar__item:last-child span {
   border: none;
@@ -541,12 +615,95 @@ main {
   border-radius: 6px;
 }
 .left-sidebar__user-block {
+  position: relative;
+  top: 0;
+  z-index: 1001;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
   align-items: center;
   padding: 34px 0;
   background: #2c2f34;
+  transition: all 0.9s ease;
+}
+.left-sidebar__user-block--popup {
+  background: #191c21;
+  animation: slideUp 1s ease-in-out forwards;
+}
+.left-sidebar__user-block--exit {
+  animation: slideDown 1s ease-in-out forwards;
+}
+.left-sidebar__enter-btns {
+  display: none;
+  flex-direction: column;
+}
+.left-sidebar__enter-btns--visible {
+  display: flex;
+}
+.left-sidebar__login-btn {
+  display: flex;
+  justify-content: center;
+  width: 134px;
+  padding-top: 7px;
+  padding-bottom: 5px;
+  margin-bottom: 29px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: #fffbf6;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+.left-sidebar__login-btn--active {
+  color: #30c0af;
+  background: #ffffff;
+  cursor: default;
+}
+.left-sidebar__login-btn--active:hover {
+  cursor: default;
+}
+.left-sidebar__login-btn:hover {
+  color: #30c0af;
+  background: #ffffff;
+}
+.left-sidebar__sign-btn {
+  display: flex;
+  justify-content: center;
+  width: 134px;
+  padding-top: 7px;
+  padding-bottom: 5px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  border-radius: 30px;
+  color: #ffb957;
+  background: transparent;
+  border: 1px solid #ffb957;
+  transition: all 0.3s ease;
+}
+.left-sidebar__sign-btn--active {
+  color: #fffbf6;
+  background: #ffb956;
+  border-color: #ffb956;
+  cursor: default;
+}
+.left-sidebar__sign-btn--active:hover {
+  cursor: default;
+}
+.left-sidebar__sign-btn:hover {
+  color: #fffbf6;
+  background: #ffb956;
+  border-color: #ffb956;
+}
+.left-sidebar__user-info {
+  display: none;
+  flex-direction: column;
+  -ms-grid-row-align: center;
+      align-items: center;
+}
+.left-sidebar__user-info--visible {
+  display: flex;
 }
 .left-sidebar__user-photo {
   width: 68px;
@@ -569,54 +726,6 @@ main {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #808285;
-}
-.left-sidebar--popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 200px;
-  padding-top: 374px;
-  background: #191c21;
-}
-.left-sidebar__login-text {
-  display: flex;
-  justify-content: center;
-  width: 134px;
-  padding-top: 7px;
-  padding-bottom: 5px;
-  margin-bottom: 29px;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 2px;
-  color: #fffbf6;
-  border-radius: 30px;
-}
-.left-sidebar__login-text--active {
-  color: #30c0af;
-  background: #ffffff;
-}
-.left-sidebar__sign-btn {
-  display: flex;
-  justify-content: center;
-  width: 134px;
-  padding-top: 7px;
-  padding-bottom: 5px;
-  line-height: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-decoration: none;
-  color: #fffbf6;
-  background: #ffb956;
-  border-radius: 30px;
-}
-.left-sidebar__sign-btn--active {
-  color: #ffb957;
-  background: transparent;
-  border: 1px solid #ffb957;
 }
 .page-footer {
   position: relative;
@@ -744,15 +853,16 @@ main {
   position: relative;
   padding-top: 2px;
   padding-bottom: 1px;
-  width: 140px;
   transition: all 0.3s ease;
 }
 .page-header__search-block:hover {
-  width: 280px;
   transform: scale(1.05);
 }
+.page-header__search-block:hover input {
+  width: 280px;
+}
 .page-header__search-block input {
-  width: 100%;
+  width: 140px;
   padding-top: 4.5px;
   padding-right: 36px;
   padding-bottom: 4.5px;
@@ -987,15 +1097,27 @@ main {
 .popup-outer {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 200px;
   right: 0;
   bottom: 0;
   z-index: 1000;
   display: none;
+  opacity: 0;
   background: rgba(30, 28, 28, 0.8);
+  transition: all 0.9s ease;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.3s;
 }
 .popup-outer--visible {
   display: flex;
+  animation-name: visible;
+}
+.popup-outer--exit {
+  display: flex;
+  opacity: 1;
+  animation: hidden 0.3s forwards;
+  transform: scale(0);
 }
 .popup {
   position: absolute;
@@ -1009,6 +1131,9 @@ main {
   margin-left: -210.5px;
   padding-top: 57px;
   background: #ffffff;
+  opacity: 0;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
 }
 .popup--welcome {
   height: 559px;
@@ -1021,6 +1146,13 @@ main {
 }
 .popup--current {
   display: flex;
+  animation-name: visible;
+}
+.popup--exit {
+  display: flex;
+  opacity: 1;
+  animation: hidden 0.3s forwards;
+  transform: scale(0);
 }
 .popup--warning .popup__warning-block {
   display: flex;
