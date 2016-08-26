@@ -12,15 +12,10 @@
 
 	background: @popup-outer-bg-color;
 
-	transition: all 0.9s ease;
-	animation-duration: 0.9s;
-	animation-fill-mode: forwards;
-	animation-delay: 0.3s;
-
 	&--visible {
 		display: flex;
 
-		animation-name: visible;
+		animation: visible 0.9s forwards;
 	}
 
 	&--exit {
@@ -48,8 +43,8 @@
 	opacity: 0;
 
 	// transition: all 0.9s ease;
-	animation-duration: 0.9s;
-	animation-fill-mode: forwards;
+	// animation-duration: 0.9s;
+	// animation-fill-mode: forwards;
 
 	&--welcome {
 		height: 559px;
@@ -73,13 +68,13 @@
 
 	&--current {
 		display: flex;
-		animation-name: visible;
+		animation: visible 1s forwards;
 	}
 
 	&--exit {
 		display: flex;
 		opacity: 1;
-		animation: hidden 0.3s forwards;
+		animation: hidden 1s forwards;
 		transform: scale(0);
 	}
 }

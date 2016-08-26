@@ -309,17 +309,21 @@ th {
 }
 @keyframes visible {
   from {
+    transform: scale(0);
     opacity: 0;
   }
   to {
+    transform: scale(1);
     opacity: 1;
   }
 }
 @keyframes hidden {
   from {
+    transform: scale(1);
     opacity: 1;
   }
   to {
+    transform: scale(0);
     opacity: 0;
   }
 }
@@ -1104,14 +1108,10 @@ main {
   display: none;
   opacity: 0;
   background: rgba(30, 28, 28, 0.8);
-  transition: all 0.9s ease;
-  animation-duration: 0.9s;
-  animation-fill-mode: forwards;
-  animation-delay: 0.3s;
 }
 .popup-outer--visible {
   display: flex;
-  animation-name: visible;
+  animation: visible 0.9s forwards;
 }
 .popup-outer--exit {
   display: flex;
@@ -1132,8 +1132,6 @@ main {
   padding-top: 57px;
   background: #ffffff;
   opacity: 0;
-  animation-duration: 0.9s;
-  animation-fill-mode: forwards;
 }
 .popup--welcome {
   height: 559px;
@@ -1146,12 +1144,12 @@ main {
 }
 .popup--current {
   display: flex;
-  animation-name: visible;
+  animation: visible 1s forwards;
 }
 .popup--exit {
   display: flex;
   opacity: 1;
-  animation: hidden 0.3s forwards;
+  animation: hidden 1s forwards;
   transform: scale(0);
 }
 .popup--warning .popup__warning-block {
