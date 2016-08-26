@@ -35,13 +35,6 @@
 	line-height: 0;
 
 	opacity: 0.6;
-	svg {
-		width: 114px;
-		height: 33px;
-
-		fill: red;
-		// background: @left-sidebar-logo-color; // временно
-	}
 }
 
 .left-sidebar__list {
@@ -108,7 +101,7 @@
 	}
 }
 
-.lift-sidebar__item-counter-block {
+.left-sidebar__item-counter-block {
 	// position: absolute;
 
 	display: flex;
@@ -191,18 +184,34 @@
 }
 
 .left-sidebar__login-text {
-	padding-bottom: 34px;
+	display: flex;
+	justify-content: center;
+
+	width: 134px;
+	padding-top: 7px;
+	padding-bottom: 5px;
+	margin-bottom: 29px;
 
 	text-transform: uppercase;
+	text-decoration: none;
 	letter-spacing: 2px;
 	color: @left-sidebar-login-text-color;
+
+	border-radius: 30px;
+
+	&--active {
+		color: @left-sidebar-login-text-color-current;
+		background: @left-sidebar-login-bg-color-current;
+	}
 }
 
 .left-sidebar__sign-btn {
+	display: flex;
+	justify-content: center;
+
+	width: 134px;
 	padding-top: 7px;
-	padding-right: 25px;
 	padding-bottom: 5px;
-	padding-left: 25px;
 
 	line-height: 20px;
 	text-transform: uppercase;
@@ -212,6 +221,13 @@
 
 	background: @left-sidebar-sign-btn-bg-color;
 	border-radius: 30px;
+
+	&--active {
+		color: @left-sidebar-sign-btn-text-color-current;
+
+		background: @left-sidebar-sign-btn-bg-color-current;
+		border: 1px solid @left-sidebar-sign-btn-border-color-current;
+	}
 }
 
 @media @small-screen-only {
