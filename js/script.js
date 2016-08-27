@@ -187,7 +187,7 @@ $(document).ready(function() {
 		e = e || event;
 		e.preventDefault;
 		$(".popup__back-btn").parent().removeClass(current).addClass(exit);
-		$(".popup--sign-up").addClass(current);
+		$(".popup--sign-up").removeClass(exit).addClass(current);
 	});
 
 
@@ -198,8 +198,4 @@ $(document).ready(function() {
 			popupExit();
 		}
 	});
-
-	// проверяем input на заполненость текстом, если текст есть,
-	// присваиваем им соответствующий цвет текста
-
 });
