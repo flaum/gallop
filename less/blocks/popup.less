@@ -4,7 +4,7 @@
 	left: 200px;
 	right: 0;
 	bottom: 0;
-	z-index: 1000;
+	z-index: -1000;
 
 	display: none;
 
@@ -15,14 +15,17 @@
 	&--visible {
 		display: flex;
 
-		animation: visible 0.9s forwards;
+		animation:
+			visible 0.9s forwards,
+			zPosUp 0.01s steps(1) forwards;
 	}
 
 	&--exit {
 		display: flex;
 		opacity: 1;
-		animation: hidden 0.3s forwards;
-		transform: scale(0);
+		animation:
+			hidden 0.6s forwards,
+			zPosDown 0.7s steps(1) forwards;
 	}
 }
 
@@ -42,9 +45,6 @@
 	background: @popup-bg-color;
 	opacity: 0;
 
-	// transition: all 0.9s ease;
-	// animation-duration: 0.9s;
-	// animation-fill-mode: forwards;
 
 	&--welcome {
 		height: 559px;
@@ -68,14 +68,17 @@
 
 	&--current {
 		display: flex;
-		animation: visible 1s forwards;
+		animation:
+			visible 1s forwards,
+			popupShow 1s forwards;
 	}
 
 	&--exit {
 		display: flex;
 		opacity: 1;
-		animation: hidden 1s forwards;
-		transform: scale(0);
+		animation:
+			hidden 1s forwards,
+			popupHide 1s forwards;
 	}
 }
 
@@ -83,7 +86,7 @@
 	display: flex;
 }
 
-.popup--warning  .popup__form-login {
+.popup--warning  .popup__form {
 
 	input {
 		color: @popup-input-text-color-warning;

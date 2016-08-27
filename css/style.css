@@ -309,22 +309,50 @@ th {
 }
 @keyframes visible {
   from {
-    transform: scale(0);
     opacity: 0;
   }
   to {
-    transform: scale(1);
     opacity: 1;
   }
 }
 @keyframes hidden {
   from {
-    transform: scale(1);
     opacity: 1;
   }
   to {
-    transform: scale(0);
     opacity: 0;
+  }
+}
+@keyframes popupShow {
+  from {
+    transform: translateY(-1000px);
+  }
+  to {
+    transform: scale(1), translateY(0);
+  }
+}
+@keyframes popupHide {
+  from {
+    transform: scale(1) translateY(0);
+  }
+  to {
+    transform: scale(0) translateY(1000px);
+  }
+}
+@keyframes zPosUp {
+  from {
+    z-index: -1000;
+  }
+  to {
+    z-index: 1000;
+  }
+}
+@keyframes zPosDown {
+  from {
+    z-index: 1000;
+  }
+  to {
+    z-index: -1000;
   }
 }
 body {
@@ -1104,20 +1132,19 @@ main {
   left: 200px;
   right: 0;
   bottom: 0;
-  z-index: 1000;
+  z-index: -1000;
   display: none;
   opacity: 0;
   background: rgba(30, 28, 28, 0.8);
 }
 .popup-outer--visible {
   display: flex;
-  animation: visible 0.9s forwards;
+  animation: visible 0.9s forwards, zPosUp 0.01s steps(1) forwards;
 }
 .popup-outer--exit {
   display: flex;
   opacity: 1;
-  animation: hidden 0.3s forwards;
-  transform: scale(0);
+  animation: hidden 0.6s forwards, zPosDown 0.7s steps(1) forwards;
 }
 .popup {
   position: absolute;
@@ -1144,30 +1171,31 @@ main {
 }
 .popup--current {
   display: flex;
-  animation: visible 1s forwards;
+  animation: visible 1s forwards,
+			popupShow 1s forwards;
 }
 .popup--exit {
   display: flex;
   opacity: 1;
-  animation: hidden 1s forwards;
-  transform: scale(0);
+  animation: hidden 1s forwards,
+			popupHide 1s forwards;
 }
 .popup--warning .popup__warning-block {
   display: flex;
 }
-.popup--warning .popup__form-login input {
+.popup--warning .popup__form input {
   color: #ff5353;
 }
-.popup--warning .popup__form-login input:hover {
+.popup--warning .popup__form input:hover {
   color: #35363b;
 }
-.popup--warning .popup__form-login input:focus {
+.popup--warning .popup__form input:focus {
   color: #35363b;
 }
-.popup--warning .popup__form-login input:focus + .popup__form-input-icon svg {
+.popup--warning .popup__form input:focus + .popup__form-input-icon svg {
   fill: #6bd3c6;
 }
-.popup--warning .popup__form-login svg {
+.popup--warning .popup__form svg {
   fill: #ff5353;
 }
 .popup__logo {

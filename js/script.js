@@ -1,20 +1,51 @@
 $(document).ready(function() {
 	var links = $(document).find("a");
+
 	var leftSidebar = $(".left-sidebar").children();
 	var leftSidebarItem = leftSidebar.children();
 	var userBlock = $(".left-sidebar__user-block");
 	var loginBtns = $(".left-sidebar__enter-btns").children();
 	var popupOuter = $(".popup-outer");
+	var inputsWrap = $(".popup__form-input-wrapper");
+	var inputs = $(".popup__form-input-wrapper").find("input");
 
+	var login = "popup--login";
+	var loginPopup = $(".popup--login");
+	var loginBtn = $(".left-sidebar__login-btn");
+	var loginBtnClass = "left-sidebar__login-btn";
+	var loginBtnActive = "left-sidebar__login-btn--active";
 
+	var sign = "popup--registration";
+	var signPopup = $(".popup--registration");
+	var signBtn = $(".left-sidebar__sign-btn");
+	var signBtnClass = "left-sidebar__sign-btn";
+	var signBtnActive = "left-sidebar__sign-btn--active";
+
+	var current = "popup--current";
+	var exit = "popup--exit";
 
 	// popup mode function
 	function popupMode(element) {
+		// проверка соответствия открытого попапа кнопе, на которую нажали
+		// если не соответствует, закрываем попап и открываем нужный, если
+		// соответствует, не делаем ничего.
 		var btnClass = $(element).attr("class");
 
 		for(var i = 0; i < popupOuter.children().length; i++) {
-			if($(popupOuter.children()[i]).hasClass("popup--current") == true && ($(popupOuter.children()[i]).hasClass("popup--login") == false || $(popupOuter.children()[i]).hasClass("popup--registration") == false)) {
-				$(popupOuter.children()[i]).removeClass("popup--current").addClass("popup--exit");
+			var el = $(popupOuter.children()[i]);
+
+			if(el.hasClass(current) == true) {
+				if(el.hasClass(sign) == false || el.hasClass(login) == false) {
+					el.removeClass(current).addClass(exit);
+
+					var hasClassL = $(element).hasClass(loginBtnClass);
+					var hasClassS = $(element).hasClass(signBtnClass);
+					if(hasClassL == true) {
+						loginPopup.addClass(current).removeClass(exit);
+					} else if (hasClassS == true) {
+						signPopup.addClass(current).removeClass(exit);
+					}
+				}
 			}
 		};
 
@@ -24,42 +55,50 @@ $(document).ready(function() {
 
 		popupOuter.removeClass("popup-outer--exit").addClass("popup-outer--visible");
 
-		if(btnClass  == "left-sidebar__login-btn") {
-			$(element).toggleClass("left-sidebar__login-btn--active");
-			$(".left-sidebar__sign-btn").removeClass("left-sidebar__sign-btn--active")
+		if(btnClass  == loginBtnClass) {
+			$(element).addClass(loginBtnActive);
+			signBtn.removeClass(signBtnActive);
 
-			if($(".popup--registration").hasClass("popup--current") == true) {
-				$(".popup--registration").removeClass("popup--current").addClass("popup--exit");
+			if(signPopup.hasClass(current) == true) {
+				loginPopup.removeClass(current).addClass(exit);
 			};
 
-			$(".popup--login").removeClass("popup--exit").addClass("popup--current");
-
-		} else if (btnClass  == "left-sidebar__sign-btn") {
-			$(element).toggleClass("left-sidebar__sign-btn--active");
-			$(".left-sidebar__login-btn").removeClass("left-sidebar__login-btn--active");
-
-			if($(".popup--login").hasClass("popup--current") == true) {
-				$(".popup--login").removeClass("popup--current").addClass("popup--exit");
+			if(loginPopup.hasClass(current)) {
+				return false;
+			} else {
+				loginPopup.removeClass(exit).addClass(current);
 			};
 
-			$(".popup--registration").removeClass("popup--exit").addClass("popup--current");
+		} else if (btnClass  == signBtnClass) {
+			$(element).addClass(signBtnActive);
+			loginBtn.removeClass(loginBtnActive);
+
+			if(loginPopup.hasClass(current) == true) {
+				loginPopup.removeClass(current).addClass(exit);
+			};
+
+			if(signPopup.hasClass(current)) {
+				return false;
+			} else {
+				signPopup.removeClass(exit).addClass(current);
+			};
 		};
 
 		for(var i = 0; i < leftSidebarItem.length; i++) {
 			var className;
+			var sideItem = $(leftSidebarItem[i]);
 
-			if($(leftSidebarItem[i]).attr("class").indexOf(" ") == -1) {
-				className = $(leftSidebarItem[i]).attr("class") + "--popup";
+			if(sideItem.attr("class").indexOf(" ") == -1) {
+				className = sideItem.attr("class") + "--popup";
 			} else {
-				className = $(leftSidebarItem[i]).attr("class").slice(0, $(leftSidebarItem[i]).attr("class").indexOf(" ")) + "--popup";
+				className = sideItem.attr("class").slice(0, sideItem.attr("class").indexOf(" ")) + "--popup";
 			};
 
-			if($(leftSidebarItem[i]).hasClass(className) == false) {
-				$(leftSidebarItem[i]).addClass(className);
+			if(sideItem.hasClass(className) == false) {
+				sideItem.addClass(className);
 			};
 		};
-
-		return false;
+		// return false;
 	};
 
 	// popup exit function
@@ -68,26 +107,27 @@ $(document).ready(function() {
 		popupOuter.removeClass("popup-outer--visible").addClass("popup-outer--exit");
 
 		for(var i = 0; i < popupOuter.children().length; i++) {
-			if($(popupOuter.children()[i]).hasClass("popup--current") == true) {
-				$(popupOuter.children()[i]).removeClass("popup--current").addClass("popup--exit");
+			if($(popupOuter.children()[i]).hasClass(current) == true) {
+				$(popupOuter.children()[i]).removeClass(current).addClass(exit);
 			}
 		};
 
 		for(var i = 0; i < loginBtns.length; i++) {
 			var btnClass;
+			var btn = $(loginBtns[i]);
 
-			if($(loginBtns[i]).attr("class").indexOf(" ") == -1) {
-				btnClass = $(loginBtns[i]).attr("class") + "--active";
+			if(btn.attr("class").indexOf(" ") == -1) {
+				btnClass = btn.attr("class") + "--active";
 			} else {
-				btnClass = $(loginBtns[i]).attr("class").slice(0, $(loginBtns[i]).attr("class").indexOf(" ")) + "--active";
+				btnClass = btn.attr("class").slice(0, btn.attr("class").indexOf(" ")) + "--active";
 			};
-			$(loginBtns[i]).removeClass(btnClass);
+			btn.removeClass(btnClass);
 		};
 
 		for(var i = 0; i < leftSidebarItem.length; i++) {
-			// var className = $(leftSidebarItem[i]).attr("class").slice(0, $(leftSidebarItem[i]).attr("class").indexOf(" ")) + "--popup";
-			var className = $(leftSidebarItem[i]).attr("class").slice(0, $(leftSidebarItem[i]).attr("class").indexOf(" ")) + "--popup";
-			$(leftSidebarItem[i]).removeClass(className);
+			var sideItem = $(leftSidebarItem[i]);
+			var className = sideItem.attr("class").slice(0, $(leftSidebarItem[i]).attr("class").indexOf(" ")) + "--popup";
+			sideItem.removeClass(className);
 		};
 	}
 
@@ -115,24 +155,24 @@ $(document).ready(function() {
 
 	// переход к форме восстановления пароля
 
-	$(".popup--login").find(".popup__form-link").on("click", function(e) {
+	loginPopup.find(".popup__form-link").on("click", function(e) {
 		e = e || event;
 		e.preventDefault;
 
-		$(".popup--login").removeClass("popup--current").addClass("popup--exit");
-		$(".popup--reset-main").removeClass("popup--exit").addClass("popup--current");
+		loginPopup.removeClass(current).addClass(exit);
+		$(".popup--reset-main").removeClass(exit).addClass(current);
 	});
 
 	// переход с формы регистрации на форму входа
 
-	$(".popup--registration").find(".popup__form-link").on("click", function(e) {
+	signPopup.find(".popup__form-link").on("click", function(e) {
 		e = e || event;
 		e.preventDefault;
 
-		$(".popup--registration").removeClass("popup--current").addClass("popup--exit");
-		$(".popup--login").removeClass("popup--exit").addClass("popup--current");
-		$(".left-sidebar__login-btn").addClass("left-sidebar__login-btn--active");
-		$(".left-sidebar__sign-btn").removeClass("left-sidebar__sign-btn--active");
+		signPopup.removeClass(current).addClass(exit);
+		loginPopup.removeClass(exit).addClass(current);
+		loginBtn.addClass(loginBtnActive);
+		signBtn.removeClass(signBtnActive);
 	});
 
 	// закрытие попапов
@@ -142,10 +182,24 @@ $(document).ready(function() {
 		popupExit();
 	});
 
+	// back to Sign-up btn event {
+	$(".popup__back-btn").on("click", function(e) {
+		e = e || event;
+		e.preventDefault;
+		$(".popup__back-btn").parent().removeClass(current).addClass(exit);
+		$(".popup--sign-up").addClass(current);
+	});
+
+
+	// closing by ESC key
 	$(this).keydown(function (e) {
 		e = e || event;
 		if(e.which == 27) {
 			popupExit();
 		}
 	});
+
+	// проверяем input на заполненость текстом, если текст есть,
+	// присваиваем им соответствующий цвет текста
+
 });
