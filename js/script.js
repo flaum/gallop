@@ -26,6 +26,7 @@ $(document).ready(function() {
 
 	// popup mode function
 	function popupMode(element) {
+
 		// проверка соответствия открытого попапа кнопе, на которую нажали
 		// если не соответствует, закрываем попап и открываем нужный, если
 		// соответствует, не делаем ничего.
@@ -187,7 +188,7 @@ $(document).ready(function() {
 		e = e || event;
 		e.preventDefault;
 		$(".popup__back-btn").parent().removeClass(current).addClass(exit);
-		$(".popup--sign-up").addClass(current);
+		$(".popup--sign-up").removeClass(exit).addClass(current);
 	});
 
 
@@ -198,8 +199,4 @@ $(document).ready(function() {
 			popupExit();
 		}
 	});
-
-	// проверяем input на заполненость текстом, если текст есть,
-	// присваиваем им соответствующий цвет текста
-
 });
