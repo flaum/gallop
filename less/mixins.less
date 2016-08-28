@@ -50,3 +50,80 @@
 	font-family: "Georgia Italic", Arial, sans-serif;
 	font-style: italic;
 }
+
+.btn-gray() {
+	display: flex;
+	justify-content: center;
+
+	padding-top: 8px;
+	padding-right: 18px;
+	padding-bottom: 6px;
+	padding-left: 18px;
+
+	.font-fira-medium();
+	font-size: 11px;
+	letter-spacing: 1px;
+	line-height: 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	color: @gray-btn-color;
+
+	border: 1px solid @gray-btn-color;
+	border-radius: 18px;
+}
+
+.correction-link() {
+	display: flex;
+	justify-content: center;
+
+	font-size: 14px;
+	color: @correction-link-color;
+
+	opacity: 0.7;
+}
+
+.orange-mark () {
+	display: flex;
+	align-self: flex-start;
+
+	margin-left: 16px;
+	padding-top: 2.5px;
+	padding-right: 13px;
+	padding-bottom: 1.5px;
+	padding-left: 13px;
+
+	.font-fira-medium();
+	font-size: 10px;
+	line-height: 20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: @orange-mark-text-color;
+
+	background: @orange-mark-bg-color;
+	border-radius: 15px;
+
+	opacity: 0.9;
+}
+
+.text-light(@fsize: 40px, @lheight: 48px, @color: @text-light-color) {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+	.font-fira-medium();
+	font-size: @fsize;
+	line-height: @lheight;
+	text-align: center;
+
+	color: @text-light-color;
+}
+
+.text-gray(@fs: 14px, @lh: 18px, @col: @text-gray-color) {
+	display: flex;
+
+	.font-fira-italic();
+	font-size: @fs;
+	line-height: @lh;
+	color: @col;
+}

@@ -2033,7 +2033,7 @@ main {
 .right-sidebar__author {
   padding-bottom: 30px;
 }
-.right-sidebar__author:hover .right-sidebar__author-photo {
+.right-sidebar__author:hover .right-sidebar__author-avatar {
   border-color: #23baab;
 }
 .right-sidebar__author:hover .right-sidebar__author-name {
@@ -2237,10 +2237,10 @@ main {
 .right-sidebar__correction-link {
   display: flex;
   justify-content: center;
-  margin-top: 58px;
   font-size: 14px;
   color: #5e6466;
   opacity: 0.7;
+  margin-top: 58px;
 }
 .travel-offers {
   display: flex;
@@ -2459,18 +2459,20 @@ main {
   border-radius: 15px;
   opacity: 0.9;
 }
-.widget__header-title-wrapper {
+.widget__text-substrate {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+  padding-top: 8px;
+  padding-bottom: 6px;
   background: rgba(0, 0, 0, 0.5);
 }
 .widget__header-title {
   display: flex;
   width: 90%;
-  padding-top: 8px;
   padding-right: 10px;
-  padding-bottom: 6px;
   padding-left: 16px;
   font-family: "FiraSans Medium", Arial, sans-serif;
   font-size: 40px;
@@ -2529,6 +2531,11 @@ main {
   letter-spacing: 1px;
   color: #23bdaa;
 }
+.widget__add-link--fix-width {
+  justify-content: flex-end;
+  width: 275px;
+  padding-right: 18px;
+}
 .widget__add-link span {
   display: flex;
   padding-top: 3px;
@@ -2542,7 +2549,12 @@ main {
   flex-direction: column;
   margin-bottom: 25px;
   padding-top: 36px;
+  padding-right: 33px;
+  padding-left: 28px;
   background: #ffffff;
+}
+.widget__content--nopadding {
+  padding-top: 0;
 }
 .widget__date {
   display: flex;
@@ -2563,12 +2575,6 @@ main {
   line-height: 40px;
   letter-spacing: 2px;
   color: #071a1e;
-}
-.widget__text-wrapper {
-  display: flex;
-  flex-direction: column;
-  padding-right: 36px;
-  padding-left: 36px;
 }
 .widget__text {
   margin: 0;
@@ -2599,6 +2605,12 @@ main {
   width: 100%;
   height: 100%;
 }
+.widget__image--vertical {
+  align-self: center;
+  width: 63%;
+  max-height: 1000px;
+  margin-bottom: 30px;
+}
 .widget__blockquote {
   display: flex;
   margin: 0;
@@ -2609,12 +2621,16 @@ main {
   line-height: 30px;
   color: #071a1e;
 }
+.widget__blockquote--small-padding {
+  padding-bottom: 20px;
+}
 .widget__place-container {
   display: flex;
   flex-direction: column;
   padding-top: 15px;
 }
 .widget__place-title {
+  display: flex;
   margin: 0;
   padding-bottom: 10px;
   font-family: "FiraSans Medium", Arial, sans-serif;
@@ -2624,6 +2640,7 @@ main {
   color: #1f1d1e;
 }
 .widget__place-text {
+  display: flex;
   margin: 0;
   padding-bottom: 15px;
   font-family: "FiraSans Medium", Arial, sans-serif;
@@ -2631,6 +2648,7 @@ main {
   color: #1f1d1e;
 }
 .widget__place-name {
+  display: flex;
   margin: 0;
   padding-bottom: 3px;
   font-size: 15px;
@@ -2639,8 +2657,266 @@ main {
   text-transform: uppercase;
 }
 .widget__place-type {
-  padding-bottom: 16px;
+  display: flex;
+  padding-bottom: 15px;
   color: #acacac;
+}
+.widget__place {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 29px;
+  background: #ffffff;
+}
+.widget__place-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 297px;
+  padding-top: 105px;
+  padding-bottom: 18px;
+  background: url("../img/solomon-museum.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+.widget__place-image-container-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 390px;
+  margin: 0;
+  font-family: "FiraSans Medium", Arial, sans-serif;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #ffffff;
+}
+.widget__place-image-container-location {
+  font-family: "PT Serif Italic", Arial, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  color: #ffffff;
+}
+.widget__place-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 13px;
+}
+.widget__place-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 275px;
+  padding-left: 15px;
+}
+.widget__place-info-item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 13px;
+}
+.widget__place-info-item:not(:first-child) {
+  padding-left: 10px;
+}
+.widget__place-info-item:not(:last-child) {
+  border-right: 1px solid #a9a9a9;
+}
+.widget__place-info-item--ratio svg {
+  top: -2px;
+  width: 20px;
+  height: 19px;
+}
+.widget__place-info-item--duration svg {
+  top: -1px;
+}
+.widget__place-info-item--price {
+  top: -4px;
+}
+.widget__place-info-item span {
+  padding-top: 2px;
+  padding-right: 11px;
+  padding-left: 4px;
+  padding-bottom: 1px;
+  font-size: 14px;
+  line-height: 10px;
+  color: #242121;
+}
+.widget__place-info-item svg {
+  position: relative;
+  fill: #242121;
+}
+.widget__btn {
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+  padding-right: 18px;
+  padding-bottom: 6px;
+  padding-left: 18px;
+  font-family: "FiraSans Medium", Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: #8d8d8d;
+  border: 1px solid #8d8d8d;
+  border-radius: 18px;
+  width: 200px;
+}
+.widget__route {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 27px;
+  background: #ffffff;
+}
+.widget__route-image-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 299px;
+  padding-top: 25px;
+  padding-bottom: 18px;
+  background: #808a96 url("../img/bycicle.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+.widget__route-topic {
+  display: flex;
+  align-self: flex-start;
+  margin-left: 16px;
+  padding-top: 2.5px;
+  padding-right: 13px;
+  padding-bottom: 1.5px;
+  padding-left: 13px;
+  font-family: "FiraSans Medium", Arial, sans-serif;
+  font-size: 10px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+  background: #f66f2c;
+  border-radius: 15px;
+  opacity: 0.9;
+  position: absolute;
+  top: 20px;
+}
+.widget__route-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: "FiraSans Medium", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+  color: #ffffff;
+  width: 430px;
+}
+.widget__route-place {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: "FiraSans Medium", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  font-family: "PT Serif Italic", Arial, sans-serif;
+  font-style: italic;
+}
+.widget__route-icon {
+  display: flex;
+  background: white;
+}
+.widget__route-icon svg {
+  fill: #ffffff;
+}
+.widget__route-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 13px;
+}
+.widget__route-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 275px;
+  padding-right: 18px;
+  padding-left: 15px;
+}
+.widget__route-info-item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 13px;
+}
+.widget__route-info-item:not(:first-child) {
+  padding-left: 10px;
+}
+.widget__route-info-item:not(:last-child) {
+  border-right: 1px solid #a9a9a9;
+}
+.widget__route-info-item--distance svg {
+  top: -2px;
+  width: 20px;
+  height: 19px;
+  background: #242121;
+}
+.widget__route-info-item--transport {
+  padding-right: 10px;
+}
+.widget__route-info-item--duration svg {
+  top: -1px;
+}
+.widget__route-info-item span {
+  padding-top: 2px;
+  padding-right: 11px;
+  padding-left: 4px;
+  padding-bottom: 1px;
+  font-size: 14px;
+  line-height: 10px;
+  color: #242121;
+}
+.widget__route-info-item svg {
+  position: relative;
+  fill: #242121;
+}
+.widget__content-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 26px;
+  padding-bottom: 28px;
+  border-top: 1px solid #e8e8e8;
+}
+.widget__author-name {
+  display: flex;
+  font-family: "FiraSans Italic", Arial, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 18px;
+  color: #5e6466;
+  width: 180px;
+}
+.widget__correction-link {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  color: #5e6466;
+  opacity: 0.7;
 }
 @media all and (min-width: 1150px) {
   .app__download {

@@ -35,33 +35,18 @@
 }
 
 .widget__header-topic {
-	display: flex;
-	align-self: flex-start;
-
-	margin-left: 16px;
-	padding-top: 2.5px;
-	padding-right: 13px;
-	padding-bottom: 1.5px;
-	padding-left: 13px;
-
-	.font-fira-medium();
-	font-size: 10px;
-	line-height: 20px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	color: @widget-topic-text-color;
-
-	background: @widget-topic-bg-color;
-	border-radius: 15px;
-
-	opacity: 0.9;
+	.orange-mark();
 }
 
-.widget__header-title-wrapper {
+.widget__text-substrate {
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 
 	width: 100%;
+	padding-top: 8px;
+	padding-bottom: 6px;
 
 	background: rgba(0, 0, 0, 0.5);
 }
@@ -70,9 +55,7 @@
 	display: flex;
 
 	width: 90%;
-	padding-top: 8px;
 	padding-right: 10px;
-	padding-bottom: 6px;
 	padding-left: 16px;
 
 	.font-fira-medium();
@@ -142,6 +125,13 @@
 	letter-spacing: 1px;
 	color: @widget-header-add-link-color;
 
+	&--fix-width {
+		justify-content: flex-end;
+
+		width: 275px;
+		padding-right: 18px;
+	}
+
 	span {
 		display: flex;
 		padding-top: 3px;
@@ -159,8 +149,14 @@
 
 	margin-bottom: 25px;
 	padding-top: 36px;
+	padding-right: 33px;
+	padding-left: 28px;
 
 	background: @widget-block-bg-color;
+
+	&--nopadding {
+		padding-top: 0;
+	}
 }
 
 .widget__date {
@@ -186,14 +182,6 @@
 	line-height: 40px;
 	letter-spacing: 2px;
 	color: @widget-title-color;
-}
-
-.widget__text-wrapper {
-	display: flex;
-	flex-direction: column;
-
-	padding-right: 36px;
-	padding-left: 36px;
 }
 
 .widget__text {
@@ -234,6 +222,14 @@
 		width: 100%;
 		height: 100%;
 	}
+
+	&--vertical {
+		align-self: center;
+
+		width: 63%;
+		max-height: 1000px;
+		margin-bottom: 30px;
+	}
 }
 
 .widget__blockquote {
@@ -247,15 +243,22 @@
 	font-size: 18px;
 	line-height: 30px;
 	color: @widget-text-color;
+
+	&--small-padding {
+		padding-bottom: 20px;
+	}
 }
 
 .widget__place-container {
 	display: flex;
 	flex-direction: column;
+
 	padding-top: 15px;
 }
 
 .widget__place-title {
+	display: flex;
+
 	margin: 0;
 	padding-bottom: 10px;
 
@@ -268,6 +271,8 @@
 }
 
 .widget__place-text {
+	display: flex;
+
 	margin: 0;
 	padding-bottom: 15px;
 
@@ -278,6 +283,8 @@
 }
 
 .widget__place-name {
+	display: flex;
+
 	margin: 0;
 	padding-bottom: 3px;
 
@@ -287,7 +294,284 @@
 }
 
 .widget__place-type {
-	padding-bottom: 16px;
+	display: flex;
+	padding-bottom: 15px;
 
 	color: @widget-place-type-color;
+}
+
+.widget__place {
+	display: flex;
+	flex-direction: column;
+
+	margin-bottom: 29px;
+	background: @widget-block-bg-color;
+}
+
+.widget__place-image-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 100%;
+	height: 297px;
+	padding-top: 105px;
+	padding-bottom: 18px;
+
+	background: url("../img/solomon-museum.jpg") no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.widget__place-image-container-title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 390px;
+	margin: 0;
+
+	.font-fira-medium();
+	font-size: 32px;
+	line-height: 40px;
+	letter-spacing: 2px;
+	text-align: center;
+
+	color: @widget-place-image-container-text-color;
+}
+
+.widget__place-image-container-location {
+	.font-ptserif-italic();
+	font-size: 14px;
+
+	color: @widget-place-image-container-text-color;
+}
+
+.widget__place-footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+
+	padding-top: 12px;
+	padding-bottom: 13px;
+}
+
+.widget__place-info {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	width: 275px;
+
+	padding-left: 15px;
+}
+
+.widget__place-info-item {
+	position: relative;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 13px;
+
+	&:not(:first-child) {
+		padding-left: 10px;
+	}
+
+	&:not(:last-child) {
+		border-right: 1px solid @widget-place-info-border-color;
+	}
+
+	&--ratio {
+		svg {
+			top: -2px;
+
+			width: 20px;
+			height: 19px;
+		}
+	}
+
+	&--duration {
+		svg {
+			top: -1px;
+		}
+	}
+
+	&--price {
+		top: -4px;
+	}
+
+	span {
+		padding-top: 2px;
+		padding-right: 11px;
+		padding-left: 4px;
+		padding-bottom: 1px;
+
+		font-size: 14px;
+		line-height: 10px;
+
+		color: @widget-place-info-color;
+	}
+
+	svg {
+		position: relative;
+
+		fill: @widget-place-info-color;
+	}
+}
+
+.widget__btn {
+	.btn-gray();
+	width: 200px;
+}
+
+.widget__route {
+	display: flex;
+	flex-direction: column;
+
+	margin-bottom: 27px;
+
+	background: @widget-block-bg-color;
+}
+
+.widget__route-image-container {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 100%;
+	height: 299px;
+	padding-top: 25px;
+	padding-bottom: 18px;
+
+	background: #808a96 url("../img/bycicle.jpg") no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.widget__route-topic {
+	.orange-mark();
+
+	position: absolute;
+	top: 20px;
+}
+
+.widget__route-title {
+	.text-light(30px, 40px);
+	width: 430px;
+}
+
+.widget__route-place {
+	.text-light(12px, 20px);
+	.font-ptserif-italic();
+}
+
+.widget__route-icon {
+	display: flex;
+	background: white;
+
+	svg {
+		fill: @widget-route-icon-color;
+	}
+}
+
+.widget__route-footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+
+	padding-top: 12px;
+	padding-bottom: 13px;
+}
+
+.widget__route-info {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	width: 275px;
+	padding-right: 18px;
+	padding-left: 15px;
+}
+
+.widget__route-info-item {
+	position: relative;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 13px;
+
+	&:not(:first-child) {
+		padding-left: 10px;
+	}
+
+	&:not(:last-child) {
+		border-right: 1px solid @widget-route-info-border-color;
+	}
+
+	&--distance {
+		svg {
+			top: -2px;
+
+			width: 20px;
+			height: 19px;
+			background: @widget-route-info-color;
+		}
+	}
+
+	&--transport {
+		padding-right: 10px;
+	}
+
+	&--duration {
+		svg {
+			top: -1px;
+		}
+	}
+
+	span {
+		padding-top: 2px;
+		padding-right: 11px;
+		padding-left: 4px;
+		padding-bottom: 1px;
+
+		font-size: 14px;
+		line-height: 10px;
+
+		color: @widget-route-info-color;
+	}
+
+	svg {
+		position: relative;
+
+		fill: @widget-route-info-color;
+	}
+}
+
+.widget__content-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding-top: 26px;
+	padding-bottom: 28px;
+
+	border-top: 1px solid @widget-content-footer-border-color;
+}
+
+.widget__author-name {
+	.text-gray();
+
+	width: 180px;
+}
+
+.widget__correction-link {
+	.correction-link();
 }
