@@ -81,8 +81,8 @@ gulp.task("serve", function() {
 	});
 
   gulp.watch("less/**/*.less", ["style"]);
-  gulp.watch("jade/**/*.jade", ["html"]);
   gulp.watch("*.html").on("change", server.reload);
+	gulp.watch("pages/*.html").on("change", server.reload);
 });
 
 gulp.task("copy", function() {
@@ -91,6 +91,7 @@ gulp.task("copy", function() {
 		"img/**",
 		"js/**",
 		"css/style.min.css",
+		"pages/*.html",
 		"*.html"
 	], {
 		base: "."

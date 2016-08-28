@@ -1,4 +1,6 @@
 .page-header {
+	position: relative;
+
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -10,7 +12,8 @@
 	padding-left: 16px;
 	margin-left: 200px;
 
-	box-shadow: inset 9px 0 7px -6px rgba(122, 122, 122, 0.5);
+	border-bottom: 1px solid @page-header-border-color;
+	box-shadow: inset 9px 0 7px -6px rgba(182, 182, 182, 0.5);
 }
 
 .page-header__search-block {

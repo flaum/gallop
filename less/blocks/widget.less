@@ -1,0 +1,293 @@
+.widget {
+	display: flex;
+	flex-direction: column;
+
+	min-width: 422px;
+	padding-top: 34px;
+	padding-right: 35px;
+	padding-bottom: 67px;
+	padding-left: 17px;
+}
+
+.widget__header {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	margin-bottom: 17px;
+
+	background: @widget-block-bg-color;
+}
+
+.widget__header-image-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 100%;
+	height: 298px;
+	padding-top: 16px;
+	padding-bottom: 24px;
+
+	background: #8c6b4c url("../img/bicycle.jpg") no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.widget__header-topic {
+	display: flex;
+	align-self: flex-start;
+
+	margin-left: 16px;
+	padding-top: 2.5px;
+	padding-right: 13px;
+	padding-bottom: 1.5px;
+	padding-left: 13px;
+
+	.font-fira-medium();
+	font-size: 10px;
+	line-height: 20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: @widget-topic-text-color;
+
+	background: @widget-topic-bg-color;
+	border-radius: 15px;
+
+	opacity: 0.9;
+}
+
+.widget__header-title-wrapper {
+	display: flex;
+	justify-content: center;
+
+	width: 100%;
+
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.widget__header-title {
+	display: flex;
+
+	width: 90%;
+	padding-top: 8px;
+	padding-right: 10px;
+	padding-bottom: 6px;
+	padding-left: 16px;
+
+	.font-fira-medium();
+	font-size: 40px;
+	line-height: 48px;
+	letter-spacing: 1px;
+	text-align: center;
+	color: @widget-header-title-color;
+}
+
+.widget__header-activity {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 100%;
+	padding-top: 17px;
+	padding-right: 19px;
+	padding-bottom: 20px;
+	padding-left: 16px;
+}
+
+.widget__header-left-side {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.widget__likes {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	padding-right: 18px;
+
+	.font-fira-italic();
+	font-size: 14px;
+	text-decoration: none;
+	color: @widget-header-text-color;
+
+	svg {
+		margin-right: 5px;
+		margin-bottom: 2px;
+
+		fill: @widget-header-text-color;
+	}
+}
+
+.widget__header-comments {
+	display: flex;
+
+	.font-fira-italic();
+	font-size: 14px;
+	text-decoration: none;
+	color: @widget-header-text-color;
+}
+
+.widget__add-link {
+	display: flex;
+	flex-direction: row;
+
+	font-size: 10px;
+	line-height: 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 1px;
+	color: @widget-header-add-link-color;
+
+	span {
+		display: flex;
+		padding-top: 3px;
+		padding-right: 6px;
+	}
+
+	svg {
+		fill: @widget-header-add-link-color;
+	}
+}
+
+.widget__content {
+	display: flex;
+	flex-direction: column;
+
+	margin-bottom: 25px;
+	padding-top: 36px;
+
+	background: @widget-block-bg-color;
+}
+
+.widget__date {
+	display: flex;
+	align-self: center;
+
+	padding-bottom: 13px;
+
+	.font-fira-italic();
+	font-size: 14px;
+	color: @widget-date-color;
+}
+
+.widget__title {
+	display: flex;
+	align-self: center;
+
+	margin: 0;
+	padding-bottom: 40px;
+
+	.font-fira-medium();
+	font-size: 28px;
+	line-height: 40px;
+	letter-spacing: 2px;
+	color: @widget-title-color;
+}
+
+.widget__text-wrapper {
+	display: flex;
+	flex-direction: column;
+
+	padding-right: 36px;
+	padding-left: 36px;
+}
+
+.widget__text {
+	margin: 0;
+	padding-bottom: 25px;
+
+	.font-ptserif();
+	font-size: 14px;
+	line-height: 24px;
+	color: @widget-text-color;
+}
+
+.widget__text-link {
+	display: inline-block;
+
+	text-decoration: none;
+	line-height: 16px;
+	color: @widget-text-link-color;
+
+	border-bottom: 1px dashed @widget-text-link-color;
+
+	transition: all 0.3s ease;
+
+	&:hover {
+		color: @widget-text-link-color-hover;
+	}
+}
+
+.widget__image {
+	display: flex;
+
+	width: 100%;
+	max-height: 370px;
+
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.widget__blockquote {
+	display: flex;
+
+	margin: 0;
+	padding-top: 36px;
+	padding-bottom: 45px;
+
+	.font-fira-medium-italic();
+	font-size: 18px;
+	line-height: 30px;
+	color: @widget-text-color;
+}
+
+.widget__place-container {
+	display: flex;
+	flex-direction: column;
+	padding-top: 15px;
+}
+
+.widget__place-title {
+	margin: 0;
+	padding-bottom: 10px;
+
+	.font-fira-medium();
+	font-size: 20px;
+	line-height: 40px;
+	text-transform: uppercase;
+
+	color: @widget-place-text-color;
+}
+
+.widget__place-text {
+	margin: 0;
+	padding-bottom: 15px;
+
+	.font-fira-medium();
+	font-size: 13px;
+
+	color: @widget-place-text-color;
+}
+
+.widget__place-name {
+	margin: 0;
+	padding-bottom: 3px;
+
+	font-size: 15px;
+	.font-fira-italic();
+	text-transform: uppercase;
+}
+
+.widget__place-type {
+	padding-bottom: 16px;
+
+	color: @widget-place-type-color;
+}
