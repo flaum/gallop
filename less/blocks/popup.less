@@ -511,6 +511,10 @@
 
 	border-radius: 50%;
 
+	&:hover {
+		background: @popup-social-icon-color-hover;
+	}
+
 	&--facebook {
 		background: #3a5897;
 	}
@@ -575,16 +579,19 @@
 }
 
 .popup__e-mail-btn {
-	display: flex;
-	flex-direction: row;
+	.btn-gray();
 	align-items: center;
 
-	width: 100%;
-	margin-bottom: 49px;
+	padding: 0;
+	margin-bottom: 20px;
 
-	text-decoration: none;
-	border: 1px solid @popup-mail-btn-border-color;
-	border-radius: 15px;
+	&:hover {
+
+		svg {
+			transition: all 0.3s ease;
+			fill: #fff;
+		}
+	}
 
 	span {
 		padding-top: 7px;
@@ -592,18 +599,13 @@
 		padding-bottom: 5px;
 		padding-left: 30px;
 
-
-		.font-fira-medium();
-		font-size: 11px;
-		line-height: 20px;
 		letter-spacing: 2px;
-		text-transform: uppercase;
-		color: @popup-mail-btn-color;
 	}
 
 	svg {
 		width: 23px;
 		height: 22px;
+		margin-right: 10px;
 
 		fill: @popup-mail-icon-color;
 	}

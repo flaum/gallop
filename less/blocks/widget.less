@@ -677,15 +677,35 @@
 
 		&-text {
 			display: flex;
+
 			width: 100%;
 
 			margin: 0;
-			padding-bottom: 6px;
+			margin-bottom: 6px;
+			max-height: 75px;
 
 			.font-ptserif-italic();
 			font-size: 14px;
 			line-height: 18px;
 			color: @widget-comment-text-color;
+			// text-overflow: ellipsis;
+			// white-space: nowrap;
+
+			overflow: hidden;
+		}
+
+		&-footer {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+
+			width: 100%;
+		}
+
+		&-left-side {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
 		}
 
 		&-reply {
@@ -693,21 +713,111 @@
 			flex-direction: row;
 			align-items: flex-start;
 
+			padding-top: 6px;
+
 			font-size: 10px;
 			line-height: 10px;
 			letter-spacing: 1px;
 			text-transform: uppercase;
 			text-decoration: none;
 			color: @widget-comment-reply-color;
+			border-bottom: 1px solid transparent;
 
-			span {
-				padding-top: 6px;
+			transition: all 0.6s ease;
+
+			&:hover {
+				border-bottom-color: @widget-comment-reply-border-color;
+			}
+		}
+	}
+
+	&__complain {
+		position: relative;
+
+		display: flex;
+		flex-direction: row;
+
+		&-link {
+			display: flex;
+			align-self: center;
+
+			font-size: 10px;
+			line-height: 9px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			text-decoration: none;
+			color: @widget-complain-color;
+
+			border-bottom: 1px solid transparent;
+
+			transition: all 0.3s ease;
+
+			&:hover {
+				border-bottom-color: @widget-complain-hover-border-color;
 			}
 
-			svg {
-				margin-right: 10px;
+			// &:hover + .widget__complain-popup {
+			// 	display: flex;
+			// }
 
-				fill: @widget-comment-reply-color;
+			&--active + .widget__complain-popup {
+				display: flex;
+			}
+		}
+
+		&-popup {
+			position: absolute;
+			top: -140px;
+			right: 0;
+
+			display: none;
+			flex-direction: column;
+
+			width: 303px;
+
+			padding: 0;
+			padding-top: 25px;
+			padding-right: 24px;
+			padding-left: 30px;
+			padding-bottom: 24px;
+			margin: 0;
+			margin-bottom: 30px;
+
+			list-style: none;
+
+			background: @widget-block-bg-color;
+			box-shadow: 0 0 10px -1px @widget-complain-popup-shadow;
+
+			&:hover {
+				display: flex;
+			}
+
+			&-item {
+				&:not(:last-child) {
+					padding-bottom: 10px;
+				}
+
+				a {
+					font-size: 12px;
+					text-decoration: none;
+					color: @widget-complain-color;
+				}
+			}
+		}
+
+		&-close-btn {
+			position: absolute;
+			top: 9px;
+			right: 9px;
+
+			display: flex;
+
+			font-size: 0;
+			line-height: 0;
+
+			svg {
+				fill: @widget-complain-popup-exit-btn-color;
+				// fill: red;
 			}
 		}
 	}
@@ -796,11 +906,23 @@
 			}
 
 			&-image {
-				.adaptive-image(156px);
+				.row-item-image(250px, 156px);
+
+				&--new-york {
+					background-image: url("../img/new-york.jpg")
+				}
+
+				&--mountains {
+					background-image: url("../img/mountains.jpg")
+				}
+
+				&--village {
+					background-image: url("../img/village-on-water.jpg")
+				}
 			}
 
 			&-title {
-				display: flex;
+				display: inline;
 
 				height: 54px;
 				padding-top: 10px;
@@ -813,8 +935,8 @@
 				font-size: 17px;
 				line-height: 22px;
 				color: @widget-similar-text-color;
-				text-overflow: ellipsis;
-
+				// text-overflow: ellipsis;
+				// white-space: nowrap;
 
 				overflow: hidden;
 			}

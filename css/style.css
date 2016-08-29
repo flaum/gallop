@@ -380,6 +380,52 @@ main {
   flex-wrap: nowrap;
   min-width: 967px;
 }
+.likes {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 18px;
+  font-family: "FiraSans Italic", Arial, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  text-decoration: none;
+  color: #979797;
+}
+.likes:hover svg {
+  fill: #65cfc2;
+  opacity: 1;
+}
+.likes svg {
+  transition: all 0.3s ease;
+  margin-right: 4px;
+}
+.likes .icon-like {
+  fill: #979797;
+}
+.likes .icon-like-layer {
+  position: absolute;
+  top: -2px;
+  left: -1px;
+  fill: #65cfc2;
+  opacity: 0;
+}
+.likes:hover svg {
+  fill: #65cfc2;
+}
+.likes--liked {
+  position: relative;
+}
+.likes--liked .icon-like,
+.likes--liked .icon-like-layer {
+  fill: #25beab;
+  opacity: 1;
+}
+.likes--liked:hover .icon-like,
+.likes--liked:hover .icon-like-layer {
+  fill: #25beab;
+  opacity: 1;
+}
 .main-content-wrapper {
   display: flex;
   flex-direction: column;
@@ -1499,6 +1545,9 @@ main {
   line-height: 0;
   border-radius: 50%;
 }
+.popup__social-icon:hover {
+  background: #1ebcaa;
+}
 .popup__social-icon--facebook {
   background: #3a5897;
 }
@@ -1548,29 +1597,47 @@ main {
 }
 .popup__e-mail-btn {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 49px;
+  justify-content: center;
+  padding-top: 8px;
+  padding-right: 18px;
+  padding-bottom: 6px;
+  padding-left: 18px;
+  font-family: "FiraSans Medium", Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+  line-height: 20px;
+  text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
+  color: #8d8d8d;
   border: 1px solid #8d8d8d;
-  border-radius: 15px;
+  border-radius: 18px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  align-items: center;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.popup__e-mail-btn:hover {
+  color: #fff;
+  background: #23bdaa;
+  border-color: #23bdaa;
+}
+.popup__e-mail-btn:hover svg {
+  transition: all 0.3s ease;
+  fill: #fff;
 }
 .popup__e-mail-btn span {
   padding-top: 7px;
   padding-right: 15px;
   padding-bottom: 5px;
   padding-left: 30px;
-  font-family: "FiraSans Medium", Arial, sans-serif;
-  font-size: 11px;
-  line-height: 20px;
   letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #8d8d8d;
 }
 .popup__e-mail-btn svg {
   width: 23px;
   height: 22px;
+  margin-right: 10px;
   fill: #8d8d8d;
 }
 .popup__footer {
@@ -1667,6 +1734,7 @@ main {
   align-items: center;
 }
 .post__header-likes {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1677,16 +1745,26 @@ main {
   text-decoration: none;
   color: #979797;
 }
+.post__header-likes:hover svg {
+  fill: #65cfc2;
+  opacity: 1;
+}
 .post__header-likes svg {
-  margin-right: 5px;
-  margin-bottom: 2px;
+  transition: all 0.3s ease;
+  margin-right: 4px;
+}
+.post__header-likes .icon-like {
   fill: #979797;
 }
-.post__header-likes:hover svg {
-  fill: #22bcaa;
+.post__header-likes .icon-like-layer {
+  position: absolute;
+  top: -2px;
+  left: -1px;
+  fill: #65cfc2;
+  opacity: 0;
 }
 .post__header-likes:hover svg {
-  fill: #979797;
+  fill: #65cfc2;
 }
 .post__header-comments {
   display: flex;
@@ -2361,10 +2439,19 @@ main {
 .right-sidebar__correction-link {
   display: flex;
   justify-content: center;
+  align-self: center;
   font-size: 14px;
+  line-height: 13px;
   color: #5e6466;
+  text-decoration: none;
+  border-bottom: 1px solid #a6a9aa;
   opacity: 0.7;
+  transition: all 0.3s ease;
   margin-top: 58px;
+}
+.right-sidebar__correction-link:hover {
+  color: #16d2bb;
+  border-color: #4edbca;
 }
 .travel-offers {
   display: flex;
@@ -2414,6 +2501,7 @@ main {
   color: #7e888a;
 }
 .travel-offers__item-image-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -2422,6 +2510,23 @@ main {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
+}
+.travel-offers__item-image-container span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "FiraSans Medium Italic", Arial, sans-serif;
+  font-size: 15px;
+  color: #071a1e;
+  background: rgba(255, 255, 255, 0.75);
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 .travel-offers__item-image-container--living {
   background-image: url("../img/living.jpg");
@@ -2635,6 +2740,7 @@ main {
   background: rgba(0, 0, 0, 0.5);
 }
 .widget__likes {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -2645,13 +2751,26 @@ main {
   text-decoration: none;
   color: #979797;
 }
+.widget__likes:hover svg {
+  fill: #65cfc2;
+  opacity: 1;
+}
 .widget__likes svg {
-  margin-right: 5px;
-  margin-bottom: 2px;
+  transition: all 0.3s ease;
+  margin-right: 4px;
+}
+.widget__likes .icon-like {
   fill: #979797;
 }
+.widget__likes .icon-like-layer {
+  position: absolute;
+  top: -2px;
+  left: -1px;
+  fill: #65cfc2;
+  opacity: 0;
+}
 .widget__likes:hover svg {
-  fill: #22bcaa;
+  fill: #65cfc2;
 }
 .widget__add-link {
   display: flex;
@@ -2747,23 +2866,6 @@ main {
   display: block;
   max-width: 95%;
   height: 100%;
-}
-.widget__image span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-family: "FiraSans Medium Italic", Arial, sans-serif;
-  font-size: 15px;
-  color: #071a1e;
-  background: rgba(255, 255, 255, 0.75);
-  opacity: 0;
-  transition: all 0.3s ease;
 }
 .widget__image--vertical {
   align-self: center;
@@ -2933,8 +3035,14 @@ main {
   border: 1px solid #8d8d8d;
   border-radius: 18px;
   background: #ffffff;
+  transition: all 0.3s ease;
   width: 200px;
   margin-bottom: 15px;
+}
+.widget__btn:hover {
+  color: #fff;
+  background: #23bdaa;
+  border-color: #23bdaa;
 }
 .widget__btn--proxima {
   font-family: "ProximaNova Regular", Arial, sans-serif;
@@ -3080,9 +3188,18 @@ main {
 .widget__correction-link {
   display: flex;
   justify-content: center;
+  align-self: center;
   font-size: 14px;
+  line-height: 13px;
   color: #5e6466;
+  text-decoration: none;
+  border-bottom: 1px solid #a6a9aa;
   opacity: 0.7;
+  transition: all 0.3s ease;
+}
+.widget__correction-link:hover {
+  color: #16d2bb;
+  border-color: #4edbca;
 }
 .widget__footer {
   display: flex;
@@ -3244,30 +3361,105 @@ main {
   display: flex;
   width: 100%;
   margin: 0;
-  padding-bottom: 6px;
+  margin-bottom: 6px;
+  max-height: 75px;
   font-family: "PT Serif Italic", Arial, sans-serif;
   font-style: italic;
   font-size: 14px;
   line-height: 18px;
   color: #353535;
+  overflow: hidden;
+}
+.widget__comment-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.widget__comment-left-side {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 }
 .widget__comment-reply {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  padding-top: 6px;
   font-size: 10px;
   line-height: 10px;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-decoration: none;
   color: #23bdaa;
+  border-bottom: 1px solid transparent;
+  transition: all 0.6s ease;
 }
-.widget__comment-reply span {
-  padding-top: 6px;
+.widget__comment-reply:hover {
+  border-bottom-color: #9ee2da;
 }
-.widget__comment-reply svg {
-  margin-right: 10px;
-  fill: #23bdaa;
+.widget__complain {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.widget__complain-link {
+  display: flex;
+  align-self: center;
+  font-size: 10px;
+  line-height: 9px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #8d8e8e;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+.widget__complain-link:hover {
+  border-bottom-color: #cdcdcd;
+}
+.widget__complain-link--active + .widget__complain-popup {
+  display: flex;
+}
+.widget__complain-popup {
+  position: absolute;
+  top: -140px;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  width: 303px;
+  padding: 0;
+  padding-top: 25px;
+  padding-right: 24px;
+  padding-left: 30px;
+  padding-bottom: 24px;
+  margin: 0;
+  margin-bottom: 30px;
+  list-style: none;
+  background: #ffffff;
+  box-shadow: 0 0 10px -1px rgba(57, 184, 171, 0.6);
+}
+.widget__complain-popup:hover {
+  display: flex;
+}
+.widget__complain-popup-item:not(:last-child) {
+  padding-bottom: 10px;
+}
+.widget__complain-popup-item a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #8d8e8e;
+}
+.widget__complain-close-btn {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  display: flex;
+  font-size: 0;
+  line-height: 0;
+}
+.widget__complain-close-btn svg {
+  fill: #c2c6c7;
 }
 .widget__new-comment {
   display: flex;
@@ -3333,8 +3525,14 @@ main {
   border: 1px solid #bfc3c4;
   border-radius: 18px;
   background: #ffffff;
+  transition: all 0.3s ease;
   align-self: flex-end;
   width: 108px;
+}
+.widget__new-comment-btn:hover {
+  color: #fff;
+  background: #23bdaa;
+  border-color: #23bdaa;
 }
 .widget__new-comment-btn:active {
   outline: none;
@@ -3381,20 +3579,14 @@ main {
 }
 .widget__similar-item-image {
   position: relative;
-  display: block;
-  width: 100%;
-  padding-top: 20px;
-  margin-bottom: 20px;
-  max-height: 156px;
-  background: #ffffff;
-  box-sizing: content-box;
-  overflow: hidden;
-}
-.widget__similar-item-image img {
-  margin: 0 auto;
-  display: block;
-  max-width: 95%;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 250px;
+  background-color: #a6512e;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
 }
 .widget__similar-item-image span {
   position: absolute;
@@ -3413,14 +3605,17 @@ main {
   opacity: 0;
   transition: all 0.3s ease;
 }
-.widget__similar-item-image--vertical {
-  align-self: center;
-  width: 63%;
-  max-height: 1000px;
-  margin-bottom: 30px;
+.widget__similar-item-image--new-york {
+  background-image: url("../img/new-york.jpg");
+}
+.widget__similar-item-image--mountains {
+  background-image: url("../img/mountains.jpg");
+}
+.widget__similar-item-image--village {
+  background-image: url("../img/village-on-water.jpg");
 }
 .widget__similar-item-title {
-  display: flex;
+  display: inline;
   height: 54px;
   padding-top: 10px;
   padding-right: 40px;
@@ -3431,7 +3626,6 @@ main {
   font-size: 17px;
   line-height: 22px;
   color: #211e1e;
-  text-overflow: ellipsis;
   overflow: hidden;
 }
 .widget__similar-item-footer {
@@ -3444,6 +3638,7 @@ main {
   border-top: 1px solid #dadada;
 }
 .widget__similar-item-likes {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -3455,13 +3650,26 @@ main {
   color: #979797;
   padding-right: 9px;
 }
+.widget__similar-item-likes:hover svg {
+  fill: #65cfc2;
+  opacity: 1;
+}
 .widget__similar-item-likes svg {
-  margin-right: 5px;
-  margin-bottom: 2px;
+  transition: all 0.3s ease;
+  margin-right: 4px;
+}
+.widget__similar-item-likes .icon-like {
   fill: #979797;
 }
+.widget__similar-item-likes .icon-like-layer {
+  position: absolute;
+  top: -2px;
+  left: -1px;
+  fill: #65cfc2;
+  opacity: 0;
+}
 .widget__similar-item-likes:hover svg {
-  fill: #22bcaa;
+  fill: #65cfc2;
 }
 .widget__similar-item-comments {
   display: flex;
@@ -3524,6 +3732,9 @@ main {
   }
   .widget__similar-item {
     width: 32.5%;
+  }
+  .widget__similar-item-image {
+    height: 156px;
   }
   .widget__place-image-container {
     padding-top: 105px;

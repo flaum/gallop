@@ -287,6 +287,28 @@ main {
 	min-width: 967px;
 }
 
+.likes {
+	.post-likes();
+
+	&--liked {
+		position: relative;
+
+		.icon-like,
+		.icon-like-layer {
+			fill: @post-likes-icon-color-liked;
+			opacity: 1;
+		}
+		
+		&:hover {
+			.icon-like,
+			.icon-like-layer {
+				fill: @post-likes-icon-color-liked;
+				opacity: 1;
+			}
+		}
+	}
+}
+
 .main-content-wrapper {
 	display: flex;
 	flex-direction: column;
