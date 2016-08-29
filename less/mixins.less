@@ -54,7 +54,7 @@
 .adaptive-image(@height: 800px, @overcolor: rgba(255, 255, 255, 0.75)) {
 	position: relative;
 
-	display: flex;
+	display: block;
 
 	width: 100%;
 	padding-top: 20px;
@@ -68,9 +68,10 @@
 	overflow: hidden;
 
 	img {
-		width: auto;
-		max-height: @height;
 		margin: 0 auto;
+		display: block;
+		max-width: 95%;
+		height: 100%
 	}
 
 	span {

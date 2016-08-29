@@ -2733,7 +2733,7 @@ main {
 }
 .widget__image {
   position: relative;
-  display: flex;
+  display: block;
   width: 100%;
   padding-top: 20px;
   margin-bottom: 20px;
@@ -2743,9 +2743,10 @@ main {
   overflow: hidden;
 }
 .widget__image img {
-  width: auto;
-  max-height: 800px;
   margin: 0 auto;
+  display: block;
+  max-width: 95%;
+  height: 100%;
 }
 .widget__image span {
   position: absolute;
@@ -3380,7 +3381,7 @@ main {
 }
 .widget__similar-item-image {
   position: relative;
-  display: flex;
+  display: block;
   width: 100%;
   padding-top: 20px;
   margin-bottom: 20px;
@@ -3390,9 +3391,10 @@ main {
   overflow: hidden;
 }
 .widget__similar-item-image img {
-  width: auto;
-  max-height: 156px;
   margin: 0 auto;
+  display: block;
+  max-width: 95%;
+  height: 100%;
 }
 .widget__similar-item-image span {
   position: absolute;
