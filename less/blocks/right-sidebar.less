@@ -24,7 +24,31 @@
 }
 
 .right-sidebar__author {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	padding-bottom: 30px;
+}
+
+.right-sidebar__author-link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 110px;
+
+	text-decoration: none;
+	color: @right-sidebar-author-name-color;
+
+	transition: all 0.3s ease;
+
+	&:hover .right-sidebar__author-name {
+		color: @right-sidebar-author-name-color-hover;
+	}
+
+	&:hover .right-sidebar__author-avatar {
+		border-color: @right-sidebar-author-avatar-border-color-hover;
+	}
 }
 
 .right-sidebar__author-info {
@@ -50,9 +74,9 @@
 
 	cursor: pointer;
 
-	&:hover {
-		border-color: @right-sidebar-author-avatar-border-color-hover;
-	}
+	// &:hover {
+	// 	border-color: @right-sidebar-author-avatar-border-color-hover;
+	// }
 }
 
 .right-sidebar__author-name {
@@ -190,14 +214,27 @@
 
 	transition: all 0.3s ease;
 
+
 	&:hover {
 		color: @right-sidebar-tags-text-color-hover;
-		background: @right-sidebar-tags-bg-color-hover
+		background: @right-sidebar-tags-bg-color-hover;
 	}
 
 	&:active {
 		color: @right-sidebar-tags-text-color;
 		background: @right-sidebar-tags-bg-active;
+	}
+
+	&--not-link {
+		&:hover {
+			color: @right-sidebar-tags-text-color;
+			background: @right-sidebar-tags-bg-color;
+		}
+
+		&:active {
+			color: @right-sidebar-tags-text-color;
+			background: @right-sidebar-tags-bg-color;
+		}
 	}
 }
 

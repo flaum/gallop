@@ -1685,6 +1685,9 @@ main {
 .post__header-likes:hover svg {
   fill: #22bcaa;
 }
+.post__header-likes:hover svg {
+  fill: #979797;
+}
 .post__header-comments {
   display: flex;
   font-family: "FiraSans Italic", Arial, sans-serif;
@@ -2093,7 +2096,9 @@ main {
   padding-right: 39px;
 }
 .right-sidebar__block-title {
+  width: 100%;
   margin: 0;
+  margin-bottom: 10px;
   padding-bottom: 6px;
   font-family: "FiraSans Light", Arial, sans-serif;
   font-size: 13px;
@@ -2104,7 +2109,25 @@ main {
   border-bottom: 1px solid #d6d6d6;
 }
 .right-sidebar__author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-bottom: 30px;
+}
+.right-sidebar__author-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 110px;
+  text-decoration: none;
+  color: #373737;
+  transition: all 0.3s ease;
+}
+.right-sidebar__author-link:hover .right-sidebar__author-name {
+  color: #23baab;
+}
+.right-sidebar__author-link:hover .right-sidebar__author-avatar {
+  border-color: #23baab;
 }
 .right-sidebar__author-info {
   display: flex;
@@ -2122,9 +2145,6 @@ main {
   overflow: hidden;
   box-sizing: content-box;
   cursor: pointer;
-}
-.right-sidebar__author-avatar:hover {
-  border-color: #23baab;
 }
 .right-sidebar__author-name {
   padding-top: 16px;
@@ -2262,6 +2282,14 @@ main {
 .right-sidebar__tag:active {
   color: #686868;
   background: #ffffff;
+}
+.right-sidebar__tag--not-link:hover {
+  color: #686868;
+  background: #ebebeb;
+}
+.right-sidebar__tag--not-link:active {
+  color: #686868;
+  background: #ebebeb;
 }
 .right-sidebar__social-block {
   display: flex;
@@ -3066,8 +3094,6 @@ main {
 .widget__comments {
   display: flex;
   flex-direction: column;
-  padding-right: 42px;
-  padding-left: 43px;
   padding-bottom: 32px;
   background: #ffffff;
 }
@@ -3077,7 +3103,6 @@ main {
   flex-direction: column;
   padding-right: 42px;
   padding-left: 43px;
-  padding-bottom: 32px;
   background: #ffffff;
 }
 .widget__comments-header {
@@ -3088,6 +3113,8 @@ main {
   padding-top: 26px;
   padding-bottom: 22px;
   margin-bottom: 27px;
+  margin-right: 42px;
+  margin-left: 43px;
   border-bottom: 1px solid #e4e4e4;
 }
 .widget__comments-title {
@@ -3115,6 +3142,7 @@ main {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding-bottom: 32px;
 }
 .widget__comments-btn {
   display: flex;
