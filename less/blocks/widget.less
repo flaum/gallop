@@ -125,12 +125,10 @@
 		display: flex;
 		flex-direction: column;
 
-		margin-bottom: 25px;
-		padding-top: 36px;
-		padding-right: 33px;
-		padding-left: 28px;
+		// padding-right: 33px;
+		// padding-left: 28px;
 
-		background: @widget-block-bg-color;
+		// background: @widget-block-bg-color;
 
 		&--nopadding {
 			padding-top: 0;
@@ -140,30 +138,42 @@
 
 	&__date {
 		display: flex;
-		align-self: center;
+		justify-content: center;
+
+		width: 100%;
+		padding-top: 36px;
 
 		padding-bottom: 13px;
 
 		.font-fira-italic();
 		font-size: 14px;
 		color: @widget-date-color;
+		background: @widget-block-bg-color;
 	}
 
 	&__title {
 		.text-dark();
 
 		padding-bottom: 40px;
+		padding-right: 33px;
+		padding-left: 28px;
 		text-align: left;
+
+		background: @widget-block-bg-color;
 	}
 
 	&__text {
 		margin: 0;
 		padding-bottom: 25px;
+		padding-right: 33px;
+		padding-left: 28px;
 
 		.font-ptserif();
 		font-size: 14px;
 		line-height: 24px;
 		color: @widget-text-color;
+
+		background: @widget-block-bg-color;
 
 		&-link {
 			display: inline-block;
@@ -192,11 +202,15 @@
 		margin: 0;
 		padding-top: 36px;
 		padding-bottom: 45px;
+		padding-right: 33px;
+		padding-left: 28px;
 
 		.font-fira-medium-italic();
 		font-size: 18px;
 		line-height: 30px;
 		color: @widget-text-color;
+
+		background: @widget-block-bg-color;
 
 		&--small-padding {
 			padding-bottom: 20px;
@@ -304,6 +318,7 @@
 
 		&-footer {
 			.block-footer();
+			// margin-bottom: 10px;
 		}
 
 		&-info {

@@ -2648,11 +2648,6 @@ main {
 .widget__content {
   display: flex;
   flex-direction: column;
-  margin-bottom: 25px;
-  padding-top: 36px;
-  padding-right: 33px;
-  padding-left: 28px;
-  background: #ffffff;
 }
 .widget__content--nopadding {
   padding-top: 0;
@@ -2660,12 +2655,15 @@ main {
 }
 .widget__date {
   display: flex;
-  align-self: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 36px;
   padding-bottom: 13px;
   font-family: "FiraSans Italic", Arial, sans-serif;
   font-style: italic;
   font-size: 14px;
   color: rgba(151, 151, 151, 0.9);
+  background: #ffffff;
 }
 .widget__title {
   display: flex;
@@ -2678,15 +2676,21 @@ main {
   text-transform: none;
   color: #071a1e;
   padding-bottom: 40px;
+  padding-right: 33px;
+  padding-left: 28px;
   text-align: left;
+  background: #ffffff;
 }
 .widget__text {
   margin: 0;
   padding-bottom: 25px;
+  padding-right: 33px;
+  padding-left: 28px;
   font-family: "PT Serif", Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
   color: #071a1e;
+  background: #ffffff;
 }
 .widget__text-link {
   display: inline-block;
@@ -2738,10 +2742,13 @@ main {
   margin: 0;
   padding-top: 36px;
   padding-bottom: 45px;
+  padding-right: 33px;
+  padding-left: 28px;
   font-family: "FiraSans Medium Italic", Arial, sans-serif;
   font-size: 18px;
   line-height: 30px;
   color: #071a1e;
+  background: #ffffff;
 }
 .widget__blockquote--small-padding {
   padding-bottom: 20px;
