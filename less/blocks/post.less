@@ -15,6 +15,65 @@
 	&:hover {
 		box-shadow: 0px 0px 27px -2px rgba(0, 0, 0, 0.6);
 	}
+
+	&__header {
+		display: flex;
+		flex-direction: column;
+
+		width: 100%;
+		margin-bottom: 17px;
+
+		background: @widget-block-bg-color;
+
+		&-activity {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+
+			width: 100%;
+			padding-top: 17px;
+			padding-right: 19px;
+			padding-bottom: 20px;
+			padding-left: 16px;
+		}
+
+		&-left-side {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&-likes {
+			.post-likes();
+		}
+
+		&-comments {
+			.post-comments();
+		}
+	}
+
+	&__add-link {
+		display: flex;
+		flex-direction: row;
+
+		font-size: 10px;
+		line-height: 20px;
+		text-transform: uppercase;
+		text-decoration: none;
+		letter-spacing: 1px;
+		color: @widget-header-add-link-color;
+
+		span {
+			display: flex;
+			padding-top: 3px;
+			padding-right: 6px;
+		}
+
+		svg {
+			fill: @widget-header-add-link-color;
+		}
+	}
 }
 
 

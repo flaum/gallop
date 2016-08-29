@@ -27,14 +27,6 @@
 	padding-bottom: 30px;
 }
 
-.right-sidebar__author:hover .right-sidebar__author-avatar {
-	border-color: @right-sidebar-author-avatar-border-color-hover;
-}
-
-.right-sidebar__author:hover .right-sidebar__author-name {
-	color: @right-sidebar-author-name-color-hover;
-}
-
 .right-sidebar__author-info {
 	display: flex;
 	flex-direction: column;
@@ -57,6 +49,10 @@
 	box-sizing: content-box;
 
 	cursor: pointer;
+
+	&:hover {
+		border-color: @right-sidebar-author-avatar-border-color-hover;
+	}
 }
 
 .right-sidebar__author-name {
@@ -67,6 +63,10 @@
 	text-decoration: none;
 
 	color: @right-sidebar-author-name-color;
+
+	&:hover {
+		color: @right-sidebar-author-name-color-hover;
+	}
 }
 
 .right-sidebar__author-status {
@@ -111,7 +111,7 @@
 		color: @right-sidebar-author-thanks-btn-text-color-hover;
 		border-color: @right-sidebar-author-thanks-btn-text-color-hover;
 	}
-	
+
 	&--disabled {
 		border-color: transparent;
 		cursor: default;
