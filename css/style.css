@@ -2735,7 +2735,8 @@ main {
   position: relative;
   display: flex;
   width: auto;
-  max-height: 370px;
+  max-height: 800px;
+  margin: 0 auto;
   margin-bottom: 10px;
   overflow: hidden;
 }
@@ -3373,6 +3374,7 @@ main {
   display: flex;
   width: auto;
   max-height: 156px;
+  margin: 0 auto;
   margin-bottom: 10px;
   overflow: hidden;
 }
