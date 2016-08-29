@@ -8,17 +8,19 @@
 }
 
 .right-sidebar__block-title {
-	margin: 0;
-	padding-bottom: 6px;
+	.right-sidebar-title();
 
-	.font-fira-light();
-	font-size: 13px;
-	line-height: 20px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	color: @right-sidebar-title-color;
-
-	border-bottom: 1px solid @right-sidebar-boder-color;
+	// margin: 0;
+	// padding-bottom: 6px;
+	//
+	// .font-fira-light();
+	// font-size: 13px;
+	// line-height: 20px;
+	// text-transform: uppercase;
+	// letter-spacing: 2px;
+	// color: @right-sidebar-title-color;
+	//
+	// border-bottom: 1px solid @right-sidebar-boder-color;
 }
 
 .right-sidebar__author {
@@ -81,44 +83,44 @@
 }
 
 .right-sidebar__author-sign-btn {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	align-self: stretch;
+	.right-sidebar-btn(@right-sidebar-author-sign-btn-bg-color);
 
 	margin-bottom: 12px;
-	padding-top: 15px;
-	padding-bottom: 13px;
 
-	.font-fira-medium();
-	font-size: 14px;
-	line-height: 20px;
-	letter-spacing: 1px;
-	text-decoration: none;
-	text-transform: uppercase;
 	color: @right-sidebar-author-sign-btn-text-color;
 
 	background: @right-sidebar-author-sign-btn-bg-color;
+
+	&:hover {
+		background: @right-sidebar-author-sign-btn-bg-color-hover
+	}
+
+	&:active {
+		color: @right-sidebar-author-sign-btn-text-color-active;
+		background: @right-sidebar-author-sign-btn-bg-color-active;
+		border: 1px solid @right-sidebar-author-sign-btn-text-color-active;
+	}
 }
 
 .right-sidebar__author-thanks-btn {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	align-self: stretch;
-
-	padding-top: 15px;
-	padding-bottom: 13px;
-
-	.font-fira-medium();
-	font-size: 14px;
-	line-height: 20px;
-	letter-spacing: 1px;
-	text-decoration: none;
-	text-transform: uppercase;
+	.right-sidebar-btn(@right-sidebar-author-thanks-btn-border-color);
 	color: @right-sidebar-author-thanks-btn-text-color;
 
-	border: 1px solid @right-sidebar-author-thanks-btn-border-color;
+
+	&:hover {
+		color: @right-sidebar-author-thanks-btn-text-color-hover;
+		border-color: @right-sidebar-author-thanks-btn-text-color-hover;
+	}
+	
+	&--disabled {
+		border-color: transparent;
+		cursor: default;
+
+		&:hover {
+			color: @right-sidebar-author-thanks-btn-text-color;
+			border-color: transparent;
+		}
+	}
 }
 
 .right-sidebar__filters {

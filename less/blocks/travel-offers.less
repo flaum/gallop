@@ -26,25 +26,11 @@
 }
 
 .travel-offers__item-container {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	flex-wrap: wrap;
-
-	width: 100%;
+	.row();
 }
 
 .travel-offers__item {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	min-width: 225px;
-	background: @travel-offers-item-bg-color;
-	margin-bottom: 15px;
-
-	&:nth-child(4) {
-		display: none;
-	}
+	.row-item();
 }
 
 .travel-offers__item-title {
@@ -214,10 +200,6 @@
 
 @media @desktop-width {
 
-	.travel-offers__item {
-		width: 32.5%;
-	}
-
 	.travel-offers__item-image-container {
 		height: 165px;
 	}
@@ -225,11 +207,4 @@
 
 @media @xl-screens-width {
 
-	.travel-offers__item {
-		width: 24%;
-
-		&:nth-child(4) {
-			display: flex;
-		}
-	}
 }
