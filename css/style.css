@@ -2706,7 +2706,7 @@ main {
 .widget__image {
   position: relative;
   display: flex;
-  width: 100%;
+  width: auto;
   max-height: 370px;
   overflow: hidden;
 }
@@ -3342,7 +3342,7 @@ main {
 .widget__similar-item-image {
   position: relative;
   display: flex;
-  width: 100%;
+  width: auto;
   max-height: 156px;
   overflow: hidden;
 }
