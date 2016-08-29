@@ -2708,6 +2708,7 @@ main {
   display: flex;
   width: auto;
   max-height: 370px;
+  margin-bottom: 10px;
   overflow: hidden;
 }
 .widget__image img {
@@ -3344,6 +3345,7 @@ main {
   display: flex;
   width: auto;
   max-height: 156px;
+  margin-bottom: 10px;
   overflow: hidden;
 }
 .widget__similar-item-image img {
