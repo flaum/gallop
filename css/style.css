@@ -2654,16 +2654,9 @@ main {
   padding-left: 28px;
   background: #ffffff;
 }
-.widget__content-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 26px;
-  padding-bottom: 28px;
-  border-top: 1px solid #e8e8e8;
-}
 .widget__content--nopadding {
   padding-top: 0;
+  margin-bottom: 0;
 }
 .widget__date {
   display: flex;
@@ -3049,6 +3042,18 @@ main {
   font-size: 14px;
   color: #5e6466;
   opacity: 0.7;
+}
+.widget__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 26px;
+  padding-right: 33px;
+  padding-bottom: 28px;
+  padding-left: 28px;
+  margin-bottom: 28px;
+  border-top: 1px solid #e8e8e8;
+  background: #ffffff;
 }
 .widget__comments {
   display: flex;
