@@ -1775,6 +1775,7 @@ main {
 .post__add-link {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
   font-size: 10px;
   line-height: 20px;
   text-transform: uppercase;
@@ -2771,6 +2772,7 @@ main {
 .widget__add-link {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
   font-size: 10px;
   line-height: 20px;
   text-transform: uppercase;
@@ -2803,6 +2805,9 @@ main {
 }
 .widget__add-link--added:hover svg {
   fill: #23bdaa;
+}
+.widget__add-link--padding {
+  padding-right: 24px;
 }
 .widget__content {
   display: flex;
@@ -3589,6 +3594,10 @@ main {
 .widget__similar-item:hover .widget__similar-item-image span {
   opacity: 1;
 }
+.widget__similar-item-link-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 .widget__similar-item-image {
   position: relative;
   display: flex;
@@ -3627,7 +3636,7 @@ main {
   background-image: url("../img/village-on-water.jpg");
 }
 .widget__similar-item-title {
-  display: inline;
+  display: flex;
   height: 54px;
   padding-top: 10px;
   padding-right: 40px;
