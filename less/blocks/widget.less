@@ -338,7 +338,6 @@
 	&__btn {
 		.btn-gray();
 		width: 200px;
-		margin-bottom: 15px;
 
 		&--proxima {
 			.font-proximanova-regular();
@@ -348,6 +347,15 @@
 		@media @desktop-width {
 			margin-bottom: 0;
 		}
+	}
+
+	&__row-wrapper {
+		display: flex;
+		justify-content: center;
+
+		width: 100%;
+
+		padding-top: 20px;
 	}
 
 	&__route {
@@ -445,11 +453,13 @@
 
 	&__correction-link {
 		.correction-link();
+		// width: 100%;
 	}
 
 	&__footer {
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 		align-items: center;
 
 		padding-top: 26px;
@@ -979,4 +989,13 @@
 			width: 275px;
 		}
 	}
+
+	.widget__row-wrapper {
+		width: 180px;
+		padding-top: 0;
+	}
+
+	// .widget__btn {
+	// 	margin-bottom: 15px;
+	// }
 }

@@ -3054,7 +3054,6 @@ main {
   background: #ffffff;
   transition: all 0.3s ease;
   width: 200px;
-  margin-bottom: 15px;
 }
 .widget__btn:hover {
   color: #fff;
@@ -3064,6 +3063,12 @@ main {
 .widget__btn--proxima {
   font-family: "ProximaNova Regular", Arial, sans-serif;
   font-size: 10px;
+}
+.widget__row-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 20px;
 }
 .widget__route {
   display: flex;
@@ -3221,6 +3226,7 @@ main {
 .widget__footer {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   padding-top: 26px;
   padding-right: 33px;
@@ -3770,6 +3776,10 @@ main {
   }
   .widget__add-link--fix-width {
     width: 275px;
+  }
+  .widget__row-wrapper {
+    width: 180px;
+    padding-top: 0;
   }
 }
 @media all and (min-width: 1500px) {
