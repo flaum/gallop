@@ -2015,25 +2015,18 @@ main {
   font-style: italic;
   color: #979797;
 }
-.post__likes {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-right: 15px;
-}
-.post__likes:hover svg {
-  fill: #22bcaa;
-}
-.post__likes svg {
-  width: 17px;
-  height: 16px;
-  margin-right: 7px;
-  margin-bottom: 2px;
-  fill: #979797;
-  transition: all 0.3s ease;
-}
 .post__comments {
-  text-transform: capitalize;
+  display: flex;
+  font-family: "FiraSans Italic", Arial, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 13px;
+  text-decoration: none;
+  color: #979797;
+  border-bottom: 1px solid transparent;
+}
+.post__comments:hover {
+  border-bottom: 1px solid #979797;
 }
 .post__more {
   font-family: "FiraSans Italic", Arial, sans-serif;
@@ -2853,7 +2846,7 @@ main {
   padding-right: 33px;
   padding-left: 28px;
   font-family: "PT Serif", Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   color: #071a1e;
   background: #ffffff;
@@ -2934,7 +2927,7 @@ main {
   margin: 0;
   padding-bottom: 15px;
   font-family: "FiraSans Medium", Arial, sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   color: #1f1d1e;
 }
 .widget__place-name {
