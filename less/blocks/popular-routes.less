@@ -19,20 +19,7 @@
 	}
 
 	&__image {
-		position: relative;
-
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: center;
-
-		height: 210px;
-		padding-top: 100px;
-
-		background-color: #a6512e;
-		background-repeat: no-repeat;
-		background-position: 50% 50%;
-		background-size: cover;
+		.row-item-image-ver-2(@substrate-light-color, 210px, 90px);
 
 		&:hover {
 			.popular-routes__details-city {
@@ -42,28 +29,6 @@
 			.popular-routes__details-country {
 				opacity: 1;
 			}
-		}
-
-		&:hover::before {
-			opacity: 1;
-		}
-
-		&::before {
-			content: "";
-
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			z-index: 12;
-
-			display: flex;
-			width: 100%;
-			background: rgba(255, 255, 255, 0.85);
-
-			transition: all 0.3s ease;
-			opacity: 0;
 		}
 
 		&--strasbourg {
@@ -80,66 +45,11 @@
 	}
 
 	&__details-city {
-		position: relative;
-		z-index: 13;
-
-		display: flex;
-
-		.font-fira-medium();
-		font-size: 14px;
-		line-height: 22px;
-		letter-spacing: 2px;
-		text-transform: uppercase;
-		color: @text-dark-color;
-
-		transition: all 0.3s ease;
-		opacity: 0;
+		.hidden-name-dark();
 	}
 
 	&__details-country {
-		position: relative;
-		z-index: 13;
-
-		display: flex;
-
-		.font-ptserif-italic();
-		font-size: 13px;
-		line-height: 17px;
-		color: @text-dark-color;
-
-		transition: all 0.3s ease;
-		opacity: 0;
-
-		&::before {
-			content: "";
-
-			position: absolute;
-			top: 49%;
-			right: -11px;
-
-			display: flex;
-
-			width: 5px;
-			height: 1px;
-
-			background: @text-dark-color;
-		}
-
-		&::after {
-			content: "";
-
-			position: absolute;
-			top: 49%;
-			left: -13px;
-
-			display: flex;
-
-			width: 5px;
-			height: 1px;
-
-			// background: @text-dark-color;
-			background: red;
-		}
+		.hidden-name-dashed();
 	}
 
 	&__favorite {
