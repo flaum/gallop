@@ -1284,29 +1284,8 @@ main {
   line-height: 0;
   font-size: 0;
 }
-.popup__close-btn::before {
-  content: "";
-  position: absolute;
-  top: 7px;
-  left: 0;
-  width: 15px;
-  height: 1px;
-  background: #35363b;
-  border: 1px solid #939496;
-  border-radius: 1px;
-  transform: rotate(45deg);
-}
-.popup__close-btn::after {
-  content: "";
-  position: absolute;
-  top: 7px;
-  left: 0;
-  width: 15px;
-  height: 1px;
-  background: #35363b;
-  border: 1px solid #939496;
-  border-radius: 1px;
-  transform: rotate(-45deg);
+.popup__close-btn svg {
+  fill: #35363b;
 }
 .popup__back-btn {
   position: absolute;
@@ -1448,6 +1427,9 @@ main {
   padding-top: 11px;
   padding-bottom: 34px;
 }
+.popup__form-row-wrapper input[type="checkbox"]:checked + .popup__form-checkbox-label::before {
+  border-color: #23bdaa;
+}
 .popup__form-row-wrapper input[type="checkbox"]:checked + .popup__form-checkbox-label::after {
   content: "";
   position: absolute;
@@ -1456,7 +1438,7 @@ main {
   display: flex;
   width: 7.5px;
   height: 7.5px;
-  background: #6bd3c6;
+  background: #23bdaa;
   border-radius: 50%;
 }
 .popup__form-checkbox-label {
@@ -1477,12 +1459,26 @@ main {
   height: 13px;
   border: 1px solid #35363b;
   border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.popup__form-checkbox-label::after {
+  content: "";
+  position: absolute;
+  top: 6.5px;
+  left: 4.75px;
+  display: flex;
+  width: 7.5px;
+  height: 7.5px;
+  background: transparent;
+  border-radius: 50%;
+  transition: all 0.3s ease;
 }
 .popup__form-link {
   display: flex;
   font-family: "FiraSans Italic", Arial, sans-serif;
   font-style: italic;
   color: #23bdaa;
+  transition: all 0.3s ease;
 }
 .popup__form-link--centered {
   align-self: center;
@@ -1492,6 +1488,9 @@ main {
 .popup__form-link--margined {
   margin-top: 9px;
   margin-bottom: 34px;
+}
+.popup__form-link:hover {
+  color: #16d2bb;
 }
 .popup__form-btn {
   display: flex;
@@ -1544,6 +1543,7 @@ main {
   font-size: 0;
   line-height: 0;
   border-radius: 50%;
+  transition: all 0.3s ease;
 }
 .popup__social-icon:hover {
   background: #1ebcaa;
@@ -1655,8 +1655,14 @@ main {
   color: #8d8d8d;
 }
 .popup__conditions a {
-  color: #46bdb1;
+  line-height: 9px;
   text-decoration: none;
+  color: #46bdb1;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+.popup__conditions a:hover {
+  text-decoration: underline;
 }
 .popup__warning-block {
   position: absolute;
