@@ -3577,6 +3577,11 @@ main {
   flex-wrap: wrap;
   width: 100%;
 }
+.widget__similar-link-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
 .widget__similar-item {
   display: flex;
   flex-direction: column;
@@ -3593,10 +3598,6 @@ main {
 }
 .widget__similar-item:hover .widget__similar-item-image span {
   opacity: 1;
-}
-.widget__similar-item-link-wrapper {
-  display: flex;
-  flex-direction: column;
 }
 .widget__similar-item-image {
   position: relative;
