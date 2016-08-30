@@ -289,21 +289,19 @@ main {
 
 .likes {
 	.post-likes();
+	color: @post-comments-color;
 
 	&--liked {
-		position: relative;
 
-		.icon-like,
-		.icon-like-layer {
+		svg {
 			fill: @post-likes-icon-color-liked;
-			opacity: 1;
+			stroke: @post-likes-icon-color-liked;
 		}
-		
+
 		&:hover {
-			.icon-like,
-			.icon-like-layer {
+			svg {
 				fill: @post-likes-icon-color-liked;
-				opacity: 1;
+				stroke: @post-likes-icon-color-liked;
 			}
 		}
 	}

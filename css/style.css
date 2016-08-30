@@ -381,7 +381,6 @@ main {
   min-width: 967px;
 }
 .likes {
-  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -394,37 +393,25 @@ main {
 }
 .likes:hover svg {
   fill: #65cfc2;
-  opacity: 1;
+  stroke: #65cfc2;
 }
 .likes svg {
-  transition: all 0.3s ease;
   margin-right: 4px;
+  transition: all 0.3s ease;
+  stroke: #979797;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  fill: transparent;
+  fill-rule: evenodd;
 }
-.likes .icon-like {
-  fill: #979797;
-}
-.likes .icon-like-layer {
-  position: absolute;
-  top: -2px;
-  left: -1px;
-  fill: #65cfc2;
-  opacity: 0;
-}
-.likes:hover svg {
-  fill: #65cfc2;
-}
-.likes--liked {
-  position: relative;
-}
-.likes--liked .icon-like,
-.likes--liked .icon-like-layer {
+.likes--liked svg {
   fill: #25beab;
-  opacity: 1;
+  stroke: #25beab;
 }
-.likes--liked:hover .icon-like,
-.likes--liked:hover .icon-like-layer {
+.likes--liked:hover svg {
   fill: #25beab;
-  opacity: 1;
+  stroke: #25beab;
 }
 .main-content-wrapper {
   display: flex;
@@ -1285,7 +1272,12 @@ main {
   font-size: 0;
 }
 .popup__close-btn svg {
-  fill: #35363b;
+  stroke: #23bdaa;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  fill: none;
+  fill-rule: evenodd;
 }
 .popup__back-btn {
   position: absolute;
@@ -1743,7 +1735,6 @@ main {
   align-items: center;
 }
 .post__header-likes {
-  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1756,24 +1747,17 @@ main {
 }
 .post__header-likes:hover svg {
   fill: #65cfc2;
-  opacity: 1;
+  stroke: #65cfc2;
 }
 .post__header-likes svg {
-  transition: all 0.3s ease;
   margin-right: 4px;
-}
-.post__header-likes .icon-like {
-  fill: #979797;
-}
-.post__header-likes .icon-like-layer {
-  position: absolute;
-  top: -2px;
-  left: -1px;
-  fill: #65cfc2;
-  opacity: 0;
-}
-.post__header-likes:hover svg {
-  fill: #65cfc2;
+  transition: all 0.3s ease;
+  stroke: #979797;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  fill: transparent;
+  fill-rule: evenodd;
 }
 .post__header-comments {
   display: flex;
@@ -1798,12 +1782,30 @@ main {
   letter-spacing: 1px;
   color: #23bdaa;
 }
+.post__add-link:hover svg {
+  fill: #8ddad0;
+}
 .post__add-link span {
   display: flex;
   padding-top: 3px;
   padding-right: 6px;
 }
 .post__add-link svg {
+  stroke: #23bdaa;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  fill: transparent;
+  fill-rule: evenodd;
+  transition: all 0.3s ease;
+}
+.post__add-link--added {
+  cursor: default;
+}
+.post__add-link--added svg {
+  fill: #23bdaa;
+}
+.post__add-link--added:hover svg {
   fill: #23bdaa;
 }
 .post--full-length .post__image-container {
@@ -2749,7 +2751,6 @@ main {
   background: rgba(0, 0, 0, 0.5);
 }
 .widget__likes {
-  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -2762,30 +2763,21 @@ main {
 }
 .widget__likes:hover svg {
   fill: #65cfc2;
-  opacity: 1;
+  stroke: #65cfc2;
 }
 .widget__likes svg {
-  transition: all 0.3s ease;
   margin-right: 4px;
-}
-.widget__likes .icon-like {
-  fill: #979797;
-}
-.widget__likes .icon-like-layer {
-  position: absolute;
-  top: -2px;
-  left: -1px;
-  fill: #65cfc2;
-  opacity: 0;
-}
-.widget__likes:hover svg {
-  fill: #65cfc2;
+  transition: all 0.3s ease;
+  stroke: #979797;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  fill: transparent;
+  fill-rule: evenodd;
 }
 .widget__add-link {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  width: auto;
   font-size: 10px;
   line-height: 20px;
   text-transform: uppercase;
@@ -2793,12 +2785,30 @@ main {
   letter-spacing: 1px;
   color: #23bdaa;
 }
+.widget__add-link:hover svg {
+  fill: #8ddad0;
+}
 .widget__add-link span {
   display: flex;
   padding-top: 3px;
   padding-right: 6px;
 }
 .widget__add-link svg {
+  stroke: #23bdaa;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  fill: transparent;
+  fill-rule: evenodd;
+  transition: all 0.3s ease;
+}
+.widget__add-link--added {
+  cursor: default;
+}
+.widget__add-link--added svg {
+  fill: #23bdaa;
+}
+.widget__add-link--added:hover svg {
   fill: #23bdaa;
 }
 .widget__content {
@@ -2864,7 +2874,7 @@ main {
   display: block;
   width: 100%;
   padding-top: 20px;
-  margin-bottom: 20px;
+  padding-bottom: 30px;
   max-height: 800px;
   background: #ffffff;
   box-sizing: content-box;
@@ -2885,7 +2895,7 @@ main {
 .widget__blockquote {
   display: flex;
   margin: 0;
-  padding-top: 36px;
+  padding-top: 25px;
   padding-bottom: 45px;
   padding-right: 33px;
   padding-left: 28px;
@@ -3646,39 +3656,9 @@ main {
   padding-left: 5px;
   border-top: 1px solid #dadada;
 }
-.widget__similar-item-likes {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-right: 18px;
-  font-family: "FiraSans Italic", Arial, sans-serif;
-  font-style: italic;
-  font-size: 14px;
-  text-decoration: none;
-  color: #979797;
-  padding-right: 9px;
-}
 .widget__similar-item-likes:hover svg {
-  fill: #65cfc2;
-  opacity: 1;
-}
-.widget__similar-item-likes svg {
-  transition: all 0.3s ease;
-  margin-right: 4px;
-}
-.widget__similar-item-likes .icon-like {
-  fill: #979797;
-}
-.widget__similar-item-likes .icon-like-layer {
-  position: absolute;
-  top: -2px;
-  left: -1px;
-  fill: #65cfc2;
-  opacity: 0;
-}
-.widget__similar-item-likes:hover svg {
-  fill: #65cfc2;
+  stroke: #979797;
+  fill: transparent;
 }
 .widget__similar-item-comments {
   display: flex;
@@ -3692,6 +3672,9 @@ main {
 }
 .widget__similar-item-comments:hover {
   border-bottom: 1px solid #979797;
+}
+.widget__similar-item-comments:hover {
+  border-color: transparent;
 }
 @media all and (min-width: 1150px) {
   .app__download {
@@ -3726,9 +3709,6 @@ main {
   }
   .travel-offers__item-image-container {
     height: 165px;
-  }
-  .widget__add-link {
-    padding-right: 18px;
   }
   .widget__place-footer {
     flex-direction: row;

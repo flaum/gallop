@@ -46,22 +46,6 @@
 
 		&-likes {
 			.post-likes();
-
-			// &--liked {
-			// 	.icon-like,
-			// 	.icon-like-layer {
-			// 		fill: @post-likes-icon-color-liked;
-			// 		opacity: 1;
-			// 	}
-			//
-			// 	&:hover {
-			// 		.icon-like,
-			// 		.icon-like-layer {
-			// 			fill: @post-likes-icon-color-liked;
-			// 			opacity: 1;
-			// 		}
-			// 	}
-			// }
 		}
 
 		&-comments {
@@ -70,24 +54,21 @@
 	}
 
 	&__add-link {
-		display: flex;
-		flex-direction: row;
+		.add-link();
 
-		font-size: 10px;
-		line-height: 20px;
-		text-transform: uppercase;
-		text-decoration: none;
-		letter-spacing: 1px;
-		color: @widget-header-add-link-color;
+		&--added {
+			cursor: default;
 
-		span {
-			display: flex;
-			padding-top: 3px;
-			padding-right: 6px;
-		}
+			svg {
+				fill: @add-link-color;
+			}
 
-		svg {
-			fill: @widget-header-add-link-color;
+			&:hover {
+
+				svg {
+					fill: @add-link-color;
+				}
+			}
 		}
 	}
 }

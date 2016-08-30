@@ -58,7 +58,7 @@
 
 	width: 100%;
 	padding-top: 20px;
-	margin-bottom: 20px;
+	padding-bottom: 30px;
 	max-height: @height;
 
 	background: @widget-block-bg-color;
@@ -80,6 +80,42 @@
 		width: 63%;
 		max-height: 1000px;
 		margin-bottom: 30px;
+	}
+}
+
+.add-link() {
+	display: flex;
+	flex-direction: row;
+
+	font-size: 10px;
+	line-height: 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 1px;
+	color: @add-link-color;
+
+	&:hover {
+		svg {
+			fill: @add-link-color-hover;
+		}
+	}
+
+	span {
+		display: flex;
+		padding-top: 3px;
+		padding-right: 6px;
+	}
+
+	svg {
+		// fill: @widget-header-add-link-color;
+		stroke: @add-link-color;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-width: 2px;
+		fill: transparent;
+		fill-rule: evenodd;
+
+		transition: all 0.3s ease;
 	}
 }
 
@@ -295,8 +331,6 @@
 }
 
 .post-likes(@color: @post-comments-color, @icolor-hover: #65cfc2, @icolor-liked: #25beab) {
-	position: relative;
-
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -311,33 +345,21 @@
 	&:hover {
 		svg {
 			fill: @icolor-hover;
-			opacity: 1;
+			stroke: @icolor-hover;
 		}
 	}
 
 	svg {
-		transition: all 0.3s ease;
 		margin-right: 4px;
-	}
 
-	.icon-like {
-		fill: @color;
-	}
+		transition: all 0.3s ease;
 
-	.icon-like-layer {
-		position: absolute;
-		top: -2px;
-		left: -1px;
-
-		fill: @icolor-hover;
-
-		opacity: 0;
-	}
-
-	&:hover {
-		svg {
-			fill: @icolor-hover;
-		}
+		stroke: @color;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-width: 2px;
+		fill: transparent;
+		fill-rule: evenodd;
 	}
 }
 
