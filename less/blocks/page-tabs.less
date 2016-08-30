@@ -1,5 +1,5 @@
-.page-content {
-	.container();
+.page-tabs {
+	.container(24px, 0);
 
 	flex-direction: row;
 	justify-content: space-between;
@@ -7,16 +7,16 @@
 	flex-grow: 1;
 	flex-shrink: 0;
 
-	&__header {
+	&__wrapper {
 		display: flex;
 
 		width: 100%;
-		margin-bottom: 39px;
+		// margin-bottom: 39px;
 
-		border-bottom: 1px solid @posts-container-header-border-color;
+		border-bottom: 1px solid @page-content-header-border-color;
 	}
 
-	&__header-tab {
+	&__tab {
 		position: relative;
 
 		display: flex;
@@ -33,10 +33,15 @@
 		text-decoration: none;
 		text-transform: uppercase;
 		letter-spacing: 2px;
-		color: @posts-container-header-link-color;
+		color: @page-content-header-link-color;
 
-		border: 1px solid @posts-container-header-border-color;
+		border: 1px solid @page-content-header-border-color;
+		border-left-color: transparent;
 		border-bottom: none;
+
+		&:first-child {
+			border-left-color: @page-content-header-border-color
+		}
 
 
 		&--current {
@@ -48,8 +53,8 @@
 			padding-left: 33px;
 
 
-			color: @posts-container-header-link-color-current;
-			background: @posts-container-header-link-bg-color-current;
+			color: @page-content-header-link-color-current;
+			background: @page-content-header-link-bg-color-current;
 			border: none;
 
 			&::after {
@@ -81,7 +86,7 @@
 				width: 12px;
 				height: 1px;
 
-				background: @posts-container-header-border-color;
+				background: @page-content-header-border-color;
 				transform: rotate(0deg);
 			}
 		}
@@ -100,7 +105,7 @@
 				height: 12px;
 
 				background: @body-bg-color;
-				border-bottom: 1px solid @posts-container-header-border-color;
+				border-bottom: 1px solid @page-content-header-border-color;
 
 				transform: rotate(45deg);
 			}

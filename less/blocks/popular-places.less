@@ -13,31 +13,12 @@
 
 	&__item {
 		.row-item-ver-2();
-		// display: flex;
-		// flex-direction: column;
-		//
-		// width: 100%;
-		// min-width: 225px;
-		// padding-bottom: 28px;
-	}
 
-	&__image {
-		.row-item-image-ver-2();
-		// position: relative;
-		//
-		// display: flex;
-		// flex-direction: column;
-		// justify-content: flex-start;
-		//
-		// height: 170px;
-		// padding-top: 30px;
-		//
-		// background-color: #a6512e;
-		// background-repeat: no-repeat;
-		// background-position: 50% 50%;
-		// background-size: cover;
-		//
 		&:hover {
+			.popular-places__image::before {
+				opacity: 1;
+			}
+
 			.popular-places__details-name {
 				opacity: 1;
 			}
@@ -46,28 +27,35 @@
 				opacity: 1;
 			}
 		}
-		//
-		// &:hover::before {
-		// 	opacity: 1;
-		// }
-		//
-		// &::before {
-		// 	content: "";
-		//
-		// 	position: absolute;
-		// 	top: 0;
-		// 	right: 0;
-		// 	bottom: 0;
-		// 	left: 0;
-		// 	z-index: 12;
-		//
-		// 	display: flex;
-		// 	width: 100%;
-		// 	background: @popular-places-substrate-color;
-		//
-		// 	transition: all 0.3s ease;
-		// 	opacity: 0;
-		// }
+	}
+
+	&__image {
+		.row-item-image-ver-2();
+
+		&-footer {
+			position: relative;
+			z-index: 14;
+
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+
+			padding-bottom: 10px;
+		}
+
+		&:hover {
+			.popular-places__details-name {
+				opacity: 1;
+			}
+
+			.popular-places__details-text {
+				opacity: 1;
+			}
+
+			.popular-places__info-item {
+				opacity: 1;
+			}
+		}
 
 		&--prague {
 			background-image: url("../img/places/prague.jpg");
@@ -92,6 +80,30 @@
 		&--helsinki {
 			background-image: url("../img/places/helsinki.jpg");
 		}
+
+		&--louvre {
+			background-image: url("../img/places/louvre.jpg");
+		}
+
+		&--notre-dame {
+			background-image: url("../img/routes/marseille.jpg");
+		}
+
+		&--fine-arts {
+			background-image: url("../img/places/paris.jpg");
+		}
+
+		&--vieille-charite {
+			background-image: url("../img/places/milan.jpg");
+		}
+
+		&--pharo {
+			background-image: url("../img/destinations/la-rochelle.jpg");
+		}
+
+		&--eiffel-tower {
+			background-image: url("../img/places/helsinki.jpg");
+		}
 	}
 
 	&__details-name {
@@ -104,6 +116,60 @@
 
 	&__favorite {
 		.favorite();
+	}
+
+	&__best {
+		.mark();
+
+		position: absolute;
+		top: 8px;
+		right: 7px;
+	}
+
+	&__low-price {
+		.mark(@mark-low-price-color);
+
+		position: absolute;
+		top: 8px;
+		right: 7px;
+	}
+
+	&__info-item {
+		position: relative;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		height: 18px;
+
+		transition: all 0.3s ease;
+		opacity: 0;
+
+		&:not(:first-child) {
+			padding-left: 10px;
+		}
+
+		&:not(:last-child) {
+			border-right: 1px solid @popular-places-image-footer-text-color;
+		}
+
+		span {
+			padding-top: 2px;
+			padding-right: 11px;
+			padding-left: 4px;
+			padding-bottom: 1px;
+
+			font-size: 14px;
+			line-height: 10px;
+
+			color: @popular-places-image-footer-text-color;
+		}
+
+		svg {
+			position: relative;
+
+			fill: @popular-places-image-footer-text-color;
+		}
 	}
 
 	&__name {
@@ -126,30 +192,11 @@
 	}
 
 	&__footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-
-		width: 100%;
-		padding-bottom: 32px;
-
-		border-bottom: 1px solid @block-border-color;
+		.container-footer();
 	}
 
 	&__show-more {
 		.show-btn();
 		align-self: center;
-	}
-}
-
-@media @desktop-width {
-	.popular-places__item {
-		width: 32.5%;
-	}
-}
-
-@media @xl-screens-width {
-	.popular-places__item {
-		width: 24%;
 	}
 }

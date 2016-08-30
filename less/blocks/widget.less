@@ -26,7 +26,7 @@
 		}
 
 		&-topic {
-			.orange-mark();
+			.mark();
 		}
 
 		&-title {
@@ -377,7 +377,7 @@
 		}
 
 		&-topic {
-			.orange-mark();
+			.mark();
 
 			position: absolute;
 			top: 20px;
@@ -893,9 +893,17 @@
 			}
 
 			&:hover  .widget__similar-item-image {
+				&::before {
+					opacity: 1;
+				}
+
 				span {
 					opacity: 1;
 				}
+			}
+
+			&:hover  .widget__similar-item-image::before {
+				opacity: 1;
 			}
 
 			&-image {

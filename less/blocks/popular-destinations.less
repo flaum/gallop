@@ -1,0 +1,74 @@
+.popular-destinations {
+	.container(34px, 0);
+
+	&__title {
+		.container-title();
+	}
+
+	&__items {
+		.row();
+	}
+
+	&__item {
+		.row-item-ver-2();
+	}
+
+	&__image {
+		.row-item-image-ver-2();
+
+		&--nice {
+			background-image: url("../img/destinations/nice.jpg");
+		}
+
+		&--marseille {
+			background-image: url("../img/routes/marseille.jpg");
+		}
+
+		&--paris {
+			background-image: url("../img/places/paris.jpg");
+		}
+
+		&--lyon {
+			background-image: url("../img/destinations/lyon.jpg");
+		}
+
+		&--la-rochelle {
+			background-image: url("../img/destinations/la-rochelle.jpg");
+		}
+
+		&--saint-etienne {
+			background-image: url("../img/places/helsinki.jpg");
+		}
+	}
+
+	.popular-destinations__image::before {
+		display: none;
+	}
+
+	&__name {
+		display: flex;
+
+		margin: 0;
+		padding-top: 13px;
+		padding-bottom: 2px;
+
+		.font-fira-medium();
+		font-size: 20px;
+		letter-spacing: 1px;
+		color: @text-dark-color;
+	}
+
+	&__country {
+		.font-fira-italic();
+		font-size: 13px;
+		color: @text-black-color;
+	}
+
+	&__footer {
+		.container-footer(0, 45px);
+	}
+
+	&__show-more {
+		.show-btn();
+	}
+}
