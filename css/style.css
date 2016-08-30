@@ -1388,6 +1388,9 @@ main {
 .popup__form-input-wrapper:hover .popup__form-input-icon svg {
   fill: #6bd3c6;
 }
+.popup__form input:focus + .popup__form-input-icon svg {
+  fill: #6bd3c6;
+}
 .popup__form-input-icon {
   position: absolute;
   top: 4px;
