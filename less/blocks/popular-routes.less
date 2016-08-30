@@ -1,0 +1,202 @@
+.popular-routes {
+	.container();
+	padding-bottom: 45px;
+
+	&__title {
+		.container-title();
+	}
+
+	&__items {
+		.row();
+
+		padding-bottom: 51px;
+
+		border-bottom: 1px solid @block-border-color;
+	}
+
+	&__item {
+		.row-item();
+	}
+
+	&__image {
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+
+		height: 210px;
+		padding-top: 100px;
+
+		background-color: #a6512e;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+
+		&:hover {
+			.popular-routes__details-city {
+				opacity: 1;
+			}
+
+			.popular-routes__details-country {
+				opacity: 1;
+			}
+		}
+
+		&:hover::before {
+			opacity: 1;
+		}
+
+		&::before {
+			content: "";
+
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 12;
+
+			display: flex;
+			width: 100%;
+			background: rgba(255, 255, 255, 0.85);
+
+			transition: all 0.3s ease;
+			opacity: 0;
+		}
+
+		&--strasbourg {
+			background-image: url("../img/routes/strasbourg.jpg");
+		}
+
+		&--marseille {
+			background-image: url("../img/routes/marseille.jpg");
+		}
+
+		&--normandy {
+			background-image: url("../img/routes/normandy.jpg");
+		}
+	}
+
+	&__details-city {
+		position: relative;
+		z-index: 13;
+
+		display: flex;
+
+		.font-fira-medium();
+		font-size: 14px;
+		line-height: 22px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: @text-dark-color;
+
+		transition: all 0.3s ease;
+		opacity: 0;
+	}
+
+	&__details-country {
+		position: relative;
+		z-index: 13;
+
+		display: flex;
+
+		.font-ptserif-italic();
+		font-size: 13px;
+		line-height: 17px;
+		color: @text-dark-color;
+
+		transition: all 0.3s ease;
+		opacity: 0;
+
+		&::before {
+			content: "";
+
+			position: absolute;
+			top: 49%;
+			right: -11px;
+
+			display: flex;
+
+			width: 5px;
+			height: 1px;
+
+			background: @text-dark-color;
+		}
+
+		&::after {
+			content: "";
+
+			position: absolute;
+			top: 49%;
+			left: -13px;
+
+			display: flex;
+
+			width: 5px;
+			height: 1px;
+
+			// background: @text-dark-color;
+			background: red;
+		}
+	}
+
+	&__favorite {
+		.favorite();
+
+		z-index: 11;
+	}
+
+	&__item-footer {
+		display: flex;
+		flex-direction: column;
+
+		padding-right: 13px;
+		padding-bottom: 18px;
+		padding-left: 13px;
+	}
+
+	&__info {
+		.block-footer-info();
+		align-items: center;
+
+		padding-left: 0;
+	}
+
+	&__info-item {
+		display: flex;
+		align-items: center;
+
+		padding-right: 8px;
+
+		&:not(:first-child) {
+			padding-left: 8px;
+		}
+
+		&:not(:last-child) {
+			border-right: 1px solid @popular-routes-footer-info-color;
+		}
+
+		span {
+			padding-top: 4px;
+			padding-left: 3px;
+
+			font-size: 14px;
+			color: @popular-routes-footer-info-color;
+		}
+
+		svg {
+			fill: @popular-routes-footer-info-color;
+		}
+	}
+
+	&__item-footer-text {
+		max-height: 40px;
+
+		font-size: 16px;
+		line-height: 22px;
+
+		color: @text-dark-color;
+	}
+}

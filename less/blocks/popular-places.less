@@ -1,0 +1,182 @@
+.popular-places {
+	.container();
+
+	padding-bottom: 0;
+
+	&__title {
+		.container-title();
+	}
+
+	&__items {
+		.row();
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+
+		width: 100%;
+		min-width: 225px;
+		padding-bottom: 28px;
+	}
+
+	&__image {
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+
+		height: 170px;
+		padding-top: 30px;
+
+		background-color: #a6512e;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+
+		&:hover {
+			.popular-places__details-name {
+				opacity: 1;
+			}
+
+			.popular-places__details-text {
+				opacity: 1;
+			}
+		}
+
+		&:hover::before {
+			opacity: 1;
+		}
+
+		&::before {
+			content: "";
+
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 12;
+
+			display: flex;
+			width: 100%;
+			background: @popular-places-substrate-color;
+
+			transition: all 0.3s ease;
+			opacity: 0;
+		}
+
+		&--prague {
+			background-image: url("../img/places/prague.jpg");
+		}
+
+		&--polignano {
+			background-image: url("../img/places/polignano-a-mare.jpg");
+		}
+
+		&--paris {
+			background-image: url("../img/places/paris.jpg");
+		}
+
+		&--brno {
+			background-image: url("../img/places/brno.jpg");
+		}
+
+		&--milan {
+			background-image: url("../img/places/milan.jpg");
+		}
+
+		&--helsinki {
+			background-image: url("../img/places/helsinki.jpg");
+		}
+	}
+
+	&__details-name {
+		position: relative;
+		z-index: 13;
+
+		display: flex;
+		align-self: center;
+
+		padding-bottom: 11px;
+
+		.font-fira-bold();
+		font-size: 22px;
+		line-height: 30px;
+		color: @text-light-color;
+
+		opacity: 0;
+		transition: all 0.3s ease;
+	}
+
+	&__details-text {
+		position: relative;
+		z-index: 13;
+
+		display: flex;
+
+		height: 80px;
+		margin: 0;
+		padding: 0 20px;
+
+		.font-fira-italic();
+		font-size: 13px;
+		text-align: center;
+		color: @text-light-color;
+
+		opacity: 0;
+		transition: all 0.3s ease;
+	}
+
+	&__favorite {
+		.favorite();
+	}
+
+	&__name {
+		display: flex;
+
+		margin: 0;
+		padding-top: 6px;
+
+		.font-fira-medium();
+		font-size: 20px;
+		line-height: 24px;
+		color: @text-dark-color;
+	}
+
+	&__country {
+		.font-fira-italic();
+		font-size: 13px;
+		line-height: 18px;
+		color: @text-dark-color;
+	}
+
+	&__footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		width: 100%;
+		padding-bottom: 32px;
+
+		border-bottom: 1px solid @block-border-color;
+	}
+
+	&__show-more {
+		.show-btn();
+		align-self: center;
+	}
+}
+
+@media @desktop-width {
+	.popular-places__item {
+		width: 32.5%;
+	}
+}
+
+@media @xl-screens-width {
+	.popular-places__item {
+		width: 24%;
+	}
+}
