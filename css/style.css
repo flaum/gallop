@@ -1537,7 +1537,8 @@ a {
 }
 .popular-places__item:hover .popular-places__image::before,
 .popular-places__item:hover .popular-places__details-name,
-.popular-places__item:hover .popular-places__details-text {
+.popular-places__item:hover .popular-places__details-text,
+.popular-places__item:hover .popular-places__info-item {
   opacity: 1;
 }
 .popular-places__image {
@@ -3239,6 +3240,8 @@ a {
   background: #f0f0f0;
   border-radius: 50%;
   transition: all 0.3s ease;
+  font-size: 0;
+  line-height: 0;
 }
 .right-sidebar__route:not(:nth-child(3n+3)) {
   margin-right: 5px;
