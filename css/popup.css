@@ -1,0 +1,755 @@
+@font-face {
+	font-family: "FiraSans";
+	src:
+		url("../fonts/firasans.woff") format("woff"),
+		url("../fonts/firasans.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "FiraSans Bold";
+	src:
+		url("../fonts/firasansbold.woff") format("woff"),
+		url("../fonts/firasansbold.woff2") format("woff2");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "FiraSans Italic";
+	src:
+		url("../fonts/firasansitalic.woff") format("woff"),
+		url("../fonts/firasansitalic.woff2") format("woff2");
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "FiraSans Light";
+	src:
+		url("../fonts/firasanslight.woff") format("woff"),
+		url("../fonts/firasanslight.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "FiraSans Medium";
+	src:
+		url("../fonts/firasansmedium.woff") format("woff"),
+		url("../fonts/firasansmedium.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "FiraSans Medium Italic";
+	src:
+		url("../fonts/firasansmediumitalic.woff") format("woff"),
+		url("../fonts/firasansmediumitalic.woff2") format("woff2");
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "FiraSans Regular";
+	src:
+		url("../fonts/firasansregular.woff") format("woff"),
+		url("../fonts/firasansregular.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "ProximaNova Regular";
+	src:
+		url("../fonts/proximanovaregular.woff") format("woff"),
+		url("../fonts/proximanovaregular.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "PT Serif";
+	src:
+		url("../fonts/ptserif.woff") format("woff"),
+		url("../fonts/ptserif.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "PT Serif Bold";
+	src:
+		url("../fonts/ptserifbold.woff") format("woff"),
+		url("../fonts/ptserifbold.woff2") format("woff2");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "PT Serif Italic";
+	src:
+		url("../fonts/ptserifitalic.woff") format("woff"),
+		url("../fonts/ptserifitalic.woff2") format("woff2");
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Georgia Italic";
+	src:
+		url("../fonts/georgiaitalic.woff") format("woff"),
+		url("../fonts/georgiaitalic.woff2") format("woff2");
+	font-weight: normal;
+	font-style: italic;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "FiraSans";
+	font-size: 12px;
+	line-height: 20px;
+	background: #f7f7f7;
+}
+
+.popups-width {
+	display: flex;
+	flex-direction: column;
+
+	width: 40%;
+	margin: 0 auto;
+}
+
+.popup {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding-top: 57px;
+
+	background: #ffffff;
+}
+
+.popup__welcome-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 100%;
+	margin: 0;
+	// height: 559px;
+	padding-top: 216px;
+	padding-bottom: 200px;
+
+	background: #453b10 url("../img/ocean.jpg") no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.popup--warning  .popup__warning-block {
+	display: flex;
+}
+
+.popup--warning  .popup__form input {
+	color: #ff5353;
+}
+
+.popup--warning  .popup__form input:hover {
+	color: #35363b;
+}
+
+.popup--warning  .popup__form input:focus {
+	color: #35363b;
+}
+
+.popup--warning  .popup__form input:focus + .popup__form-input-icon svg {
+	fill: #6bd3c6;
+}
+
+.popup--warning  .popup__form svg {
+	fill: #ff5353;
+}
+
+.popup__logo {
+	flex-shrink: 0;
+	align-self: center;
+
+	font-size: 0;
+	line-height: 0;
+}
+
+.popup__welcome-title {
+	font-family: "FiraSans Medium", Arial, sans-serif;
+	font-size: 30px;
+	line-height: 40px;
+	text-transform: uppercase;
+	letter-spacing: 6px;
+	color: #ffffff;
+}
+
+.popup__close-btn {
+	position: absolute;
+	top: 19px;
+	right: 19px;
+
+	display: flex;
+
+	width: 16px;
+	height: 16px;
+
+	line-height: 0;
+	font-size: 0;
+
+}
+
+.popup__close-btn svg {
+	stroke: #23bdaa;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 2px;
+	fill: none;
+	fill-rule: evenodd;
+}
+
+.popup__back-btn {
+	position: absolute;
+	top: 64px;
+	left: 35px;
+
+	display: flex;
+
+	width: 22px;
+	height: 13px;
+
+	font-size: 0;
+	line-height: 0;
+
+	transform: rotate(90deg);
+}
+
+.popup__back-btn svg {
+	width: 42px;
+	height: 33px;
+
+	fill: #68696c;
+}
+
+.popup__main-content-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 100%;
+	padding-right: 9%;
+	padding-left: 9%;
+}
+
+.popup__title {
+	margin: 0;
+	padding-bottom: 15px;
+
+	font-family: "FiraSans Medium", Arial, sans-serif;
+	font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 2px;
+	color: #35363b;
+}
+
+.popup__title--margin-bottom {
+	margin-bottom: 30px;
+}
+
+.popup__text {
+	margin: 0;
+	padding: 0 20px;
+
+	line-height: 18px;
+	text-align: center;
+	color: #979797;
+}
+
+.popup__form {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	padding-top: 15px;
+}
+
+.popup__form--pass-reset {
+	padding-top: 20px;
+	padding-right: 6.7%;
+	padding-bottom: 0;
+	padding-left: 6.7%;
+}
+
+.popup__form 	input {
+	display: flex;
+
+	width: 100%;
+	padding-top: 9px;
+	padding-bottom: 9px;
+
+	font-size: 15px;
+	line-height: 20px;
+	color: #35363b;
+
+	border: none;
+	border-bottom: 1px solid #bfc0c2;
+
+	transition: all 0.3s ease;
+}
+
+.popup__form input[type="checkbox"] {
+	display: none;
+}
+
+.popup__form 	input:hover {
+	border-bottom: 1px solid #2c2f34;
+}
+
+.popup__form 	input:focus {
+	outline: none;
+	border-bottom: 1px solid #2c2f34;
+}
+
+.popup__form-input-wrapper {
+	position: relative;
+
+	display: flex;
+	width: 100%;
+}
+
+.popup__form-input-wrapper:not(:first-of-type) {
+	margin-top: 12px;
+}
+
+.popup__form-input-wrapper:hover  .popup__form-input-icon {
+	border-color: #6bd3c6;
+}
+
+.popup__form-input-wrapper:hover  .popup__form-input-icon svg {
+	fill: #6bd3c6;
+}
+
+.popup__form input:focus + .popup__form-input-icon svg {
+	fill: #6bd3c6;
+}
+
+.popup__form-input-icon {
+	position: absolute;
+	top: 4px;
+	right: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 31px;
+	height: 31px;
+}
+
+.popup__form-input-icon:hover svg {
+	fill: #6bd3c6;
+}
+
+.popup__form-input-icon svg {
+	width: 46px;
+	height: 40px;
+
+	transition: all 0.3s ease;
+
+	fill: #bababa;
+}
+
+.popup__form-input-icon--phone {
+	top: 0px;
+
+	border: 1px solid #bababa;
+	border-radius: 50%;
+}
+
+.popup__form-input-icon--phone svg {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+
+	width: 29px;
+	height: 29px;
+}
+
+.popup__form-row-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	width: 100%;
+	padding-top: 11px;
+	padding-bottom: 34px;
+}
+
+.popup__form-row-wrapper  input[type="checkbox"]:checked + .popup__form-checkbox-label::before {
+	border-color: #23bdaa;
+}
+
+.popup__form-row-wrapper  input[type="checkbox"]:checked + .popup__form-checkbox-label::after {
+	content: "";
+
+	position: absolute;
+	top: 6.5px;
+	left: 4.75px;
+
+	display: flex;
+
+	width: 7.5px;
+	height: 7.5px;
+
+	background: #23bdaa;
+	border-radius: 50%;
+}
+
+.popup__form-checkbox-label {
+	position: relative;
+
+	display: flex;
+
+	padding-top: 2px;
+	padding-left: 22px;
+
+	color: #35363b;
+
+	cursor: pointer;
+}
+
+.popup__form-checkbox-label::before {
+	content: "";
+
+	position: absolute;
+	top: 2.5px;
+	left: 1px;
+
+	display: flex;
+	width: 13px;
+	height: 13px;
+
+	border: 1px solid #35363b;
+	border-radius: 50%;
+
+	transition: all 0.3s ease;
+}
+
+.popup__form-checkbox-label::after {
+	content: "";
+
+	position: absolute;
+	top: 6.5px;
+	left: 4.75px;
+
+	display: flex;
+
+	width: 7.5px;
+	height: 7.5px;
+
+	background: transparent;
+	border-radius: 50%;
+
+	transition: all 0.3s ease;
+}
+
+
+.popup__form-link {
+	display: flex;
+	align-self: center;
+
+	font-family: "FiraSans Italic", Arial, sans-serif;
+	font-style: italic;
+	color: #23bdaa;
+
+	transition: all 0.3s ease;
+}
+
+.popup__form-link--centered {
+	align-self: center;
+	margin-top: 15px;
+	margin-bottom: 34px;
+}
+
+.popup__form-link--margined {
+	margin-top: 9px;
+	margin-bottom: 34px;
+}
+
+.popup__form-link:hover {
+	color: #16d2bb;
+}
+
+.popup__form-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin-right: 3%;
+	margin-bottom: 39px;
+	margin-left: 3%;
+	padding-top: 13px;
+	padding-bottom: 11px;
+
+	font-family: "FiraSans Medium", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #ffffff;
+
+	background: #23bdaa;
+	border: none;
+}
+
+.popup__form-btn--margin-top {
+	margin-top: 45px;
+	margin-bottom: 0;
+}
+
+.popup__form-btn:active {
+	outline: none;
+}
+
+.popup__social-block {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 30px;
+	list-style: none;
+}
+
+.popup__social-item:not(:last-child) {
+	padding-right: 9%;
+}
+
+.popup__social-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 44px;
+	height: 44px;
+
+	font-size: 0;
+	line-height: 0;
+
+	border-radius: 50%;
+
+	transition: all 0.3s ease;
+}
+
+.popup__social-icon:hover {
+	background: #1ebcaa;
+}
+
+.popup__social-icon--facebook {
+	background: #3a5897;
+}
+
+.popup__social-icon--google {
+	background: #dd4e41;
+}
+
+.popup__social-icon--vk {
+	background: #507199;
+}
+
+.popup__social-icon--twitter {
+	background: #00aced;
+}
+
+.popup__social-icon svg {
+	fill: #ffffff;
+}
+
+.popup__text-sideborders {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	padding-bottom: 27px;
+
+	font-family: "FiraSans Medium", Arial, sans-serif;
+	font-size: 11px;
+	line-height: 20px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #979797;
+}
+
+.popup__text-sideborders::before {
+	content: "";
+
+	display: flex;
+	flex-grow: 1;
+
+	height: 1px;
+	margin-right: 10px;
+	background: #e4e4e4;
+}
+
+.popup__text-sideborders::after {
+	content: "";
+
+	display: flex;
+	flex-grow: 1;
+
+	height: 1px;
+	margin-left: 10px;
+	background: #e4e4e4;
+}
+
+.popup__e-mail-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding-top: 8px;
+	padding-right: 18px;
+	padding-bottom: 6px;
+	padding-left: 18px;
+
+	font-family: "FiraSans Medium", Arial, sans-serif;
+	font-size: 11px;
+	letter-spacing: 1px;
+	line-height: 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	color: #8d8d8d;
+
+	border: 1px solid #8d8d8d;
+	border-radius: 18px;
+	background: #ffffff;
+
+	transition: all 0.3s ease;
+
+	padding: 0;
+	margin-bottom: 20px;
+}
+
+.popup__e-mail-btn:hover {
+	color: #fff;
+
+	background: #23bdaa;
+	border-color: #23bdaa;
+}
+
+.popup__e-mail-btn:hover svg {
+	transition: all 0.3s ease;
+	fill: #fff;
+}
+
+.popup__e-mail-btn svg {
+	width: 23px;
+	height: 22px;
+	margin-right: 10px;
+
+	fill: #8d8d8d;
+
+}
+
+.popup__e-mail-btn span {
+	padding-top: 7px;
+	padding-right: 15px;
+	padding-bottom: 5px;
+	padding-left: 30px;
+
+	letter-spacing: 2px;
+}
+
+
+.popup__footer {
+	display: flex;
+
+	width: 100%;
+	padding-top: 24px;
+	padding-right: 42px;
+	padding-bottom: 24px;
+	padding-left: 42px;
+
+	border-top: 1px solid #e4e4e4;
+}
+
+.popup__conditions {
+	margin: 0;
+
+	line-height: 16px;
+	color: #8d8d8d;
+
+}
+
+.popup__conditions a {
+	line-height: 9px;
+	text-decoration: none;
+
+	color: #46bdb1;
+	border-bottom: 1px solid transparent;
+
+	transition: all 0.3s ease;
+
+}
+
+.popup__conditions a:hover {
+	text-decoration: underline;
+}
+
+.popup__warning-block {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+
+	height: 86px;
+	padding-top: 11px;
+	padding-right: 4%;
+	padding-left: 15%;
+
+	background: #ff5353;
+}
+
+.popup__warning-icon {
+	position: absolute;
+	top: 27px;
+	left: 20px;
+}
+
+.popup__warning-icon svg {
+	width: 36px;
+	height: 32px;
+
+	fill: #ffffff;
+}
+
+.popup__warning-title {
+	padding-bottom: 5px;
+
+	font-family: "FiraSans Bold", Arial, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+	color: #ffffff;
+}
+
+.popup__warning-text {
+	font-family: "FiraSans Italic", Arial, sans-serif;
+	font-style: italic;
+	font-size: 13px;
+	line-height: 18px;
+	margin: 0;
+	color: #ffffff;
+}
