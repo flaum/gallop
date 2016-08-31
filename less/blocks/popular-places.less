@@ -15,14 +15,8 @@
 		.row-item-ver-2();
 
 		&:hover {
-			.popular-places__image::before {
-				opacity: 1;
-			}
-
-			.popular-places__details-name {
-				opacity: 1;
-			}
-
+			.popular-places__image::before,
+			.popular-places__details-name,
 			.popular-places__details-text {
 				opacity: 1;
 			}
@@ -31,6 +25,7 @@
 
 	&__image {
 		.row-item-image-ver-2();
+		justify-content: space-between;
 
 		&-footer {
 			position: relative;
