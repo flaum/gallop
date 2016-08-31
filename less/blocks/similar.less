@@ -1,0 +1,106 @@
+.similar {
+	.container(0);
+	padding-top: 13px;
+
+	&__title {
+		.visualy-hidden();
+	}
+
+	&__container {
+		.row();
+	}
+
+	&__link-wrapper {
+		display: flex;
+		flex-direction: column;
+
+		text-decoration: none;
+	}
+
+	&__item {
+		.row-item(transparent);
+
+		&:hover  .similar__item-title {
+			text-decoration: underline;
+		}
+
+		&:hover  .similar__item-image {
+			&::before {
+				opacity: 1;
+			}
+
+			span {
+				opacity: 1;
+			}
+		}
+
+		&:hover  .similar__item-image::before {
+			opacity: 1;
+		}
+
+		&-image {
+			.row-item-image(250px, 156px);
+
+			&--new-york {
+				background-image: url("../img/new-york.jpg")
+			}
+
+			&--mountains {
+				background-image: url("../img/mountains.jpg")
+			}
+
+			&--village {
+				background-image: url("../img/village-on-water.jpg")
+			}
+		}
+
+		&-title {
+			display: flex;
+
+			height: 54px;
+			padding-top: 10px;
+			padding-right: 40px;
+			padding-left: 3px;
+			margin: 0;
+			margin-bottom: 10px;
+
+			.font-fira-medium();
+			font-size: 17px;
+			line-height: 22px;
+			color: @similar-text-color;
+			// text-overflow: ellipsis;
+			// white-space: nowrap;
+
+			overflow: hidden;
+		}
+
+		&-footer {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
+			padding-top: 5px;
+			padding-bottom: 5px;
+			padding-left: 5px;
+
+			border-top: 1px solid @similar-border-color;
+		}
+
+		&-likes {
+			&:hover {
+				svg {
+					stroke: @post-comments-color;
+					fill: transparent;
+				}
+			}
+		}
+
+		&-comments {
+			.post-comments();
+
+			&:hover {
+				border-color: transparent;
+			}
+		}
+	}
+}
