@@ -1,0 +1,177 @@
+.travel-advice {
+	.container(30px, 0);
+	margin-top: 23px;
+	margin-bottom: 23px;
+
+	background: @block-bg-color;
+
+	&__header {
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		// justify-content: center;
+
+		margin-left: 36px;
+		margin-right: 34px;
+		padding-bottom: 6px;
+
+		border-bottom: 1px solid @travel-advice-border-color;
+	}
+
+	&__pro-info {
+		position: absolute;
+		top: -15px;
+
+		.font-fira-medium();
+		font-size: 11px;
+		text-transform: uppercase;
+		color: @text-orange-color;
+	}
+
+	&__pro {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		padding-bottom: 30px;
+
+		&-text {
+			margin: 0;
+			padding-top: 34px;
+			padding-bottom: 29px;
+
+			.font-fira-medium();
+			font-size: 14px;
+			line-height: 18px;
+			text-transform: uppercase;
+			color: @travel-advice-pro-text-color;
+		}
+
+		&-btn {
+			display: flex;
+
+			padding-top: 5px;
+			padding-right: 21px;
+			padding-bottom: 3px;
+			padding-left: 21px;
+
+			.font-fira-medium();
+			font-size: 11px;
+			line-height: 18px;
+			text-transform: uppercase;
+			text-decoration: none;
+			color: @text-dark-color;
+
+			border: 1px solid @text-dark-color;
+			border-radius: 15px;
+		}
+	}
+
+	&__title {
+		.container-title();
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		// display: none;
+
+		margin: 0;
+		padding-left: 36px;
+		padding-right: 34px;
+		padding-bottom: 24px;
+
+		list-style: none;
+	}
+
+	&__item {
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+
+		width: 100%;
+		padding-top: 30px;
+		padding-left: 34px;
+		padding-bottom: 30px;
+		border-bottom: 1px dashed @travel-advice-border-color;
+
+
+		&::before {
+			content: "";
+
+			position: absolute;
+			top: 33px;
+			left: 0;
+
+			display: flex;
+			width: 11px;
+			height: 11px;
+
+			border: 2px solid @travel-advice-list-mark-color;
+			border-radius: 50%;
+
+			box-sizing: border-box;
+		}
+
+		&-name {
+			.font-fira-medium();
+			font-size: 14px;
+			line-height: 18px;
+			text-transform: uppercase;
+			color: @text-green-color;
+		}
+
+		&-text {
+			margin: 0;
+
+			.font-ptserif-italic();
+			font-size: 14px;
+			line-height: 18px;
+			color: @travel-advice-text-color;
+		}
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: flex-end;
+		// display: none;
+	}
+
+	&__pagination {
+		display: flex;
+		flex-direction: row;
+
+		margin: 0;
+		padding: 0;
+		// padding-top: 13px;
+		padding-left: 36px;
+		padding-right: 34px;
+		padding-bottom: 15px;
+		list-style: none;
+
+		&-item {
+			display: flex;
+			padding-left: 13px;
+
+
+			a {
+				font-size: 14px;
+				text-decoration: none;
+
+				color: @travel-advice-pagination-color;
+
+				transition: all 0.3s ease
+			}
+
+			&--current {
+				a {
+					color: @text-green-color;
+					cursor: default;
+				}
+			}
+		}
+	}
+}

@@ -94,70 +94,12 @@
 }
 
 .page-footer__social-block {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	flex-shrink: 0;
-
-	width: 113px;
+	.social-block();
 	padding-top: 20px;
 }
 
 .page-footer__social-btn {
-	position: relative;
-
-	display: block;
-	width: 20px;
-	height: 20px;
-
-	font-size: 0;
-	line-height: 0;
-
-	box-sizing: content-box;
-
-	&:hover {
-		svg {
-			fill-opacity: 0.8;
-		}
-	}
-
-	&--vimeo {
-		svg {
-			width: 19px;
-			height: 16px;
-		}
-	}
-
-	&--twitter {
-		svg {
-			width: 19px;
-			height: 15px;
-		}
-	}
-
-	&--pinterest {
-		svg {
-			width: 16px;
-			height: 18px;
-		}
-	}
-
-	&--google {
-		svg {
-			width: 17px;
-			height: 16px;
-		}
-	}
-
-	svg {
-		display: flex;
-
-		fill: @page-footer-social-icons-color;
-		fill-opacity: 0.4;
-
-		transition: all 0.3s ease;
-	}
+	.social-btn();
 }
 
 @media @desktop-width {

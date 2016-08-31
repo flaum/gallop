@@ -1,5 +1,6 @@
 .content-header {
 	.container();
+
 	padding-bottom: 0;
 
 	&__breadcrumbs {
@@ -20,6 +21,12 @@
 			padding-left: 7px;
 
 			text-transform: uppercase;
+
+			&:last-child {
+				a {
+					cursor: default;
+				}
+			}
 
 			&:not(:last-child) {
 				padding-right: 11px;
@@ -47,7 +54,6 @@
 				}
 			}
 
-
 			a {
 				font-size: 14px;
 				line-height: 14px;
@@ -61,12 +67,12 @@
 	&__image-container {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		// justify-content: space-between;
 
 		width: 100%;
 		height: 278px;
-		padding-top: 50px;
-		padding-bottom: 40px;
+		padding-top: 15px;
+		// padding-bottom: 40px;
 
 		font-size: 0;
 		line-height: 0;
@@ -76,21 +82,44 @@
 		background-position: 50% 50%;
 		background-size: cover;
 
+		&--no-location {
+			padding-top: 50px;
+		}
+
 		&--night-paris {
 			background-image: url("../img/others/night-paris.jpg");
+		}
+
+		&--solomon {
+			background-image: url("../img/others/taxi.jpg");
 		}
 	}
 
 	&__text-substrate {
 		.text-substrate();
+		margin-bottom: 25px;
+	}
+
+	&__location {
+		display: flex;
+		flex-shrink: 0;
+
+
+		.font-ptserif-italic();
+		font-size: 14px;
+		line-height: 14px;
+		color: @content-header-text-color;
 	}
 
 	&__title {
 		display: flex;
+		justify-content: center;
 		align-self: center;
+		flex-shrink: 0;
 
 		margin: 0;
 		padding-top: 3px;
+		width: 75%;
 
 		.font-fira-bold();
 		font-size: 32px;
@@ -103,6 +132,7 @@
 
 	&__text {
 		display: flex;
+		flex-shrink: 0;
 
 		width: 100%;
 		margin: 0;
@@ -142,15 +172,58 @@
 	&__footer {
 		display: flex;
 		flex-direction: row;
-		justify-content: flex-end;
+		justify-content: space-between;
 
 		width: 100%;
+		padding-top: 15px;
+		padding-right: 24px;
 		padding-bottom: 15px;
+		padding-left: 24px;
+
+		background: @block-bg-color;
+		box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.03);
+	}
+
+	&__left-side {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	&__footer-btn {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		padding-right: 22px;
+
+		svg {
+			margin-right: 8px;
+
+			fill: @content-header-icon-gray;
+		}
+
+		span {
+			display: flex;
+
+			padding-top: 2px;
+
+			font-size: 10px;
+			line-height: 13px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			color: @content-header-gray-text-color;
+		}
+	}
+
+	&__add-link {
+		.add-link();
 	}
 
 	&__subscribe {
 		display: flex;
 		justify-content: center;
+		align-self: flex-end;
 
 		width: 97px;
 		padding-top: 3px;
