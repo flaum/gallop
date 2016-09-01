@@ -35,7 +35,7 @@
 			padding-bottom: 33px;
 			padding-left: 15px;
 
-			font-size: 15px;
+			font-size: 14px;
 			line-height: 22px;
 			color: @text-dark-color;
 		}
@@ -60,7 +60,7 @@
 		&-image-container {
 			display: flex;
 			flex-direction: column;
-			justify-content: space-between;
+			justify-content: flex-end;
 			flex-shrink: 0;
 
 			width: 260px;
@@ -164,7 +164,7 @@
 			letter-spacing: 2px;
 			text-align: center;
 			text-transform: uppercase;
-			color: @text-light-color;
+			color: @route-details-dark-color;
 		}
 
 		&-place-type {
@@ -175,7 +175,7 @@
 			font-size: 12px;
 			line-height: 18px;
 
-			color: @text-light-color;
+			color: @route-details-gray-color;
 		}
 
 		&-place-text {
@@ -183,8 +183,9 @@
 			flex-shrink: 0;
 
 			margin: 0;
+			margin-bottom: 10px;
 
-			height: 108px;
+			height: 63px;
 
 			overflow: hidden;
 
@@ -200,16 +201,18 @@
 			flex-shrink: 0;
 
 			font-size: 10px;
-			line-height: 14px;
+			line-height: 11px;
 			text-transform: uppercase;
 			letter-spacing: 1px;
 			text-decoration: none;
 			color: @text-green-color;
 
 			transition: all 0.3s ease;
+			border-bottom: 1px dashed @text-green-color;
 
 			&:hover {
 				color: @text-orange-color;
+				border-color: @text-orange-color;
 			}
 		}
 
@@ -219,16 +222,19 @@
 			flex-shrink: 0;
 
 			font-size: 10px;
-			line-height: 14px;
+			line-height: 11px;
 			text-transform: uppercase;
 			letter-spacing: 1px;
 			text-decoration: none;
 			color: @route-details-gray-color;
 
+			border-bottom: 1px dashed @route-details-gray-color;
+
 			transition: all 0.3s ease;
 
 			&:hover {
 				color: @text-orange-color;
+				border-color: @text-orange-color;
 			}
 		}
 

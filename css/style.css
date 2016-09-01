@@ -2260,6 +2260,27 @@ a {
   padding-bottom: 0;
   margin-left: 17px;
 }
+.page-nav--fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 200px;
+  z-index: 100;
+  flex-direction: row;
+  -ms-grid-row-align: center;
+      align-items: center;
+  height: 53px;
+  padding-top: 0;
+  padding-right: 35px;
+  padding-left: 17px;
+  margin: 0;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+.page-nav--fixed .page-nav__list {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 .page-nav__list {
   display: flex;
   flex-direction: row;
@@ -4115,7 +4136,7 @@ a {
   padding-right: 15px;
   padding-bottom: 33px;
   padding-left: 15px;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 22px;
   color: #071a1e;
 }
@@ -4134,7 +4155,7 @@ a {
 .route__details-image-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-shrink: 0;
   width: 260px;
   height: 184px;
@@ -4213,7 +4234,7 @@ a {
   letter-spacing: 2px;
   text-align: center;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #242121;
 }
 .route__details-place-type {
   display: flex;
@@ -4221,13 +4242,14 @@ a {
   font-family: "FiraSans Light", Arial, sans-serif;
   font-size: 12px;
   line-height: 18px;
-  color: #ffffff;
+  color: #a5a5a5;
 }
 .route__details-place-text {
   display: flex;
   flex-shrink: 0;
   margin: 0;
-  height: 108px;
+  margin-bottom: 10px;
+  height: 63px;
   overflow: hidden;
   font-family: "PT Serif", Arial, sans-serif;
   font-size: 14px;
@@ -4239,30 +4261,34 @@ a {
   align-self: flex-end;
   flex-shrink: 0;
   font-size: 10px;
-  line-height: 14px;
+  line-height: 11px;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-decoration: none;
   color: #23bdaa;
   transition: all 0.3s ease;
+  border-bottom: 1px dashed #23bdaa;
 }
 .route__details-more-btn:hover {
   color: #ffb957;
+  border-color: #ffb957;
 }
 .route__details-hide-btn {
   display: flex;
   align-self: flex-end;
   flex-shrink: 0;
   font-size: 10px;
-  line-height: 14px;
+  line-height: 11px;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-decoration: none;
   color: #a5a5a5;
+  border-bottom: 1px dashed #a5a5a5;
   transition: all 0.3s ease;
 }
 .route__details-hide-btn:hover {
   color: #ffb957;
+  border-color: #ffb957;
 }
 .route__details-more-text-block {
   display: flex;
