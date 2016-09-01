@@ -590,7 +590,7 @@
 				color: @text-green-color;
 			}
 		}
-		
+
 		span.right-sidebar__info-text-name:hover {
 			color: @text-dark-color;
 		}
@@ -679,6 +679,28 @@
 
 			transform: rotate(-90deg);
 			fill: @text-light-color;
+		}
+	}
+
+	&__rating {
+		display: flex;
+		flex-direction: column;
+
+		&-wrapper {
+			display: flex;
+			flex-direction: row;
+
+			padding-top: 6px;
+		}
+
+		&-star {
+			margin-right: 9px;
+
+			fill: @right-sidebar-star-color;
+
+			&--nominated {
+				fill: @right-sidebar-star-color-nominated;
+			}
 		}
 	}
 }
