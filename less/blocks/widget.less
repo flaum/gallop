@@ -1,5 +1,5 @@
 .widget {
-	.container(34px, 0);
+	.container(34px, 28px);
 
 	&__header {
 		display: flex;
@@ -453,10 +453,36 @@
 		padding-right: 33px;
 		padding-bottom: 28px;
 		padding-left: 28px;
-		margin-bottom: 28px;
 
 		border-top: 1px solid @widget-content-footer-border-color;
 		background: @widget-block-bg-color;
+
+		&--no-border {
+			border: none;
+			padding-top: 0;
+		}
+
+	}
+
+	&__social-block {
+		.social-block();
+		width: 100%;
+		justify-content: center;
+		padding-top: 15px;
+		padding-bottom: 10px;
+
+		@media @big-screens-width {
+			justify-content: flex-end;
+			width: 230px;
+		}
+	}
+
+	&__social-btn {
+		.social-btn();
+
+		&:not(:first-child) {
+			padding-left: 20px;
+		}
 	}
 }
 
@@ -482,7 +508,7 @@
 		padding-top: 0;
 	}
 
-	// .widget__btn {
-	// 	margin-bottom: 15px;
-	// }
+	.widget__author-name {
+		width: 230px;
+	}
 }

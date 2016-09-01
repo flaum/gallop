@@ -33,6 +33,10 @@
 
 				a {
 					color: @content-header-name-gray-color;
+
+					&:hover {
+						color: @text-green-color;
+					}
 				}
 
 				&::before {
@@ -60,6 +64,8 @@
 				text-transform: uppercase;
 				text-decoration: none;
 				color: @content-header-name-dark-color;
+
+				transition: all 0.3s ease;
 			}
 		}
 	}
@@ -82,7 +88,7 @@
 		background-position: 50% 50%;
 		background-size: cover;
 
-		&--no-location {
+		&--padding-top {
 			padding-top: 50px;
 		}
 
@@ -93,11 +99,28 @@
 		&--solomon {
 			background-image: url("../img/others/taxi.jpg");
 		}
+
+		&--route {
+			background-image: url("../img/bicycle-1.jpg");
+		}
 	}
 
 	&__text-substrate {
 		.text-substrate();
 		margin-bottom: 25px;
+
+		&--margin-top {
+			margin-top: 25px;
+		}
+	}
+
+	&__icon {
+		display: flex;
+		align-self: center;
+		padding-top: 10px;
+		padding-bottom: 25px;
+
+		fill: @text-light-color;
 	}
 
 	&__location {
@@ -128,6 +151,10 @@
 		text-align: center;
 		text-transform: uppercase;
 		color: @content-header-text-color;
+
+		&--normal-text {
+			text-transform: none;
+		}
 	}
 
 	&__text {
@@ -202,10 +229,21 @@
 
 		padding-right: 22px;
 
+		&:hover {
+			svg {
+				fill: @text-green-color;
+			}
+
+			span {
+				color: @text-green-color;
+			}
+		}
+
 		svg {
 			margin-right: 8px;
 
 			fill: @content-header-icon-gray;
+			transition: all 0.3s ease;
 		}
 
 		span {
@@ -218,6 +256,8 @@
 			text-transform: uppercase;
 			letter-spacing: 1px;
 			color: @content-header-gray-text-color;
+
+			transition: all 0.3s ease;
 		}
 	}
 

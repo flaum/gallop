@@ -1,0 +1,243 @@
+.route {
+	.container(33px, 33px);
+
+	&__details {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 37px;
+
+		&-day {
+			display: flex;
+
+			width: 100%;
+			margin: 0;
+			padding-bottom: 3px;
+
+			.font-fira-bold();
+			font-size: 28px;
+			line-height: 30px;
+			text-transform: uppercase;
+			color: @route-details-day-color;
+
+			border-bottom: 1px solid @route-details-gray-color;
+		}
+
+		&-text {
+			display: flex;
+
+			margin: 0;
+			padding-top: 33px;
+			padding-right: 15px;
+			padding-bottom: 33px;
+			padding-left: 15px;
+
+			font-size: 15px;
+			line-height: 22px;
+			color: @text-dark-color;
+		}
+
+		&-item {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			&:not(:last-child) {
+				margin-bottom: 30px;
+				border-bottom: 1px dashed @route-details-border-color;
+			}
+		}
+
+		&-image-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+
+			width: 35%;
+			// height: 184px;
+			padding-bottom: 10px;
+
+			background-color: #1b4d83;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			background-size: cover;
+
+			box-shadow: inset 0 -60px 20px -10px rgba(0, 0, 0, 0.3);
+
+			&--solomon {
+				background-image: url("../img/solomon-museum.jpg");
+			}
+
+			&--fractals {
+				background-image: url("../img/others/fractals.jpg");
+			}
+		}
+
+		&-info-block {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			align-self: center;
+		}
+
+		&-info-item {
+			display: flex;
+			flex-direction: row;
+			// align-items: center;
+
+			span {
+				display: flex;
+
+				// padding-top: 2px;
+				padding-left: 6px;
+
+				font-size: 14px;
+				line-height: 20px;
+				color: @text-light-color;
+			}
+
+			svg {
+				width: 16px;
+				height: 16px;
+
+				fill: @text-light-color;
+			}
+
+			&:not(:last-child) {
+				padding-right: 9px;
+				border-right: 1px solid @text-light-color;
+			}
+
+			&:not(:first-child) {
+				padding-left: 9px;
+			}
+		}
+
+		&-text-block {
+			display: flex;
+			flex-direction: column;
+
+			width: 65%;
+			// height: 184px;
+			padding-top: 11px;
+			padding-right: 14px;
+			padding-bottom: 11px;
+			padding-left: 20px;
+
+			background: @block-bg-color;
+		}
+
+		&-location {
+			display: flex;
+			flex-shrink: 0;
+
+			padding-bottom: 6px;
+
+			.font-ptserif-italic();
+			font-size: 14px;
+			line-height: 20px;
+			color: @route-details-gray-color;
+		}
+
+		&-place-name {
+			display: flex;
+			flex-shrink: 0;
+
+			margin: 0;
+
+			.font-fira-bold();
+			font-size: 16px;
+			line-height: 18px;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			color: @route-details-dark-color;
+		}
+
+		&-place-type {
+			display: flex;
+			flex-shrink: 0;
+
+			padding-bottom: 11px;
+
+			.font-fira-light();
+			font-size: 14px;
+			line-height: 18px;
+
+			color: @route-details-gray-color;
+		}
+
+		&-place-text {
+			display: flex;
+			flex-shrink: 0;
+
+			margin: 0;
+			margin-bottom: 11px;
+
+			height: 65px;
+
+			overflow: hidden;
+
+			.font-ptserif();
+			font-size: 14px;
+			line-height: 22px;
+			color: @text-dark-color;
+		}
+
+		&-more-btn {
+			display: flex;
+			align-self: flex-end;
+			flex-shrink: 0;
+
+			font-size: 10px;
+			line-height: 14px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			text-decoration: none;
+			color: @text-green-color;
+
+			transition: all 0.3s ease;
+
+			&:hover {
+				color: @text-orange-color;
+			}
+		}
+
+		&-hide-btn {
+			display: flex;
+			align-self: flex-end;
+			flex-shrink: 0;
+
+			font-size: 10px;
+			line-height: 14px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			text-decoration: none;
+			color: @route-details-gray-color;
+
+			transition: all 0.3s ease;
+
+			&:hover {
+				color: @text-orange-color;
+			}
+		}
+
+		&-more-text-block {
+			display: flex;
+			flex-direction: column;
+
+			width: 100%;
+			padding: 27px 34px;
+			margin-bottom: 25px;
+
+			background: @block-bg-color;
+			border-top: 1px solid @route-more-text-border-color;
+		}
+	}
+
+	&__description {
+		display: flex;
+		flex-direction: column;
+		padding-top: 35px;
+		background: @block-bg-color;
+	}
+}
