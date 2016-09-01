@@ -4000,7 +4000,12 @@ a {
   font-weight: bold;
   font-size: 14px;
   line-height: 20px;
+  text-decoration: none;
   color: #071a1e;
+  transition: all 0.3s ease;
+}
+.right-sidebar__info-text-name:hover {
+  color: #23bdaa;
 }
 .right-sidebar__info-text-value {
   font-family: "FiraSans Italic", Arial, sans-serif;
@@ -4075,6 +4080,16 @@ a {
   padding-bottom: 33px;
   margin-left: 17px;
 }
+.route__text-substrate {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 6px;
+  background: rgba(0, 0, 0, 0.5);
+}
 .route__details {
   display: flex;
   flex-direction: column;
@@ -4106,19 +4121,24 @@ a {
 }
 .route__details-item {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
 }
 .route__details-item:not(:last-child) {
   margin-bottom: 30px;
   border-bottom: 1px dashed #d6d6d6;
 }
+.route__details-row {
+  display: flex;
+  flex-direction: row;
+}
 .route__details-image-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  width: 35%;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 260px;
+  height: 184px;
+  padding-top: 36px;
   padding-bottom: 10px;
   background-color: #1b4d83;
   background-repeat: no-repeat;
@@ -4164,7 +4184,8 @@ a {
 .route__details-text-block {
   display: flex;
   flex-direction: column;
-  width: 65%;
+  justify-content: space-between;
+  flex-grow: 1;
   padding-top: 11px;
   padding-right: 14px;
   padding-bottom: 11px;
@@ -4190,24 +4211,23 @@ a {
   font-size: 16px;
   line-height: 18px;
   letter-spacing: 2px;
+  text-align: center;
   text-transform: uppercase;
-  color: #242121;
+  color: #ffffff;
 }
 .route__details-place-type {
   display: flex;
   flex-shrink: 0;
-  padding-bottom: 11px;
   font-family: "FiraSans Light", Arial, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 18px;
-  color: #a5a5a5;
+  color: #ffffff;
 }
 .route__details-place-text {
   display: flex;
   flex-shrink: 0;
   margin: 0;
-  margin-bottom: 11px;
-  height: 65px;
+  height: 108px;
   overflow: hidden;
   font-family: "PT Serif", Arial, sans-serif;
   font-size: 14px;

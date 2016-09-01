@@ -1,6 +1,10 @@
 .route {
 	.container(33px, 33px);
 
+	&__text-substrate {
+		.text-substrate();
+	}
+
 	&__details {
 		display: flex;
 		flex-direction: column;
@@ -38,9 +42,9 @@
 
 		&-item {
 			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: space-between;
+			flex-direction: column;
+			// flex-wrap: wrap;
+			// justify-content: space-between;
 
 			&:not(:last-child) {
 				margin-bottom: 30px;
@@ -48,13 +52,20 @@
 			}
 		}
 
+		&-row {
+			display: flex;
+			flex-direction: row;
+		}
+
 		&-image-container {
 			display: flex;
 			flex-direction: column;
-			justify-content: flex-end;
+			justify-content: space-between;
+			flex-shrink: 0;
 
-			width: 35%;
-			// height: 184px;
+			width: 260px;
+			height: 184px;
+			padding-top: 36px;
 			padding-bottom: 10px;
 
 			background-color: #1b4d83;
@@ -116,8 +127,10 @@
 		&-text-block {
 			display: flex;
 			flex-direction: column;
+			justify-content: space-between;
+			flex-grow: 1;
 
-			width: 65%;
+			// min-width: 150px;
 			// height: 184px;
 			padding-top: 11px;
 			padding-right: 14px;
@@ -149,21 +162,20 @@
 			font-size: 16px;
 			line-height: 18px;
 			letter-spacing: 2px;
+			text-align: center;
 			text-transform: uppercase;
-			color: @route-details-dark-color;
+			color: @text-light-color;
 		}
 
 		&-place-type {
 			display: flex;
 			flex-shrink: 0;
 
-			padding-bottom: 11px;
-
 			.font-fira-light();
-			font-size: 14px;
+			font-size: 12px;
 			line-height: 18px;
 
-			color: @route-details-gray-color;
+			color: @text-light-color;
 		}
 
 		&-place-text {
@@ -171,9 +183,8 @@
 			flex-shrink: 0;
 
 			margin: 0;
-			margin-bottom: 11px;
 
-			height: 65px;
+			height: 108px;
 
 			overflow: hidden;
 
