@@ -16,7 +16,7 @@
 	&__item {
 
 		display: flex;
-		padding-right: 58px;
+		padding-right: 8px;
 
 		transition: all 0.3s ease;
 
@@ -34,7 +34,7 @@
 		}
 
 		&--active {
-			padding-right: 74px;
+			padding-right: 14px;
 
 			a {
 				color: @page-nav-text-color-active;
@@ -49,5 +49,16 @@
 
 		font-size: 10px;
 		color: @page-nav-pro-color;
+	}
+}
+
+@media @desktop-width {
+
+	.page-nav__item {
+		padding-right: 58px;
+
+		&--active {
+			padding-right: 74px;
+		}
 	}
 }

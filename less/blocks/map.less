@@ -1,0 +1,138 @@
+.map {
+	.container(0, 35px);
+
+	&__container {
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+
+		width: 100%;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__full-btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		display: flex;
+
+		padding-top: 6px;
+		padding-right: 18px;
+		padding-bottom: 5px;
+		padding-left: 18px;
+
+		.font-fira-medium();
+		line-height: 18px;
+		text-transform: lowercase;
+		color: @text-green-color;
+		// text-decoration: none;
+
+		background: @map-full-btn-bg-color;
+	}
+
+	&__popup {
+		position: absolute;
+		top: 130px;
+		left: 30%;
+
+		display: flex;
+		flex-direction: column;
+
+		width: 284px;
+		padding: 15px 13px;
+
+		background: @block-bg-color;
+		box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.13);
+
+		&::before {
+			content: "";
+
+			position: absolute;
+			top: -4.5px;
+			left: 130px;
+
+			width: 9px;
+			height: 9px;
+
+			background: @block-bg-color;
+
+			transform: rotate(45deg);
+		}
+
+		&-title {
+			display: flex;
+			// align-self: center;
+
+			margin: 0;
+			padding-bottom: 11px;
+
+			.font-fira-medium();
+			font-size: 14px;
+			line-height: 20px;
+			text-transform: uppercase;
+			text-align: center;
+			color: @text-dark-color;
+		}
+
+		&-text {
+			display: flex;
+
+			margin: 0;
+
+			.font-fira-light();
+			font-size: 13px;
+			line-height: 18px;
+			color: @text-dark-opacity;
+		}
+
+		&-footer {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+
+			padding-top: 6px;
+
+			border-top: 1px solid @map-popup-border-color;
+		}
+
+	}
+
+	&__like {
+		stroke: @map-like-icon-color;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-width: 2px;
+		fill: transparent;
+		fill-rule: evenodd;
+	}
+
+	&__add-btn {
+		// position: relative;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		.font-fira-medium();
+		text-transform: uppercase;
+		text-decoration: none;
+		color: @text-green-color;
+
+		span {
+			padding-right: 8px;
+			margin-top: 5px;
+		}
+
+		&-icon {
+			.plus-icon();
+		}
+	}
+}

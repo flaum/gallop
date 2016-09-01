@@ -519,6 +519,43 @@
 	opacity: 0.9;
 }
 
+.plus-icon(@size: 20px, @color: @text-green-color, @length: 10px, @height: 2px, @top: 7px, @left: 3px) {
+	position: relative;
+
+	display: flex;
+	width: @size;
+	height: @size;
+
+	font-size: 0;
+	line-height: 0;
+
+	border: 2px solid @color;
+	border-radius: 50%;
+
+	&::before,
+	&::after {
+		content: "";
+
+		position: absolute;
+
+		top: @top;
+		left: @left;
+
+		display: flex;
+
+		width: @length;
+		height: @height;
+
+		background: @color;
+
+		transform-origin: center;
+	}
+
+	&::after {
+		transform: rotate(90deg);
+	}
+}
+
 .post-comments(@color: @post-comments-color, @bcolor: @post-comment-hover-border-color) {
 	display: flex;
 
