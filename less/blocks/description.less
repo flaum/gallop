@@ -53,6 +53,13 @@
 		color: @description-more-color;
 
 		border-bottom: 1px solid @description-more-border-color;
+
+		transition: all 0.3s ease;
+
+		&:hover {
+			color: @text-green-light-color;
+			border-color: #84e2d6;
+		}
 	}
 
 	&__footer {
@@ -79,11 +86,10 @@
 	}
 
 	&__btn {
-		.btn-gray();
+		.btn-author-thanks();
 		width: 200px;
 		padding-left: 0;
 		padding-right: 0;
-		.font-proximanova-regular;
 	}
 
 	&__social-block {

@@ -31,12 +31,17 @@
 			color: @page-nav-text-color;
 
 			transition: all 0.3s ease;
+
+			&:hover {
+				color: @page-nav-text-color-active;
+			}
 		}
 
 		&--active {
 			padding-right: 14px;
 
 			a {
+				cursor: default;
 				color: @page-nav-text-color-active;
 			}
 		}

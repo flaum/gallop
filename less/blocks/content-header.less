@@ -167,6 +167,11 @@
 		background: @content-header-guide-btn-bg-color;
 
 		transition: all 0.3s ease;
+
+		&:hover {
+			background: @text-green-light-color;
+			border-color: @text-green-light-color;
+		}
 	}
 
 	&__footer {
@@ -238,5 +243,26 @@
 
 		border: 1px solid @content-header-subscribe-border-color;
 		border-top: none;
+
+		transition: all 0.3s ease;
+
+		&:hover {
+			color: @text-light-color;
+			background: @text-green-light-color;
+			border-color: @text-green-light-color;
+		}
+
+		&--pushed {
+			cursor: default;
+			color: @text-light-color;
+			background: #c6c6c6;
+			border-color: #c6c6c6;
+
+			&:hover {
+				color: @text-light-color;
+				background: #c6c6c6;
+				border-color: #c6c6c6;
+			}
+		}
 	}
 }

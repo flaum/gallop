@@ -323,10 +323,13 @@
 		.btn-gray();
 		width: 200px;
 
-		&--proxima {
-			.font-proximanova-regular();
-			font-size: 10px;
+		@media @desktop-width {
+			margin-bottom: 0;
 		}
+	}
+
+	&__btn-thanks {
+		.btn-author-thanks();
 
 		@media @desktop-width {
 			margin-bottom: 0;
