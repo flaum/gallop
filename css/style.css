@@ -4028,6 +4028,9 @@ a {
 .right-sidebar__info-text-name:hover {
   color: #23bdaa;
 }
+.right-sidebar__info-text span.right-sidebar__info-text-name:hover {
+  color: #071a1e;
+}
 .right-sidebar__info-text-value {
   font-family: "FiraSans Italic", Arial, sans-serif;
   font-style: italic;
@@ -4234,7 +4237,12 @@ a {
   letter-spacing: 2px;
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
   color: #242121;
+  transition: all 0.3s ease;
+}
+.route__details-place-name:hover {
+  color: #23bdaa;
 }
 .route__details-place-type {
   display: flex;
