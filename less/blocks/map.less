@@ -104,14 +104,33 @@
 
 	}
 
-	&__like {
-		stroke: @map-like-icon-color;
-		stroke-linecap: round;
-		stroke-linejoin: round;
-		stroke-width: 2px;
-		fill: transparent;
-		fill-rule: evenodd;
+	&__popup-like {
+		display: flex;
+		align-items: center;
+
+		&:hover {
+			svg {
+				stroke: @text-green-color;
+				stroke-linecap: round;
+				stroke-linejoin: round;
+				stroke-width: 2px;
+				fill: @text-green-color;
+				fill-rule: evenodd;
+			}
+		}
+
+		svg {
+			stroke: @map-like-icon-color;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+			stroke-width: 2px;
+			fill: transparent;
+			fill-rule: evenodd;
+
+			transition: all 0.3s ease;
+		}
 	}
+
 
 	&__add-btn {
 		// position: relative;

@@ -1723,13 +1723,26 @@ a {
   padding-top: 6px;
   border-top: 1px solid rgba(53, 53, 53, 0.4);
 }
-.map__like {
+.map__popup-like {
+  display: flex;
+  align-items: center;
+}
+.map__popup-like:hover svg {
+  stroke: #23bdaa;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  fill: #23bdaa;
+  fill-rule: evenodd;
+}
+.map__popup-like svg {
   stroke: #a1a1a1;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 2px;
   fill: transparent;
   fill-rule: evenodd;
+  transition: all 0.3s ease;
 }
 .map__add-btn {
   display: flex;
