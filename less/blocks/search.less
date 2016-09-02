@@ -133,7 +133,7 @@
 			border-bottom: 1px solid @search-border-color;
 		}
 
-		&-photo {
+		&-image {
 			display: flex;
 			flex-shrink: 0;
 
@@ -158,7 +158,7 @@
 		flex-direction: row;
 		align-items: flex-end;
 
-		padding-bottom: 13px;
+		padding-bottom: 6px;
 
 		&-stars {
 			display: flex;
@@ -196,9 +196,11 @@
 		}
 	}
 
-	&__place-name {
+	&__info-name {
 		display: flex;
 		align-self: flex-start;
+
+		padding-top: 7px;
 
 		.font-fira-medium();
 		font-size: 18px;
@@ -213,7 +215,28 @@
 		}
 	}
 
-	&__place-location {
+	&__info-rank {
+		display: flex;
+		flex-direction: row;
+		padding-bottom: 11px;
+
+		svg {
+			margin-top: 1px;
+			margin-right: 3px;
+			fill: @search-green-color;
+		}
+
+		span {
+			display: flex;
+
+
+			font-size: 13px;
+			color: @search-green-color;
+			opacity: 0.9;
+		}
+	}
+
+	&__info-location {
 		.font-ptserif-italic();
 		font-size: 13px;
 		color: @text-black-color;
@@ -222,6 +245,7 @@
 	&__details {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 
 		&-text {
 			display: flex;
@@ -270,5 +294,23 @@
 
 	&__show-btn {
 		.search-show-btn();
+	}
+
+	&__sign-btn {
+		.search-show-btn();
+
+		&--selected {
+			cursor: default;
+
+			color: @text-green-color;
+			border-color: @text-green-color;
+			background: none;
+
+			&:hover {
+				color: @text-green-color;
+				border-color: @text-green-color;
+				background: none;
+			}
+		}
 	}
 }

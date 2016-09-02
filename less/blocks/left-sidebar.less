@@ -115,6 +115,18 @@
 		fill: @left-sidebar-icons-color;
 		transition: all 0.3s ease;
 	}
+
+	&--active {
+		color: @left-sidebar-text-color-hover;
+
+		span {
+			border-right: 5px solid @left-sidebar-item-border-left-color-hover;
+		}
+
+		svg {
+			fill: @left-sidebar-icons-color-hover;
+		}
+	}
 }
 
 .left-sidebar__item-counter-block {
