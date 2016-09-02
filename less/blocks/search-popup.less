@@ -1,0 +1,172 @@
+.search-popup {
+	position: absolute;
+	top: 58px;
+	left: 8px;
+
+	display: flex;
+	flex-direction: column;
+
+	width: 359px;
+	padding-top: 7px;
+	padding-right: 6px;
+
+	background: @block-bg-color;
+
+	box-shadow: 0 1px 17px rgba(52, 54, 58, 0.21);
+
+	&__content {
+		display: flex;
+		flex-direction: row;
+	}
+
+	&__list {
+		.reset-list();
+		flex-grow: 1;
+
+		padding-bottom: 13px;
+	}
+
+	&__category {
+
+		&-name {
+			display: flex;
+
+			padding-top: 15px;
+			padding-left: 21px;
+
+			.font-fira-medium();
+			font-size: 13px;
+			line-height: 18px;
+
+			color: @text-dark-color;
+			opacity: 0.4;
+		}
+
+		&-list {
+			.reset-list();
+		}
+
+		&-item {
+			width: 100%;
+
+			transition: all 0.3s ease;
+
+			cursor: pointer;
+
+			&:hover {
+				background: @search-popup-item-hover-color;
+
+			}
+
+			&:hover .search-popup__category-link {
+
+				border-color: @search-popup-item-hover-color;
+			}
+
+			&:not(:last-child)  .search-popup__category-link {
+				padding-left: 0;
+				margin-left: 53px;
+
+				svg {
+					left: -33px;
+				}
+			}
+
+			&-name {
+				.font-fira-medium();
+				font-size: 14px;
+				line-height: 16px;
+				color: @text-dark-color;
+			}
+
+			&-location {
+				.font-fira-italic();
+				font-size: 11px;
+				line-height: 14px;
+
+				color: @text-gray-color;
+			}
+		}
+
+		&-link {
+			position: relative;
+
+			display: flex;
+			flex-direction: column;
+
+			padding-top: 9px;
+			padding-bottom: 9px;
+			padding-left: 33px;
+			margin-left: 20px;
+			margin-right: 18px;
+
+			border-bottom: 2px solid @search-popup-border-color;
+
+			text-decoration: none;
+
+			transition: all 0.3s ease;
+
+			svg {
+				position: absolute;
+				top: 12px;
+				left: 0;
+
+				fill: @text-dark-color;
+
+				opacity: 0.4;
+			}
+		}
+	}
+
+	&__loading-icon {
+		.loading-icon();
+		align-self: center;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	&__scroll {
+
+		&-scale {
+			position: relative;
+
+			display: flex;
+			width: 16px;
+			align-self: stretch;
+			background: @body-bg-color;
+
+			// cursor: pointer
+		}
+
+		&-bar {
+			position: absolute;
+
+			display: flex;
+			top: 190px;
+			left: 3px;
+
+			width: 10px;
+			height: 72px;
+
+			border-radius: 30px;
+
+			background: @search-popup-scroll-bar-color;
+
+			transition: all 0.3s ease;
+
+			cursor: pointer;
+		}
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: center;
+
+		padding-top: 10px;
+		padding-bottom: 17px;
+	}
+
+	&__show-btn {
+		.search-show-btn();
+	}
+}

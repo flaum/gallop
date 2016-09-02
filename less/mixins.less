@@ -685,6 +685,16 @@
 	}
 }
 
+.reset-list(@direct: column) {
+	display: flex;
+	flex-direction: @direct;
+
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
 .right-sidebar-title() {
 	display: flex;
 	align-items: center;
@@ -892,7 +902,7 @@
 	.font-fira-regular();
 	font-size: 11px;
 	line-height: 10px;
-	font-weight: 600;
+	text-align: center;
 	text-transform: uppercase;
 	text-decoration: none;
 	letter-spacing: 1px;

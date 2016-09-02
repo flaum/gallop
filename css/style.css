@@ -1999,6 +1999,7 @@ a {
 }
 .page-header {
   position: relative;
+  z-index: 1000;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -4561,7 +4562,7 @@ a {
   font-family: "FiraSans Regular", Arial, sans-serif;
   font-size: 11px;
   line-height: 10px;
-  font-weight: 600;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 1px;
@@ -4618,7 +4619,7 @@ a {
   font-family: "FiraSans Regular", Arial, sans-serif;
   font-size: 11px;
   line-height: 10px;
-  font-weight: 600;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 1px;
@@ -4628,6 +4629,177 @@ a {
   transition: all 0.3s ease;
 }
 .search__show-btn:hover {
+  color: #ffffff;
+  background: #23bdaa;
+  border-color: #23bdaa;
+}
+.search-popup {
+  position: absolute;
+  top: 58px;
+  left: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 359px;
+  padding-top: 7px;
+  padding-right: 6px;
+  background: #fff;
+  box-shadow: 0 1px 17px rgba(52, 54, 58, 0.21);
+}
+.search-popup__content {
+  display: flex;
+  flex-direction: row;
+}
+.search-popup__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-grow: 1;
+  padding-bottom: 13px;
+}
+.search-popup__category-name {
+  display: flex;
+  padding-top: 15px;
+  padding-left: 21px;
+  font-family: "FiraSans Medium", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #071a1e;
+  opacity: 0.4;
+}
+.search-popup__category-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.search-popup__category-item {
+  width: 100%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.search-popup__category-item:hover {
+  background: #e1e1e1;
+}
+.search-popup__category-item:hover .search-popup__category-link {
+  border-color: #e1e1e1;
+}
+.search-popup__category-item:not(:last-child) .search-popup__category-link {
+  padding-left: 0;
+  margin-left: 53px;
+}
+.search-popup__category-item:not(:last-child) .search-popup__category-link svg {
+  left: -33px;
+}
+.search-popup__category-item-name {
+  font-family: "FiraSans Medium", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: #071a1e;
+}
+.search-popup__category-item-location {
+  font-family: "FiraSans Italic", Arial, sans-serif;
+  font-style: italic;
+  font-size: 11px;
+  line-height: 14px;
+  color: #5e6466;
+}
+.search-popup__category-link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 33px;
+  margin-left: 20px;
+  margin-right: 18px;
+  border-bottom: 2px solid #eeeeee;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.search-popup__category-link svg {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  fill: #071a1e;
+  opacity: 0.4;
+}
+.search-popup__loading-icon {
+  position: relative;
+  display: flex;
+  width: 46px;
+  height: 46px;
+  font-size: 0;
+  line-height: 0;
+  border: 4px solid #d7d9dd;
+  border-radius: 50%;
+  animation: 1s linear 0s normal none infinite running clockwise;
+  align-self: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.search-popup__loading-icon:after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  display: flex;
+  width: 46px;
+  height: 46px;
+  border: 4px solid transparent;
+  border-bottom-color: #a9acb7;
+  border-radius: 50%;
+  box-sizing: border-box;
+  transform: rotate(-45deg);
+}
+.search-popup__scroll-scale {
+  position: relative;
+  display: flex;
+  width: 16px;
+  align-self: stretch;
+  background: #f7f7f7;
+}
+.search-popup__scroll-bar {
+  position: absolute;
+  display: flex;
+  top: 190px;
+  left: 3px;
+  width: 10px;
+  height: 72px;
+  border-radius: 30px;
+  background: #dedede;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.search-popup__footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 17px;
+}
+.search-popup__show-btn {
+  display: flex;
+  justify-content: center;
+  width: 159px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 13px;
+  padding-bottom: 11px;
+  font-family: "FiraSans Regular", Arial, sans-serif;
+  font-size: 11px;
+  line-height: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: #8d8d8d;
+  border: 1px solid #8c8c8c;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+.search-popup__show-btn:hover {
   color: #ffffff;
   background: #23bdaa;
   border-color: #23bdaa;
