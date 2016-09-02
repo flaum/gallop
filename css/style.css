@@ -4150,6 +4150,16 @@ a {
 .right-sidebar__rating-star--nominated {
   fill: #f8bc4c;
 }
+.tag_state_selected {
+  cursor: default;
+  color: #ffffff;
+  background: #febf66;
+}
+.filter_state_active {
+  cursor: default;
+  color: #ffffff;
+  background: #febf66;
+}
 .route {
   display: flex;
   flex-direction: column;
