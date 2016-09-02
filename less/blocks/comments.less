@@ -178,6 +178,8 @@
 		display: flex;
 		flex-direction: row;
 
+
+
 		&-link {
 			display: flex;
 			align-self: center;
@@ -187,21 +189,19 @@
 			text-transform: uppercase;
 			letter-spacing: 2px;
 			text-decoration: none;
-			color: @complain-color;
+			color: @comment-gray-text-color;
+			opacity: 0.5;
 
 			border-bottom: 1px solid transparent;
 
 			transition: all 0.3s ease;
 
 			&:hover {
+				opacity: 1;
 				border-bottom-color: @complain-hover-border-color;
 			}
 
-			// &:hover + .widget__complain-popup {
-			// 	display: flex;
-			// }
-
-			&--active + .widget__complain-popup {
+			&--active + .comments__complain-popup {
 				display: flex;
 			}
 		}

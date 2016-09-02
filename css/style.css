@@ -923,13 +923,15 @@ a {
   letter-spacing: 2px;
   text-decoration: none;
   color: #8d8e8e;
+  opacity: 0.5;
   border-bottom: 1px solid transparent;
   transition: all 0.3s ease;
 }
 .comments__complain-link:hover {
+  opacity: 1;
   border-bottom-color: #cdcdcd;
 }
-.comments__complain-link--active + .widget__complain-popup {
+.comments__complain-link--active + .comments__complain-popup {
   display: flex;
 }
 .comments__complain-popup {
