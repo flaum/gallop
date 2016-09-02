@@ -1643,13 +1643,6 @@ a {
   background: #2c2f34;
   transition: all 0.9s ease;
 }
-.left-sidebar__user-block--popup {
-  background: #191c21;
-  animation: slideUp 1s ease-in-out forwards;
-}
-.left-sidebar__user-block--exit {
-  animation: slideDown 1s ease-in-out forwards;
-}
 .left-sidebar__enter-btns {
   display: none;
   flex-direction: column;
@@ -2117,7 +2110,7 @@ a {
 }
 .page-header__currency-list {
   position: absolute;
-  top: 29px;
+  top: 24px;
   left: -50px;
   z-index: 10;
   display: none;
@@ -2184,9 +2177,16 @@ a {
   display: flex;
   animation-name: fadeInDown;
 }
+.page-header__selected-lang-flag {
+  display: flex;
+  width: 20px;
+  height: 12px;
+  background: blue url("../img/flags/en.svg") no-repeat 50% 50%;
+  background-size: cover;
+}
 .page-header__lang-list {
   position: absolute;
-  top: 29px;
+  top: 24px;
   left: 50px;
   z-index: 10;
   display: none;
@@ -2216,6 +2216,9 @@ a {
 .page-header__lang-list-item:active {
   background: #24bda9;
   transform: scale(1.01);
+}
+.page-header__lang-list-item--en a {
+  background-image: url("../img/flags/ru.svg");
 }
 .page-header__lang-list-item--ru a {
   background-image: url("../img/flags/ru.svg");
@@ -3611,12 +3614,14 @@ a {
   fill: #3d3939;
 }
 .right-sidebar__text-filter--active {
+  cursor: default;
   background: #ffffff;
 }
 .right-sidebar__text-filter--active svg {
   fill: #39b8ab;
 }
 .right-sidebar__text-filter--active:hover {
+  color: #686868;
   background: #ffffff;
 }
 .right-sidebar__text-filter--active:hover svg {
@@ -3655,12 +3660,14 @@ a {
   fill: #3d3939;
 }
 .right-sidebar__filter--active {
+  cursor: default;
   background: #ffffff;
 }
 .right-sidebar__filter--active svg {
   fill: #39b8ab;
 }
 .right-sidebar__filter--active:hover {
+  color: #686868;
   background: #ffffff;
 }
 .right-sidebar__filter--active:hover svg {
@@ -3707,12 +3714,14 @@ a {
   fill: #3d3939;
 }
 .right-sidebar__route--active {
+  cursor: default;
   background: #ffffff;
 }
 .right-sidebar__route--active svg {
   fill: #39b8ab;
 }
 .right-sidebar__route--active:hover {
+  color: #686868;
   background: #ffffff;
 }
 .right-sidebar__route--active:hover svg {
@@ -3744,9 +3753,10 @@ a {
   color: #ffffff;
   background: #febf66;
 }
-.right-sidebar__tag:active {
-  color: #686868;
-  background: #ffffff;
+.right-sidebar__tag--active {
+  cursor: default;
+  color: #ffffff;
+  background: #febf66;
 }
 .right-sidebar__tag--not-link:hover {
   color: #686868;

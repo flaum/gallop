@@ -169,7 +169,7 @@
 .page-header__currency-list {
 
 	position: absolute;
-	top: 29px;
+	top: 24px;
 	left: -50px;
 	z-index: 10;
 
@@ -263,9 +263,19 @@
 	animation-name: fadeInDown;
 }
 
+.page-header__selected-lang-flag {
+	display: flex;
+
+	width: 20px;
+	height: 12px;
+
+	background: blue url("../img/flags/en.svg") no-repeat 50% 50%;
+	background-size: cover;
+}
+
 .page-header__lang-list {
 	position: absolute;
-	top: 29px;
+	top: 24px;
 	left: 50px;
 	z-index: 10;
 
@@ -304,6 +314,12 @@
 	&:active {
 		background: @page-header-currency-item-bg-color-hover;
 		transform: scale(1.01);
+	}
+
+	&--en {
+		a {
+			background-image: url("../img/flags/ru.svg");
+		}
 	}
 
 	&--ru {
