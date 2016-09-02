@@ -2218,7 +2218,7 @@ a {
   transform: scale(1.01);
 }
 .page-header__lang-list-item--en a {
-  background-image: url("../img/flags/ru.svg");
+  background-image: url("../img/flags/en.svg");
 }
 .page-header__lang-list-item--ru a {
   background-image: url("../img/flags/ru.svg");
