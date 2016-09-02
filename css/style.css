@@ -2452,10 +2452,6 @@ a {
   padding-bottom: 28px;
   text-decoration: none;
 }
-.popular-destinations__item:nth-child(8n+7),
-.popular-destinations__item:nth-child(8n+8) {
-  display: none;
-}
 .popular-destinations__image {
   position: relative;
   display: flex;
@@ -2586,10 +2582,6 @@ a {
   min-width: 225px;
   padding-bottom: 28px;
   text-decoration: none;
-}
-.popular-places__item:nth-child(8n+7),
-.popular-places__item:nth-child(8n+8) {
-  display: none;
 }
 .popular-places__item:hover .popular-places__image::before,
 .popular-places__item:hover .popular-places__details-name,
@@ -4463,11 +4455,14 @@ a {
   background: #c6c6c6;
 }
 .search__results {
-  display: flex;
+  display: none;
   flex-direction: column;
   padding: 0;
   margin: 0;
   list-style: none;
+}
+.search__results--selected {
+  display: flex;
 }
 .search__result-block {
   display: flex;
@@ -6101,16 +6096,8 @@ a {
   .popular-destinations__item {
     width: 24%;
   }
-  .popular-destinations__item:nth-child(8n+7),
-  .popular-destinations__item:nth-child(8n+8) {
-    display: flex;
-  }
   .popular-places__item {
     width: 24%;
-  }
-  .popular-places__item:nth-child(8n+7),
-  .popular-places__item:nth-child(8n+8) {
-    display: flex;
   }
   .popular-routes__item {
     width: 24%;
