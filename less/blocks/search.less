@@ -151,6 +151,126 @@
 		display: flex;
 		flex-direction: column;
 		flex-grow: 1;
+
+		&-row {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&-name {
+			display: flex;
+			align-self: flex-start;
+
+			padding-top: 2px;
+
+			.font-fira-medium();
+			font-size: 18px;
+			line-height: 20px;
+			text-decoration: none;
+			color: @search-dark-text-color;
+
+			transition: all 0.3s ease;
+
+			&:hover {
+				color: @text-green-color;
+			}
+		}
+
+		&-date {
+			.font-fira-italic();
+			color: @search-date-color;
+		}
+
+		&-rank {
+			display: flex;
+			flex-direction: row;
+			padding-bottom: 21px;
+
+			svg {
+				margin-top: 1px;
+				margin-right: 3px;
+				fill: @search-green-color;
+			}
+
+			span {
+				display: flex;
+
+
+				font-size: 13px;
+				color: @search-green-color;
+				opacity: 0.9;
+			}
+		}
+
+		&-author {
+			.font-fira-medium-italic();
+			color: @text-dark-color;
+
+			i {
+				opacity: 0.6;
+			}
+		}
+
+		&-location {
+			.font-ptserif-italic();
+			font-size: 13px;
+			color: @text-black-color;
+		}
+
+		&-text {
+			display: flex;
+
+			height: 47px;
+			margin: 0;
+			margin-top: 7px;
+
+			.font-ptserif();
+			font-size: 14px;
+			line-height: 22px;
+			color: @text-dark-color;
+
+			opacity: 0.6;
+
+			overflow: hidden;
+		}
+
+		&-footer {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+
+			padding-top: 9px;
+			padding-bottom: 4px;
+		}
+
+		&-data {
+			display: flex;
+			justify-content: space-between;
+
+			&-item {
+				.block-footer-info-item();
+				padding-top: 3px;
+			}
+		}
+	}
+
+	&__read-more {
+		display: flex;
+		align-self: flex-end;
+
+		margin-bottom: -11px;
+
+		.font-fira-italic();
+		font-size: 15px;
+		text-decoration: none;
+		color: @search-read-more-color;
+
+		transition: all 0.3s ease;
+
+		&:hover {
+			color: @text-orange-color;
+		}
 	}
 
 	&__ratio {
@@ -196,50 +316,23 @@
 		}
 	}
 
-	&__info-name {
-		display: flex;
-		align-self: flex-start;
-
-		padding-top: 7px;
-
-		.font-fira-medium();
-		font-size: 18px;
-		line-height: 20px;
-		text-decoration: none;
-		color: @search-dark-text-color;
-
-		transition: all 0.3s ease;
-
-		&:hover {
-			color: @text-green-color;
-		}
-	}
-
-	&__info-rank {
+	&__activities {
 		display: flex;
 		flex-direction: row;
-		padding-bottom: 11px;
-
-		svg {
-			margin-top: 1px;
-			margin-right: 3px;
-			fill: @search-green-color;
-		}
-
-		span {
-			display: flex;
-
-
-			font-size: 13px;
-			color: @search-green-color;
-			opacity: 0.9;
-		}
+		justify-content: space-between;
+		align-items: center;
 	}
 
-	&__info-location {
-		.font-ptserif-italic();
-		font-size: 13px;
-		color: @text-black-color;
+	&__likes {
+		.post-likes();
+	}
+
+	&__comments {
+		.post-comments();
+	}
+
+	&__add-link {
+		.add-link();
 	}
 
 	&__details {
