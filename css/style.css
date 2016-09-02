@@ -3488,9 +3488,12 @@ a {
   transition: all 0.3s ease;
 }
 .right-sidebar__author-name {
+  display: flex;
+  justify-content: center;
   padding-top: 16px;
   font-family: "FiraSans Medium", Arial, sans-serif;
   font-size: 14px;
+  text-align: center;
   text-decoration: none;
   color: #373737;
   transition: all 0.3s ease;
@@ -3594,10 +3597,11 @@ a {
   margin-right: 15px;
 }
 .right-sidebar__text-filter:hover {
-  background: #ffffff;
+  color: #ffffff;
+  background: #febf66;
 }
 .right-sidebar__text-filter:hover svg {
-  fill: #39b8ab;
+  fill: #ffffff;
 }
 .right-sidebar__text-filter svg {
   transition: all 0.3s ease;
@@ -3607,6 +3611,12 @@ a {
   background: #ffffff;
 }
 .right-sidebar__text-filter--active svg {
+  fill: #39b8ab;
+}
+.right-sidebar__text-filter--active:hover {
+  background: #ffffff;
+}
+.right-sidebar__text-filter--active:hover svg {
   fill: #39b8ab;
 }
 .right-sidebar__filter {
@@ -3631,10 +3641,11 @@ a {
   margin-right: 15px;
 }
 .right-sidebar__filter:hover {
-  background: #ffffff;
+  color: #ffffff;
+  background: #febf66;
 }
 .right-sidebar__filter:hover svg {
-  fill: #39b8ab;
+  fill: #ffffff;
 }
 .right-sidebar__filter svg {
   transition: all 0.3s ease;
@@ -3644,6 +3655,12 @@ a {
   background: #ffffff;
 }
 .right-sidebar__filter--active svg {
+  fill: #39b8ab;
+}
+.right-sidebar__filter--active:hover {
+  background: #ffffff;
+}
+.right-sidebar__filter--active:hover svg {
   fill: #39b8ab;
 }
 .right-sidebar__routes-container {
@@ -3676,10 +3693,11 @@ a {
   margin-right: 5px;
 }
 .right-sidebar__route:hover {
-  background: #ffffff;
+  color: #ffffff;
+  background: #febf66;
 }
 .right-sidebar__route:hover svg {
-  fill: #39b8ab;
+  fill: #ffffff;
 }
 .right-sidebar__route svg {
   transition: all 0.3s ease;
@@ -3689,6 +3707,12 @@ a {
   background: #ffffff;
 }
 .right-sidebar__route--active svg {
+  fill: #39b8ab;
+}
+.right-sidebar__route--active:hover {
+  background: #ffffff;
+}
+.right-sidebar__route--active:hover svg {
   fill: #39b8ab;
 }
 .right-sidebar__tags-container {

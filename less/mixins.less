@@ -407,10 +407,11 @@
 	}
 
 	&:hover {
+		color: @text-light-color;
 		background: @right-sidebar-filter-bg-color-hover;
 
 		svg {
-			fill: @right-sidebar-filter-icon-color-hover;
+			fill: @text-light-color;
 		}
 	}
 
@@ -421,10 +422,18 @@
 	}
 
 	&--active {
-		background: @right-sidebar-filter-bg-color-hover;
+		background: @right-sidebar-filter-bg-color-active;
 
 		svg {
 			fill: @right-sidebar-filter-icon-color-hover;
+		}
+
+		&:hover {
+			background: @right-sidebar-filter-bg-color-active;
+
+			svg {
+				fill: @right-sidebar-filter-icon-color-hover;
+			}
 		}
 	}
 }
