@@ -3278,7 +3278,6 @@ a {
   position: absolute;
   top: 13px;
   left: 16px;
-  display: flex;
   align-self: flex-start;
   padding-top: 2.5px;
   padding-right: 13px;
@@ -3296,6 +3295,7 @@ a {
 }
 .post__title {
   display: flex;
+  justify-content: center;
   padding-top: 8px;
   padding-right: 10px;
   padding-bottom: 6px;
@@ -3305,7 +3305,6 @@ a {
   line-height: 24px;
   letter-spacing: 1px;
   color: #ffffff;
-  background: rgba(0, 0, 0, 0.5);
 }
 .post__title--main-title {
   margin-bottom: 23px;
@@ -5763,9 +5762,9 @@ a {
 }
 .widget__date {
   display: flex;
-  justify-content: center;
   width: 100%;
   padding-top: 36px;
+  padding-left: 30px;
   padding-bottom: 13px;
   font-family: "FiraSans Italic", Arial, sans-serif;
   font-style: italic;
