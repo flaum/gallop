@@ -6366,7 +6366,7 @@ a {
     justify-content: flex-end;
     width: 230px;
   }
-  .widget__add-link--fix-width {
+  .widget__add-link {
     width: 275px;
   }
   .widget__row-wrapper {
