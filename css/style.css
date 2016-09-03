@@ -1587,7 +1587,6 @@ a {
   flex-shrink: 0;
   margin: 0;
   padding-top: 18px;
-  padding-bottom: 2px;
   padding-left: 24px;
   list-style: none;
   transition: all 0.3s ease;
@@ -1596,7 +1595,7 @@ a {
   opacity: 0;
 }
 .left-sidebar__item:last-child span {
-  border: none;
+  border-bottom: none;
 }
 .left-sidebar__item-link {
   display: flex;
@@ -1631,6 +1630,7 @@ a {
   transition: all 0.3s ease;
 }
 .left-sidebar__item-link--active {
+  cursor: default;
   color: #389d94;
 }
 .left-sidebar__item-link--active span {
@@ -3233,7 +3233,7 @@ a {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 100%;
   height: 318px;
   padding-top: 13px;
@@ -3275,9 +3275,11 @@ a {
   background-image: url("../img/bicycle.jpg");
 }
 .post__best {
+  position: absolute;
+  top: 13px;
+  left: 16px;
   display: flex;
   align-self: flex-start;
-  margin-left: 16px;
   padding-top: 2.5px;
   padding-right: 13px;
   padding-bottom: 1.5px;
@@ -3304,6 +3306,13 @@ a {
   letter-spacing: 1px;
   color: #ffffff;
   background: rgba(0, 0, 0, 0.5);
+}
+.post__title--main-title {
+  margin-bottom: 23px;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 1px;
+  text-align: center;
 }
 .post--full-length .post__title {
   font-size: 34px;
