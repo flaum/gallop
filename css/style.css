@@ -5750,7 +5750,7 @@ a {
   fill: #23bdaa;
 }
 .widget__add-link--padding {
-  padding-right: 24px;
+  margin-right: 24px;
 }
 .widget__content {
   display: flex;
@@ -6366,7 +6366,9 @@ a {
     justify-content: flex-end;
     width: 230px;
   }
-  .widget__add-link {
+  .widget__add-link-wrapper {
+    display: flex;
+    justify-content: flex-end;
     width: 275px;
   }
   .widget__row-wrapper {

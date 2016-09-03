@@ -94,7 +94,7 @@
 		}
 
 		&--padding {
-			padding-right: 24px;
+			margin-right: 24px;
 		}
 	}
 
@@ -498,7 +498,10 @@
 }
 
 @media @big-screens-width {
-	.widget__add-link {
+	.widget__add-link-wrapper {
+		display: flex;
+		justify-content: flex-end;
+
 		width: 275px;
 	}
 
