@@ -1149,6 +1149,7 @@ a {
   padding-top: 8px;
   padding-bottom: 6px;
   background: rgba(0, 0, 0, 0.5);
+  background: none;
   margin-bottom: 25px;
 }
 .content-header__text-substrate--margin-top {
