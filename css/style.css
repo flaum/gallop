@@ -1987,14 +1987,15 @@ a {
 .new-activity__images-row,
 .new-activity__images-column {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: stretch;
+  flex-wrap: wrap;
   width: 100%;
 }
 .new-activity__image {
   display: flex;
   flex-grow: 1;
-  width: 100%;
+  width: 49%;
   height: 190px;
   margin-bottom: 5px;
   font-size: 0;
@@ -2004,6 +2005,9 @@ a {
   background-position: 50% 50%;
   background-size: cover;
   transition: all 0.3s ease;
+}
+.new-activity__image:nth-child(even) {
+  margin-left: 5px;
 }
 .new-activity__image--photo-1 {
   background-image: url("../img/subscribe/photo-1.jpg");
@@ -6394,6 +6398,7 @@ a {
     margin-left: 5px;
   }
   .new-activity__images-column {
+    flex-direction: column;
     flex-grow: 1;
     -ms-grid-row-align: stretch;
     align-items: stretch;
@@ -6411,6 +6416,9 @@ a {
     width: auto;
     height: auto;
     margin-bottom: 0;
+  }
+  .new-activity__image:nth-child(even) {
+    margin-left: 0;
   }
   .page-footer__content-wrapper {
     flex-wrap: nowrap;
