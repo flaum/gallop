@@ -2731,7 +2731,7 @@ a {
 .page-tabs__tab:hover::before {
   content: "";
   position: absolute;
-  top: -7px;
+  top: -8px;
   left: -9px;
   z-index: 12;
   display: flex;
