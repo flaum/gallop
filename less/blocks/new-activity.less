@@ -1,6 +1,41 @@
 .new-activity {
 	.container(33px, 0);
 
+	&__empty {
+
+		&-text {
+			display: flex;
+			justify-content: center;
+
+			width: 100%;
+			padding-top: 70px;
+			padding-bottom: 90px;
+
+			.font-fira-medium();
+			font-size: 11px;
+			line-height: 20px;
+			text-align: center;
+			text-transform: uppercase;
+			color: @new-activity-empty-text-color;
+		}
+	}
+
+	&__popular-header {
+		display: flex;
+
+		width: 100%;
+		margin: 0;
+		padding-bottom: 6px;
+		margin-bottom: 32px;
+
+		.font-fira-medium();
+		font-size: 16px;
+		line-height: 20px;
+		color: @new-activity-dark-color-opacity;
+
+		border-bottom: 1px solid @new-activity-border-color;
+	}
+
 	&__header {
 		display: flex;
 		flex-direction: row;
