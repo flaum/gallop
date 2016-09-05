@@ -5295,6 +5295,7 @@ a {
   display: flex;
   flex-direction: column;
   width: 359px;
+  max-height: 75vh;
   padding-top: 7px;
   padding-right: 6px;
   background: #fff;
@@ -5303,6 +5304,8 @@ a {
 .search-popup__content {
   display: flex;
   flex-direction: row;
+  flex-shrink: 1;
+  overflow: hidden;
 }
 .search-popup__list {
   display: flex;
@@ -5431,6 +5434,7 @@ a {
 .search-popup__footer {
   display: flex;
   justify-content: center;
+  flex-shrink: 0;
   padding-top: 10px;
   padding-bottom: 17px;
 }
