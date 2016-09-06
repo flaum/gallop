@@ -4589,6 +4589,10 @@ a {
 .right-sidebar__text-filter--active:hover svg {
   fill: #39b8ab;
 }
+.right-sidebar__text-filter:hover {
+  background: #febf66;
+  color: #ffffff;
+}
 .right-sidebar__filter {
   position: relative;
   display: flex;
