@@ -5038,9 +5038,6 @@ a {
   color: #071a1e;
   transition: all 0.3s ease;
 }
-.right-sidebar__info-text-name:hover {
-  color: #23bdaa;
-}
 .right-sidebar__info-text span.right-sidebar__info-text-name:hover {
   color: #071a1e;
 }
