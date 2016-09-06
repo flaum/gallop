@@ -673,7 +673,7 @@
 
 }
 
-.post-likes(@color: @post-comments-color, @icolor-hover: #65cfc2, @icolor-liked: #25beab) {
+.post-likes(@width: 26px, @color: @post-comments-color, @icolor-hover: #65cfc2, @icolor-liked: #25beab) {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -693,6 +693,8 @@
 	}
 
 	svg {
+		width: @width;
+		height: @width;
 		margin-right: 4px;
 
 		transition: all 0.3s ease;
@@ -899,6 +901,37 @@
 		transition: all 0.3s ease;
 		opacity: 0;
 	}
+}
+
+.scroll-scale() {
+	position: relative;
+
+	align-self: stretch;
+
+	display: flex;
+	flex-shrink: 0;
+	
+	width: 16px;
+	background: @body-bg-color;
+}
+
+.scroll-bar() {
+	position: absolute;
+
+	display: flex;
+	top: 190px;
+	left: 3px;
+
+	width: 10px;
+	height: 72px;
+
+	border-radius: 30px;
+
+	background: @search-popup-scroll-bar-color;
+
+	transition: all 0.3s ease;
+
+	cursor: pointer;
 }
 
 .search-show-btn() {

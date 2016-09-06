@@ -131,33 +131,11 @@
 	&__scroll {
 
 		&-scale {
-			position: relative;
-
-			display: flex;
-			width: 16px;
-			align-self: stretch;
-			background: @body-bg-color;
-
-			// cursor: pointer
+			.scroll-scale();
 		}
 
 		&-bar {
-			position: absolute;
-
-			display: flex;
-			top: 190px;
-			left: 3px;
-
-			width: 10px;
-			height: 72px;
-
-			border-radius: 30px;
-
-			background: @search-popup-scroll-bar-color;
-
-			transition: all 0.3s ease;
-
-			cursor: pointer;
+			.scroll-bar();
 		}
 	}
 
