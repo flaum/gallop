@@ -401,6 +401,8 @@
 }
 
 .filter(@width: 76px, @margin: 15px) {
+	position: relative;
+
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -424,11 +426,9 @@
 	}
 
 	&:hover {
-		color: @text-light-color;
-		background: @right-sidebar-filter-bg-color-hover;
 
 		svg {
-			fill: @text-light-color;
+			opacity: 0;
 		}
 	}
 
@@ -439,11 +439,11 @@
 	}
 
 	&--active {
-		cursor: default;
-		background: @right-sidebar-filter-bg-color-active;
+		// color: @text-light-color;
+		background: @right-sidebar-filter-bg-color-hover;
 
 		svg {
-			fill: @right-sidebar-filter-icon-color-hover;
+			fill: @text-light-color;
 		}
 
 		&:hover {
@@ -910,7 +910,7 @@
 
 	display: flex;
 	flex-shrink: 0;
-	
+
 	width: 16px;
 	background: @body-bg-color;
 }
