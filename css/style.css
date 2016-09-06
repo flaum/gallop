@@ -3845,6 +3845,7 @@ a {
   font-size: 14px;
   text-decoration: none;
   color: #979797;
+  font-size: 13px;
 }
 .popup-image__likes:hover svg {
   fill: #65cfc2;
@@ -3874,6 +3875,7 @@ a {
   text-decoration: none;
   color: #979797;
   border-bottom: 1px solid transparent;
+  font-size: 13px;
 }
 .popup-image__comments:hover {
   border-bottom: 1px solid #979797;
