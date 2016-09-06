@@ -2701,6 +2701,10 @@ a {
   border-bottom: 1px solid #b7b7b7;
   border-right: 1px solid #b7b7b7;
   transform: rotate(45deg);
+  transition: all 0.4s ease;
+}
+.page-header__lang--open::after {
+  transform: scaleY(-1) translateY(-50%) rotate(45deg);
 }
 .page-header__lang:hover + .page-header__lang-list {
   display: flex;
