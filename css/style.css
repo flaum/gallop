@@ -410,9 +410,6 @@ a {
   fill: transparent;
   fill-rule: evenodd;
 }
-.likes--liked {
-  cursor: default;
-}
 .likes--liked svg {
   fill: #25beab;
   stroke: #25beab;
@@ -819,6 +816,7 @@ a {
   margin-left: 85px;
 }
 .comments__comment-author {
+  cursor: pointer;
   display: flex;
   margin: 0;
   font-family: "FiraSans Medium", Arial, sans-serif;
@@ -829,6 +827,11 @@ a {
   text-transform: none;
   color: #071a1e;
   padding-right: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.comments__comment-author:hover {
+  color: #23bdaa;
 }
 .comments__comment-author-avatar {
   display: flex;
@@ -3744,7 +3747,7 @@ a {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  padding-top: 12px;
+  padding-top: 3px;
   padding-right: 5px;
   padding-bottom: 12px;
   padding-left: 13px;
@@ -3753,7 +3756,8 @@ a {
   display: flex;
   flex-direction: row;
   flex-grow: 1;
-  padding-bottom: 5px;
+  padding-top: 9px;
+  padding-bottom: 4px;
   background: #fff;
 }
 .popup-image__scrolling-content {
@@ -3792,7 +3796,12 @@ a {
   font-family: "FiraSans Medium", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
+  text-decoration: none;
   color: rgba(33, 30, 30, 0.9);
+  transition: all 0.3s ease;
+}
+.popup-image__author-name:hover {
+  color: #23bdaa;
 }
 .popup-image__author-date {
   font-family: "PT Serif Italic", Arial, sans-serif;

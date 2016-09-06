@@ -85,8 +85,18 @@
 		}
 
 		&-author {
+			cursor: pointer;
+
 			.text-dark(14px, 20px, normal);
 			padding-right: 14px;
+
+			text-decoration: none;
+
+			transition: all 0.3s ease;
+
+			&:hover {
+				color: @text-green-color;
+			}
 
 			&-avatar {
 				.avatar();
