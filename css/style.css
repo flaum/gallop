@@ -2633,10 +2633,6 @@ a {
   border-right: 1px solid #b7b7b7;
   transform: rotate(45deg);
 }
-.page-header__currency:hover + .page-header__currency-list {
-  display: flex;
-  animation-name: fadeInDown;
-}
 .page-header__currency-list {
   position: absolute;
   top: 24px;
@@ -2650,10 +2646,6 @@ a {
   box-shadow: 0 0 4px rgba(11, 11, 11, 0.5);
   animation-duration: 0.4s;
   animation-fill-mode: both;
-}
-.page-header__currency-list:hover {
-  display: flex;
-  animation-name: fadeInDown;
 }
 .page-header__currency-list-item a {
   display: flex;
@@ -2706,10 +2698,6 @@ a {
 .page-header__lang--open::after {
   transform: scaleY(-1) translateY(-50%) rotate(45deg);
 }
-.page-header__lang:hover + .page-header__lang-list {
-  display: flex;
-  animation-name: fadeInDown;
-}
 .page-header__selected-lang-flag {
   display: flex;
   width: 20px;
@@ -2732,11 +2720,6 @@ a {
   box-shadow: 0 0 4px rgba(11, 11, 11, 0.5);
   animation-duration: 0.4s;
   animation-fill-mode: both;
-}
-.page-header__lang-list:hover {
-  display: flex;
-  opacity: 1;
-  animation-name: fadeInDown;
 }
 .page-header__lang-list-item {
   background: #feffff;
