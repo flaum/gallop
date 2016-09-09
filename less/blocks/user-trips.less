@@ -1,0 +1,37 @@
+.user-trips {
+	.container(0, 0);
+
+	background: @block-bg-color;
+
+	&__title {
+		.block-title();
+		padding-bottom: 24px;
+		padding-left: 24px;
+	}
+
+	&__trip-number {
+		padding-left: 5px;
+	}
+
+	&__map {
+		position: relative;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		svg {
+			fill: @text-green-color;
+		}
+	}
+
+	&__mark {
+		position: absolute;
+
+		&--egypt {
+			top: 50%;
+			right: 40%;
+		}
+	}
+}

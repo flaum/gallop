@@ -134,6 +134,10 @@
 			background: @page-content-header-link-bg-color-current;
 			border: none;
 
+			.page-tabs__number {
+				color: @text-gray-color;
+			}
+
 			&:hover {
 				background: @page-content-header-link-bg-color-current;
 
@@ -220,5 +224,12 @@
 				}
 			}
 		}
+	}
+
+	&__number {
+		padding-left: 6px;
+
+		letter-spacing: 1px;
+		color: @text-aqua-color;
 	}
 }

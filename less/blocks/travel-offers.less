@@ -3,7 +3,7 @@
 	flex-direction: column;
 	align-items: center;
 
-	padding-right: 25px;
+	padding-right: 35px;
 	padding-bottom: 33px;
 	padding-left: 24px;
 }
@@ -42,16 +42,15 @@
 }
 
 .travel-offers__item-image-container {
-	// display: flex;
-	// flex-direction: column;
-	// justify-content: flex-end;
-	// height: 254px;
-	//
-	// background-color: #a6512e;
-	// background-repeat: no-repeat;
-	// background-position: 50% 50%;
-	// background-size: cover;
-	.row-item-image();
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 254px;
+
+	background-color: #a6512e;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
 
 	&--living {
 		background-image: url("../img/living.jpg");
@@ -197,9 +196,9 @@
 
 @media @desktop-width {
 
-	// .travel-offers__item-image-container {
-	// 	height: 165px;
-	// }
+	.travel-offers__item-image-container {
+		height: 165px;
+	}
 }
 
 @media @xl-screens-width {

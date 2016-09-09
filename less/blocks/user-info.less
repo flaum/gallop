@@ -1,0 +1,52 @@
+.user-info {
+	.container(0, 33px);
+
+	margin-top: 40px;
+	margin-bottom: 21px;
+	padding-left: 30px;
+	padding-right: 30px;
+
+	background: @block-bg-color;
+
+	&__title {
+		.block-title();
+
+		border-bottom: 1px solid @border-gray-color;
+	}
+
+	&__name {
+		display: flex;
+
+		margin: 0;
+		padding-top: 27px;
+		padding-bottom: 7px;
+
+		.font-fira-medium();
+		font-size: 26px;
+		line-height: 30px;
+		letter-spacing: 3px;
+		color: @user-info-name-color;
+	}
+
+	&__from {
+		display: flex;
+
+		padding-bottom: 30px;
+
+		.font-ptserif();
+		font-size: 20px;
+		line-height: 24px;
+		color: @user-info-from-color;
+	}
+
+	&__text {
+		display: flex;
+
+		margin: 0;
+
+		.font-ptserif-italic();
+		font-size: 14px;
+		line-height: 24px;
+		color: @user-info-text-color;
+	}
+}
